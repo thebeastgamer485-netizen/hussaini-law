@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Placeholder portrait">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b6185"/>
+      <stop offset="100%" stop-color="#0D1B3E"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <g fill="#ffffff" opacity="0.9">
+    <circle cx="400" cy="370" r="130"/>
+    <path d="M180 850 C 180 670, 620 670, 620 850 L 620 1000 L 180 1000 Z"/>
+  </g>
+  <text x="400" y="950" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#C89B3C">
+    Sayed Rahmatullah Hussainizada
+  </text>
+</svg>

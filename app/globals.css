@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-domine: 'Domine', serif;
+  --font-manrope: 'Manrope', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-manrope);
+  color: #191c1d;
+  background-color: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-domine);
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ---- Layout container ---- */
+.container-page {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 768px) {
+  .container-page {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+/* ---- Stitch helper classes (ported verbatim from the mockups) ---- */
+
+/* Glass card (criminal mockup) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(14, 59, 93, 0.1);
+}
+
+/* Gold text gradient (home / conveyancing) */
+.text-gradient {
+  background: linear-gradient(135deg, #f0bf5c 0%, #7b5900 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-cta {
+  background: linear-gradient(to bottom, #c89b3c, #a67c27);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover lift (home practice cards) */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+/* Bento card lift (family) */
+.bento-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* Gold border glow (commercial service cards) */
+.gold-border-glow {
+  transition: all 0.5s ease, transform 0.3s ease;
+}
+.gold-border-glow:hover {
+  box-shadow: 0 0 15px rgba(200, 155, 60, 0.3);
+  transform: translateY(-8px);
+}
+
+/* Hero dot pattern (conveyancing) */
+.hero-pattern {
+  background-color: #004873;
+  background-image: radial-gradient(rgba(200, 155, 60, 0.1) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+/* Academic gradient overlay (civil litigation hero) */
+.academic-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(13, 27, 62, 0.95),
+    rgba(13, 27, 62, 0.7),
+    transparent
+  );
+}
+
+/* Form focus ring (contact) */
+.form-focus-ring:focus {
+  box-shadow: 0 0 0 2px #004873;
+  border-color: #004873;
+  outline: none;
+}
+
+/* Grayscale → color on hover (profile / map imagery) */
+.img-grayscale-hover {
+  filter: grayscale(100%);
+  transition: filter 0.6s ease;
+}
+.img-grayscale-hover:hover {
+  filter: grayscale(0%);
+}
+
+/* Animated gold link underline */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #c89b3c;
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after,
+.link-underline:focus::after {
+  width: 100%;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Soft blur orbs */
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Texture overlay */
+.texture-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
