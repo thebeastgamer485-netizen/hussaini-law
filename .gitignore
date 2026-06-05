@@ -9,3 +9,6 @@ dist/
 *.tsbuildinfo
 next-env.d.ts
 .sanity/
+
+.vercel
+.claude/settings.local.json
