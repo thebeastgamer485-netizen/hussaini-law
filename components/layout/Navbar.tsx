@@ -24,7 +24,8 @@ export function Navbar() {
     href === '/' ? pathname === '/' : pathname?.startsWith(href)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-20 bg-primary/95 backdrop-blur-md border-b border-outline-variant/20">
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 h-20 bg-primary/95 backdrop-blur-md border-b border-outline-variant/20">
       <div className="container-page h-full flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group min-w-0" aria-label="Hussaini Law Group home">
           <div className="relative h-11 w-11 md:h-12 md:w-12 shrink-0 overflow-hidden rounded-lg bg-white ring-1 ring-white/25 shadow-sm">
@@ -102,10 +103,14 @@ export function Navbar() {
           <span className="material-symbols-outlined text-3xl">{open ? 'close' : 'menu'}</span>
         </button>
       </div>
+      </header>
 
-      {/* Mobile slide-out */}
+      {/* Mobile slide-out — kept a sibling of <header> (not nested inside it).
+          The header's backdrop-blur makes it a containing block for fixed
+          descendants, which would collapse this panel to zero height and let
+          the page show through. As a sibling it resolves against the viewport. */}
       <div
-        className={`lg:hidden fixed inset-0 top-20 bg-primary transition-transform duration-300 ${
+        className={`lg:hidden fixed inset-0 top-20 z-40 bg-brand-navy transition-transform duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!open}
@@ -152,6 +157,6 @@ export function Navbar() {
           </a>
         </nav>
       </div>
-    </header>
+    </>
   )
 }
