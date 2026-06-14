@@ -79,10 +79,12 @@ module.exports = {
         'label-sm': ['var(--font-manrope)', 'Manrope', 'sans-serif'],
       },
       fontSize: {
-        'display-lg': ['64px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
-        'headline-xl': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }],
-        'headline-lg': ['32px', { lineHeight: '40px', fontWeight: '600' }],
-        'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }],
+        // Fluid headline scale — clamps between a mobile-safe min and the original desktop size.
+        // Relative line-heights keep proportions correct as the font size scales.
+        'display-lg': ['clamp(2.25rem, 1.4rem + 4.25vw, 4rem)', { lineHeight: '1.08', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'headline-xl': ['clamp(1.875rem, 1.3rem + 2.875vw, 3rem)', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'headline-lg': ['clamp(1.5625rem, 1.35rem + 1.1vw, 2rem)', { lineHeight: '1.2', fontWeight: '600' }],
+        'headline-md': ['clamp(1.25rem, 1.13rem + 0.6vw, 1.5rem)', { lineHeight: '1.3', fontWeight: '600' }],
         'headline-lg-mobile': ['28px', { lineHeight: '36px', fontWeight: '600' }],
         'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
         'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
