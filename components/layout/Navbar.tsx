@@ -26,11 +26,11 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-20 bg-primary/95 backdrop-blur-md border-b border-outline-variant/20">
       <div className="container-page h-full flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group" aria-label="Hussaini Law Group home">
-          <div className="relative h-12 w-12 shrink-0">
-            <Image src="/logo.png" alt="" fill sizes="48px" className="object-contain" priority />
+        <Link href="/" className="flex items-center gap-3 group min-w-0" aria-label="Hussaini Law Group home">
+          <div className="relative h-11 w-11 md:h-12 md:w-12 shrink-0 overflow-hidden rounded-lg bg-white ring-1 ring-white/25 shadow-sm">
+            <Image src="/logo.png" alt="" fill sizes="48px" className="object-contain p-0.5" priority />
           </div>
-          <span className="font-headline-md text-headline-md font-semibold text-secondary-fixed hidden sm:block">
+          <span className="font-headline-md text-lg sm:text-headline-md font-semibold text-secondary-fixed truncate">
             Hussaini Law Group
           </span>
         </Link>
