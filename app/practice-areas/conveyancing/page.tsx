@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 const data = PRACTICE_AREAS['conveyancing']
+const SITE = 'https://hussainilaw.com.au'
+const PAGE_URL = `${SITE}/practice-areas/conveyancing`
 
 export const metadata: Metadata = {
   title: data.metaTitle,
@@ -13,6 +16,27 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 300
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+    { '@type': 'ListItem', position: 2, name: 'Conveyancing', item: PAGE_URL },
+  ],
+}
+
+const faqLd = data.faqs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: data.faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    }
+  : null
 
 const SMALL = [
   { icon: 'sync_alt', title: 'Title Transfers', body: 'Streamlined transfers for family settlements, gifting, or corporate restructuring.' },
@@ -23,6 +47,8 @@ const SMALL = [
 export default function ConveyancingPage() {
   return (
     <>
+      <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
       <header className="relative pt-36 pb-24 md:pt-48 md:pb-40 hero-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-primary" />

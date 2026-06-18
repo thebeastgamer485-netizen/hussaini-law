@@ -51,10 +51,13 @@ export const metadata: Metadata = {
 const legalServiceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
+  '@id': `${SITE_URL}/#legalservice`,
   name: 'Hussaini Law Group',
   url: SITE_URL,
   telephone: '+61 2 8764 7885',
+  email: 'info@hussainilaw.com.au',
   image: `${SITE_URL}/logo.png`,
+  logo: `${SITE_URL}/logo.png`,
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
@@ -64,8 +67,38 @@ const legalServiceJsonLd = {
     postalCode: '2165',
     addressCountry: 'AU',
   },
-  areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -33.8687,
+    longitude: 150.9549,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:30',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '10:00',
+      closes: '14:00',
+    },
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Sydney' },
+    { '@type': 'City', name: 'Fairfield' },
+    { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  ],
   knowsLanguage: ['en', 'fa', 'ps', 'ar'],
+  employee: {
+    '@type': 'Attorney',
+    name: 'Sayed Rahmatullah Hussainizada',
+    jobTitle: 'Principal Solicitor',
+    knowsLanguage: ['en', 'fa', 'ps', 'ar'],
+    memberOf: { '@type': 'Organization', name: 'Law Society of New South Wales' },
+  },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Legal services',

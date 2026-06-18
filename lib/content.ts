@@ -88,7 +88,7 @@ export const PRACTICE_IMAGES = {
 export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
   'criminal-law': {
     slug: 'criminal-law',
-    metaTitle: 'Criminal Law',
+    metaTitle: 'Criminal Law Solicitors Sydney | Hussaini Law Group',
     metaDescription:
       'Court representation across NSW for traffic, assault, drug, fraud, AVO and appellate criminal matters. Bilingual defence in English, Dari, Pashto and Arabic.',
     eyebrow: 'Practice Area: Criminal Law',
@@ -197,7 +197,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
 
   'immigration-law': {
     slug: 'immigration-law',
-    metaTitle: 'Immigration Law',
+    metaTitle: 'Immigration Lawyers Sydney | Hussaini Law Group',
     metaDescription:
       'Sydney migration lawyers for partner, family, skilled, business and AAT-review visa matters. Bilingual service in English, Dari, Pashto and Arabic.',
     eyebrow: 'Specialised Legal Services',
@@ -348,7 +348,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
 
   'family-law': {
     slug: 'family-law',
-    metaTitle: 'Family Law',
+    metaTitle: 'Family Lawyers Sydney | Hussaini Law Group',
     metaDescription:
       'Sensitive family law representation for divorce, property settlement, parenting orders, child support, AVOs and de facto matters across NSW.',
     eyebrow: 'Family Law Excellence',
@@ -452,7 +452,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
 
   conveyancing: {
     slug: 'conveyancing',
-    metaTitle: 'Conveyancing & Property Law',
+    metaTitle: 'Conveyancing Solicitors Sydney | Hussaini Law Group',
     metaDescription:
       'Sydney property solicitors handling residential purchase and sale, off-the-plan, title transfers, refinancing and strata-title matters end-to-end through PEXA settlement.',
     eyebrow: 'Property Law Specialists',
@@ -558,7 +558,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
 
   'commercial-law': {
     slug: 'commercial-law',
-    metaTitle: 'Commercial & Corporate Law',
+    metaTitle: 'Commercial Lawyers Sydney | Hussaini Law Group',
     metaDescription:
       'Sydney commercial lawyers for business structuring, complex contracts, shareholder agreements, sale of business, dispute resolution and debt recovery.',
     eyebrow: 'Commercial & Corporate Law',
@@ -642,7 +642,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
 
   'civil-litigation': {
     slug: 'civil-litigation',
-    metaTitle: 'Civil Litigation & Debt Recovery',
+    metaTitle: 'Civil Litigation Lawyers Sydney | Hussaini Law Group',
     metaDescription:
       'Sydney civil litigation solicitors for debt recovery, contract disputes, consumer claims, NCAT applications and mediation across NSW.',
     eyebrow: 'Civil Litigation Experts',

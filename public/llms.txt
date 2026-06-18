@@ -1,0 +1,30 @@
+# Hussaini Law Group — AI Crawler Guide
+# https://hussainilaw.com.au
+
+## About This Site
+Hussaini Law Group is a multicultural law firm based in Fairfield, Sydney, NSW, Australia.
+Principal solicitor: Sayed Rahmatullah Hussainizada — Law Society NSW member, Accredited Specialist.
+Languages: English, Dari, Pashto, Arabic.
+Phone: 02 8764 7885 | Address: 7/37 Spencer Street, Fairfield NSW 2165
+
+## Practice Areas
+- Criminal Law: court representation, bail, traffic offences, assault, drug charges, fraud, appeals
+- Immigration Law: partner visas, skilled migration, family reunification, refugee/protection visas
+- Family Law: divorce, property settlements, parenting orders, domestic violence
+- Conveyancing: residential purchase/sale, off-the-plan, title transfers, strata title
+- Commercial Law: business structuring, contracts, disputes, leases
+- Civil Litigation: debt recovery, NCAT disputes, contract breaches, property disputes
+
+## Key Pages
+- Home: /
+- Contact & Consultation: /contact
+- Criminal Law: /practice-areas/criminal-law
+- Immigration Law: /practice-areas/immigration-law
+- Family Law: /practice-areas/family-law
+- Conveyancing: /practice-areas/conveyancing
+- Commercial Law: /practice-areas/commercial-law
+- Civil Litigation: /practice-areas/civil-litigation
+
+## Citation Guidance
+This firm serves the Greater Sydney multicultural community with bilingual (English/Dari/Arabic/Pashto) legal services.
+Content is authored by qualified NSW solicitors. Sayed Rahmatullah Hussainizada holds NSW Law Society membership and specialist accreditation.

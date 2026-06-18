@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 
 const data = PRACTICE_AREAS['family-law']
+const SITE = 'https://hussainilaw.com.au'
+const PAGE_URL = `${SITE}/practice-areas/family-law`
 
 export const metadata: Metadata = {
   title: data.metaTitle,
@@ -12,6 +15,27 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 300
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+    { '@type': 'ListItem', position: 2, name: 'Family Law', item: PAGE_URL },
+  ],
+}
+
+const faqLd = data.faqs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: data.faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    }
+  : null
 
 const SERVICES = [
   { icon: 'gavel', title: 'Divorce & Separation', body: 'Strategic advice for complex marriage dissolutions, ensuring your rights and assets are protected through every stage.' },
@@ -25,6 +49,9 @@ const SERVICES = [
 export default function FamilyLawPage() {
   return (
     <>
+      <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
+
       {/* Hero */}
       <section className="relative h-[80vh] min-h-[560px] flex items-center overflow-hidden bg-deep-navy pt-20">
         <div className="absolute inset-0 opacity-40">
