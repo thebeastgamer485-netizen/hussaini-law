@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { TEAM_PRINCIPAL } from '@/lib/content'
+import { BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 export type Principal = {
   name: string
@@ -24,6 +25,8 @@ export function PrincipalProfile({ principal = DEFAULT_PRINCIPAL }: { principal?
               alt={`Portrait of ${principal.name}, ${principal.title}`}
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL_LIGHT}
               className="object-cover img-grayscale-hover"
             />
           </div>

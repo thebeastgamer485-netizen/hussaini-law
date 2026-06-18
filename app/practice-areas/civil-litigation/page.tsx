@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
+import { BLUR_DATA_URL } from '@/lib/images'
 
 const data = PRACTICE_AREAS['civil-litigation']
 
@@ -97,7 +98,7 @@ export default function CivilLitigationPage() {
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
               <div className="relative w-full h-[600px] shadow-2xl border-l-8 border-brand-gold overflow-hidden">
-                <Image src={PRACTICE_IMAGES.civilProcess} alt="Fountain pen on a legal document" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
+                <Image src={PRACTICE_IMAGES.civilProcess} alt="Fountain pen on a legal document" fill sizes="(max-width:768px) 100vw, 50vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
               </div>
             </div>
             <div className="w-full md:w-1/2">

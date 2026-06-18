@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
+import { BLUR_DATA_URL, BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 const data = PRACTICE_AREAS['immigration-law']
 
@@ -96,7 +97,7 @@ export default function ImmigrationLawPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
             <div className="relative">
               <div className="relative aspect-square overflow-hidden border-2 border-secondary-fixed/30 rounded-xl">
-                <Image src={PRACTICE_IMAGES.immigrationAudience} alt="A diverse professional group in a modern boardroom" fill sizes="(max-width:1024px) 100vw, 45vw" className="object-cover grayscale opacity-80" />
+                <Image src={PRACTICE_IMAGES.immigrationAudience} alt="A diverse professional group in a modern boardroom" fill sizes="(max-width:1024px) 100vw, 45vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover grayscale opacity-80" />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-secondary-fixed p-8 lg:p-10 hidden lg:block rounded-xl">
                 <div className="text-on-secondary-fixed font-headline-lg text-headline-lg">20+ Years</div>
@@ -156,7 +157,7 @@ export default function ImmigrationLawPage() {
             </ul>
           </div>
           <div className="relative h-[600px] overflow-hidden rounded-xl">
-            <Image src={PRACTICE_IMAGES.immigrationWhy} alt="A luxury law firm lobby with city views" fill sizes="(max-width:1024px) 100vw, 45vw" className="object-cover" />
+            <Image src={PRACTICE_IMAGES.immigrationWhy} alt="A luxury law firm lobby with city views" fill sizes="(max-width:1024px) 100vw, 45vw" placeholder="blur" blurDataURL={BLUR_DATA_URL_LIGHT} className="object-cover" />
           </div>
         </div>
       </section>

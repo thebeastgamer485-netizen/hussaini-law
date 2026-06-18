@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
+import { BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 const data = PRACTICE_AREAS['commercial-law']
 
@@ -91,7 +92,7 @@ export default function CommercialLawPage() {
           <div className="lg:w-1/2 relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-gold z-10" />
             <div className="relative w-full h-[500px] overflow-hidden shadow-2xl">
-              <Image src={PRACTICE_IMAGES.commercialWhy} alt="A distinguished senior partner in a mahogany-paneled law library" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <Image src={PRACTICE_IMAGES.commercialWhy} alt="A distinguished senior partner in a mahogany-paneled law library" fill sizes="(max-width:1024px) 100vw, 50vw" placeholder="blur" blurDataURL={BLUR_DATA_URL_LIGHT} className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-brand-gold z-10" />
           </div>

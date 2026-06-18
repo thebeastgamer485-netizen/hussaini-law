@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { BLUR_DATA_URL, BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 export type FeatureItem = { icon: string; title: string; body: string }
 
@@ -33,6 +34,8 @@ export function FeatureSplit({ data }: { data: FeatureSplitData }) {
           alt={data.imageAlt ?? ''}
           fill
           sizes="(max-width: 1024px) 100vw, 45vw"
+          placeholder="blur"
+          blurDataURL={isDark ? BLUR_DATA_URL : BLUR_DATA_URL_LIGHT}
           className={`object-cover ${isDark ? 'grayscale hover:grayscale-0 transition-all duration-700' : ''}`}
         />
       </div>

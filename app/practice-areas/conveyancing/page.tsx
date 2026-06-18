@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
+import { BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 const data = PRACTICE_AREAS['conveyancing']
 
@@ -132,7 +133,7 @@ export default function ConveyancingPage() {
               legally sound, and completed on schedule.
             </p>
             <div className="pt-4 relative h-64 rounded-lg overflow-hidden shadow-lg">
-              <Image src={PRACTICE_IMAGES.conveyancingProcess} alt="Legal documents and fountain pen on a desk" fill sizes="(max-width:1024px) 100vw, 30vw" className="object-cover" />
+              <Image src={PRACTICE_IMAGES.conveyancingProcess} alt="Legal documents and fountain pen on a desk" fill sizes="(max-width:1024px) 100vw, 30vw" placeholder="blur" blurDataURL={BLUR_DATA_URL_LIGHT} className="object-cover" />
             </div>
           </div>
           <div className="lg:col-span-2 space-y-12">

@@ -5,6 +5,7 @@ import { ContactForm } from '@/components/sections/ContactForm'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { FIRM } from '@/lib/navigation'
 import { CONTACT_IMAGES } from '@/lib/content'
+import { BLUR_DATA_URL } from '@/lib/images'
 
 export const metadata: Metadata = {
   title: 'Contact — Hussaini Law Group, Fairfield Sydney',
@@ -114,6 +115,8 @@ export default function ContactPage() {
                 alt="Aerial view of Fairfield, Sydney"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors" />
