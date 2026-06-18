@@ -74,7 +74,7 @@ export default function ImmigrationLawPage() {
           <span className="font-label-sm text-secondary-fixed tracking-widest uppercase mb-4 block">
             Specialised Legal Services
           </span>
-          <h1 className="font-display-lg text-3xl sm:text-4xl md:text-display-lg text-on-primary mb-6">Immigration Law</h1>
+          <h1 className="font-display-lg text-3xl sm:text-4xl md:text-display-lg text-on-primary mb-6">Immigration Lawyers in Fairfield, Sydney</h1>
           <p className="font-body-lg text-on-primary/90 max-w-2xl mx-auto">
             Navigating the complexities of global mobility with precision, heritage, and unwavering advocacy for your
             future in Australia.

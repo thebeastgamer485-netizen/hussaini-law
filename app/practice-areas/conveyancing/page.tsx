@@ -60,7 +60,7 @@ export default function ConveyancingPage() {
               <span className="font-label-sm text-label-sm uppercase tracking-widest">Property Law Specialists</span>
             </div>
             <h1 className="font-headline-xl text-4xl md:text-headline-xl text-on-primary leading-tight">
-              Seamless Property Transactions &amp; <span className="text-gradient-cta">Expert Advice.</span>
+              Conveyancing Solicitors in <span className="text-gradient-cta">Fairfield &amp; Sydney</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-primary/80 max-w-xl">
               Hussaini Law Group provides distinguished legal counsel for your most significant assets. From first-time

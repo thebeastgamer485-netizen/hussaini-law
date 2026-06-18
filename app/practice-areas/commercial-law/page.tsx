@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
@@ -7,6 +8,8 @@ import { Reveal } from '@/components/ui/Reveal'
 import { BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 const data = PRACTICE_AREAS['commercial-law']
+const SITE = 'https://hussainilaw.com.au'
+const PAGE_URL = `${SITE}/practice-areas/commercial-law`
 
 export const metadata: Metadata = {
   title: data.metaTitle,
@@ -14,6 +17,15 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 300
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+    { '@type': 'ListItem', position: 2, name: 'Commercial Law', item: PAGE_URL },
+  ],
+}
 
 const SERVICES = [
   { icon: 'business_center', title: 'Business Structuring', body: 'Strategic optimization of entity frameworks to ensure tax efficiency, operational fluidity, and robust liability protection for emerging and established enterprises.', dark: false },
@@ -33,6 +45,7 @@ const ADVANTAGE = [
 export default function CommercialLawPage() {
   return (
     <>
+      <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {/* Hero */}
       <section className="relative min-h-[60vh] md:min-h-[85vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
@@ -45,7 +58,7 @@ export default function CommercialLawPage() {
               Commercial &amp; Corporate Law
             </span>
             <h1 className="font-headline-xl text-4xl md:text-headline-xl mb-6 leading-tight">
-              Strategic Legal Solutions for Your Business.
+              Commercial Lawyers in Fairfield &amp; Sydney
             </h1>
             <p className="font-body-lg text-body-lg text-on-primary/90 mb-10 border-l-4 border-brand-gold pl-6">
               Navigating the complexities of the corporate landscape requires more than just legal advice — it requires a

@@ -1,0 +1,338 @@
+{
+  "summary": {
+    "health_score": 58,
+    "business_type": "Local Service — Brick-and-mortar law firm",
+    "top_findings": [
+      "Zero geographic keywords in any H1 tag — highest-impact on-page SEO gap",
+      "Duplicate schema entity conflict between LocalBusiness and LegalService",
+      "Page-type mismatch — generic hub URLs vs competitor location-service pages",
+      "FAQ answers 24-47 words — below 134-word AI citation threshold",
+      "No AggregateRating schema or review solicitation mechanism"
+    ],
+    "quick_wins": [
+      "Add 'Fairfield' to all practice area meta titles",
+      "Remove duplicate LocalBusiness schema from contact page",
+      "Add BreadcrumbList to commercial-law and civil-litigation pages",
+      "Fix geo coordinates from Sydney CBD to Fairfield",
+      "Replace placeholder mobile number 0451 234 567"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 75,
+      "what_works": [
+        "Security headers A+ grade (CSP, HSTS with preload, X-Frame-Options DENY)",
+        "Server-side rendering with ISR (revalidate=300)",
+        "Font optimization — woff2 preload with display:swap",
+        "HTML fundamentals — lang, charset, viewport all correct",
+        "robots.txt correctly blocks /studio, references sitemap"
+      ],
+      "findings": [
+        {
+          "title": "favicon.ico returns 404",
+          "severity": "Medium",
+          "description": "HTML link tag points to /favicon.ico which doesn't exist. Dynamic /icon route works but isn't referenced.",
+          "recommendation": "Remove icons.icon from layout.tsx metadata, let dynamic route auto-generate link tag"
+        },
+        {
+          "title": "Sitemap domain mismatch",
+          "severity": "Medium",
+          "description": "Sitemap uses hussainilaw.com.au URLs but site is live at hussaini-law.vercel.app",
+          "recommendation": "Point custom domain or update sitemap base URL"
+        },
+        {
+          "title": "Identical sitemap lastmod dates",
+          "severity": "Low",
+          "description": "All 8 URLs have the same timestamp, reducing crawl prioritization value",
+          "recommendation": "Use per-page git commit dates for lastmod"
+        },
+        {
+          "title": "No Permissions-Policy header",
+          "severity": "Low",
+          "description": "Only security header missing from otherwise complete set",
+          "recommendation": "Add Permissions-Policy header to vercel.json"
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 50,
+      "what_works": [
+        "Strong E-E-A-T foundation — principal solicitor named with credentials",
+        "Unique meta titles and descriptions per page",
+        "FAQ content on 4/6 practice area pages",
+        "Process steps structured on all practice pages",
+        "llms.txt present with citation guidance"
+      ],
+      "findings": [
+        {
+          "title": "FAQ answers critically short (24-47 words)",
+          "severity": "Critical",
+          "description": "All 12 FAQ answers fall far below AI citation threshold of 134-167 words",
+          "recommendation": "Expand each answer to 134-167 words with statute references and firm capability"
+        },
+        {
+          "title": "No blog or informational content",
+          "severity": "High",
+          "description": "Zero long-form guides or articles. Competitors have 2,500+ word service pages plus blogs",
+          "recommendation": "Create 6 long-form practice area guides at 800-1,200 words each"
+        },
+        {
+          "title": "Commercial and Civil pages have no FAQs",
+          "severity": "High",
+          "description": "Both pages are sub-800 words with no FAQ sections or FAQ schema",
+          "recommendation": "Add 5+ FAQs per page aligned with People Also Ask queries"
+        },
+        {
+          "title": "Content depth deficit",
+          "severity": "High",
+          "description": "Practice area pages are 600-1,400 words vs competitor average of 2,500+",
+          "recommendation": "Expand content depth with jurisdiction-specific processes and statute references"
+        },
+        {
+          "title": "No About page or Team page",
+          "severity": "Medium",
+          "description": "Principal profile embedded in home page but no dedicated E-E-A-T page",
+          "recommendation": "Create dedicated About/Team page with full credentials and professional photo"
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 45,
+      "what_works": [
+        "Unique H1 per page",
+        "Logical H1-H2-H3 heading hierarchy",
+        "Meta titles include 'Sydney'",
+        "Comprehensive internal navigation"
+      ],
+      "findings": [
+        {
+          "title": "Zero H1 tags contain geographic keywords",
+          "severity": "Critical",
+          "description": "Every H1 is brand-tone copy. No page uses Fairfield, Sydney, or Western Sydney in H1.",
+          "recommendation": "Update all practice area H1s to include 'Fairfield' or 'Sydney'"
+        },
+        {
+          "title": "Fairfield absent from 7/8 meta titles",
+          "severity": "High",
+          "description": "Only contact page includes Fairfield. Practice areas use Sydney but not the firm's actual suburb.",
+          "recommendation": "Add 'Fairfield' to all practice area metaTitle values in content.ts"
+        },
+        {
+          "title": "No location-service landing pages",
+          "severity": "High",
+          "description": "Competitors rank with /criminal-lawyers-fairfield/ URLs. Generic /practice-areas/ path doesn't signal geo intent.",
+          "recommendation": "Create location-service landing pages for each practice area + suburb"
+        },
+        {
+          "title": "No court name references",
+          "severity": "High",
+          "description": "Criminal page doesn't mention Fairfield Local Court. Family page missing Federal Circuit Court reference.",
+          "recommendation": "Add specific court names to relevant practice area pages"
+        },
+        {
+          "title": "Bilingual capability buried in footer",
+          "severity": "Medium",
+          "description": "Firm's strongest differentiator (Dari/Pashto/Arabic) never appears in H1, H2, or meta description.",
+          "recommendation": "Add bilingual H2 to every practice area page, include language names in meta descriptions"
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 50,
+      "what_works": [
+        "Comprehensive LegalService entity with full properties",
+        "BreadcrumbList on 4/6 practice pages",
+        "FAQPage markup valid (retained for AI value)"
+      ],
+      "findings": [
+        {
+          "title": "Duplicate entity conflict — LocalBusiness vs LegalService",
+          "severity": "Critical",
+          "description": "Two separate entities with different @id values and contradictory Saturday hours.",
+          "recommendation": "Remove LocalBusiness from contact/page.tsx entirely"
+        },
+        {
+          "title": "BreadcrumbList missing on 2 pages",
+          "severity": "High",
+          "description": "commercial-law and civil-litigation have zero JSON-LD.",
+          "recommendation": "Add BreadcrumbList following the criminal-law pattern"
+        },
+        {
+          "title": "Geo coordinates point to Sydney CBD",
+          "severity": "High",
+          "description": "Coordinates -33.8687, 150.9549 are wrong. Fairfield is approximately -33.8728, 150.9554.",
+          "recommendation": "Update latitude and longitude in layout.tsx"
+        },
+        {
+          "title": "No Service schema on practice area pages",
+          "severity": "High",
+          "description": "hasOfferCatalog lists services as plain strings with no URL linkage.",
+          "recommendation": "Add Service JSON-LD to each practice area page"
+        },
+        {
+          "title": "No WebSite schema",
+          "severity": "Medium",
+          "description": "Missing Sitelinks Search Box eligibility.",
+          "recommendation": "Add WebSite entity to layout.tsx"
+        },
+        {
+          "title": "No Review or AggregateRating schema",
+          "severity": "Medium",
+          "description": "Testimonial exists on conveyancing page but no schema markup.",
+          "recommendation": "Add Review JSON-LD for existing testimonial"
+        }
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 80,
+      "what_works": [
+        "Static site generation with ISR",
+        "Vercel edge deployment — Sydney PoP",
+        "Next.js Image optimization with lazy loading and blur placeholders",
+        "Small JS bundle — 88KB shared"
+      ],
+      "findings": [
+        {
+          "title": "Material Symbols font loaded via external CSS",
+          "severity": "Medium",
+          "description": "Render-blocking request to fonts.googleapis.com.",
+          "recommendation": "Consider self-hosting or subsetting only used icons"
+        },
+        {
+          "title": "Images hosted on external CDN",
+          "severity": "Low",
+          "description": "15+ images load from lh3.googleusercontent.com adding DNS and connection overhead.",
+          "recommendation": "Self-host via Sanity CDN or public directory"
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 54,
+      "what_works": [
+        "llms.txt exists with firm overview and citation guidance",
+        "All AI crawlers permitted via robots.txt",
+        "Server-rendered HTML accessible without JavaScript",
+        "FAQPage markup retained for AI extraction"
+      ],
+      "findings": [
+        {
+          "title": "FAQ answers below AI citation threshold",
+          "severity": "Critical",
+          "description": "All 12 answers are 24-47 words. Target is 134-167 words.",
+          "recommendation": "Expand each answer with direct opening sentence, statute reference, and firm capability"
+        },
+        {
+          "title": "FAQ accordion hides content from non-JS crawlers",
+          "severity": "High",
+          "description": "Collapsed answers use aria-hidden=true. Non-JS crawlers only see answer #1.",
+          "recommendation": "Use CSS-only max-height:0 instead of aria-hidden for collapsed state"
+        },
+        {
+          "title": "No long-form content for AI extraction",
+          "severity": "High",
+          "description": "Zero passages at 800+ words. No guides, articles, or explainers.",
+          "recommendation": "Create one 800-1,200 word guide per practice area"
+        },
+        {
+          "title": "llms.txt incomplete",
+          "severity": "Medium",
+          "description": "Missing RSL 1.0 license, FAQ block, MARN number, founding year, structured contact fields.",
+          "recommendation": "Expand llms.txt with all missing sections"
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 60,
+      "what_works": [
+        "Alt text on all images",
+        "Lazy loading with blur placeholders",
+        "Responsive sizes attribute",
+        "Next.js automatic optimization"
+      ],
+      "findings": [
+        {
+          "title": "All images are AI-generated stock",
+          "severity": "High",
+          "description": "E-E-A-T rewards real photos. No real office, lawyer, or consultation photos exist.",
+          "recommendation": "Commission professional photography session"
+        },
+        {
+          "title": "No per-page OG images",
+          "severity": "Medium",
+          "description": "All pages share the root dynamic OG image.",
+          "recommendation": "Create per-page OG images for improved social sharing CTR"
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Remove duplicate LocalBusiness schema from contact page",
+          "Fix geo coordinates to Fairfield location",
+          "Resolve Saturday hours contradiction",
+          "Replace placeholder mobile number",
+          "Fix favicon reference in layout.tsx metadata",
+          "Add BreadcrumbList to commercial-law and civil-litigation",
+          "Add geographic keywords to all H1 tags",
+          "Add 'Fairfield' to all practice area meta titles"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Expand all 12 FAQ answers to 134-167 words",
+          "Add FAQs to commercial-law and civil-litigation pages",
+          "Add Service schema to all 6 practice area pages",
+          "Surface bilingual capability in headings and meta descriptions",
+          "Add local court references to relevant pages",
+          "Fix FAQ accordion for non-JS crawlers",
+          "Add WebSite schema to layout.tsx",
+          "Expand Attorney entity with credentials"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "Create location-service landing pages",
+          "Commission real photography",
+          "Expand llms.txt with FAQ block and license",
+          "Add Review schema for existing testimonial",
+          "Create 6 long-form practice area guides"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Google Business Profile optimization and review acquisition",
+          "Directory citations (LawConnect, HG.org, Yellow Pages)",
+          "Monthly blog posts targeting People Also Ask queries",
+          "Quarterly AI search visibility monitoring"
+        ]
+      }
+    ]
+  },
+  "sub_audit_scores": {
+    "local_seo": 38,
+    "search_experience": 38,
+    "schema_markup": 50,
+    "ai_search_readiness": 54
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
@@ -7,6 +8,8 @@ import { Reveal } from '@/components/ui/Reveal'
 import { BLUR_DATA_URL } from '@/lib/images'
 
 const data = PRACTICE_AREAS['civil-litigation']
+const SITE = 'https://hussainilaw.com.au'
+const PAGE_URL = `${SITE}/practice-areas/civil-litigation`
 
 export const metadata: Metadata = {
   title: data.metaTitle,
@@ -14,6 +17,15 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 300
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+    { '@type': 'ListItem', position: 2, name: 'Civil Litigation', item: PAGE_URL },
+  ],
+}
 
 const TOP = [
   { icon: 'account_balance_wallet', title: 'Debt Recovery', body: 'Persistent and strategic recovery of outstanding debts for corporations and individuals, leveraging statutory demands and court actions.' },
@@ -24,6 +36,7 @@ const TOP = [
 export default function CivilLitigationPage() {
   return (
     <>
+      <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {/* Hero */}
       <section className="relative min-h-[60vh] md:min-h-[85vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
@@ -36,8 +49,8 @@ export default function CivilLitigationPage() {
               Civil Litigation Experts
             </span>
             <h1 className="font-headline-xl text-4xl md:text-headline-xl text-white mb-6 leading-tight">
-              Rigorous Advocacy in <br />
-              <span className="text-brand-gold">Civil Disputes</span>
+              Civil Litigation Lawyers in <br />
+              <span className="text-brand-gold">Fairfield &amp; Sydney</span>
             </h1>
             <p className="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">
               Navigating the complexities of the Australian legal system with unwavering precision. From high-stakes debt

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Script from 'next/script'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -9,48 +8,16 @@ import { CONTACT_IMAGES } from '@/lib/content'
 import { BLUR_DATA_URL } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Contact — Hussaini Law Group, Fairfield Sydney',
+  title: 'Contact — Fairfield, Sydney',
   description:
     'Book a confidential consultation with Hussaini Law Group in Fairfield. Bilingual service in English, Dari, Pashto and Arabic. Call 02 8764 7885.',
 }
 
 const LANGUAGES = ['English', 'Dari', 'Pashto', 'Arabic']
 
-const localBusinessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://hussainilaw.com.au/#localbusiness',
-  name: 'Hussaini Law Group',
-  url: 'https://hussainilaw.com.au',
-  telephone: '+61 2 8764 7885',
-  email: 'info@hussainilaw.com.au',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '7/37 Spencer Street',
-    addressLocality: 'Fairfield',
-    addressRegion: 'NSW',
-    postalCode: '2165',
-    addressCountry: 'AU',
-  },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '17:30',
-    },
-  ],
-}
-
 export default function ContactPage() {
   return (
     <>
-      <Script
-        id="ld-local-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
-
       {/* Hero */}
       <section className="relative bg-primary text-white pt-28 pb-12 md:pt-36 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 texture-overlay opacity-40" aria-hidden="true" />

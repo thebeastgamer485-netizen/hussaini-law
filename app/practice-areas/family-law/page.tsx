@@ -65,7 +65,7 @@ export default function FamilyLawPage() {
               Family Law Excellence
             </span>
             <h1 className="font-headline-xl text-4xl md:text-headline-xl text-white mb-6 leading-tight">
-              Compassionate Advocacy for Family Matters.
+              Family Lawyers in Fairfield &amp; Western Sydney
             </h1>
             <p className="font-body-lg text-body-lg text-white/80 mb-10 max-w-lg">
               Navigating the complexities of domestic relationships with the sensitivity and expertise your family

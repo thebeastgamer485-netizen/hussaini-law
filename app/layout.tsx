@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: 'Hussaini Law Group',
     description: 'Multicultural legal excellence in Sydney.',
   },
-  icons: { icon: '/favicon.ico', apple: '/logo.png' },
+  icons: { apple: '/logo.png' },
 }
 
 const legalServiceJsonLd = {
@@ -70,8 +70,8 @@ const legalServiceJsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -33.8687,
-    longitude: 150.9549,
+    latitude: -33.8728,
+    longitude: 150.9554,
   },
   openingHoursSpecification: [
     {
@@ -79,12 +79,6 @@ const legalServiceJsonLd = {
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '09:00',
       closes: '17:30',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday'],
-      opens: '10:00',
-      closes: '14:00',
     },
   ],
   areaServed: [

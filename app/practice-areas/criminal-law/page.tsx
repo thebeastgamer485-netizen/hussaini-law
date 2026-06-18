@@ -75,7 +75,7 @@ export default function CriminalLawPage() {
               Practice Area: Criminal Law
             </span>
             <h1 className="font-headline-xl text-4xl md:text-headline-xl text-on-primary leading-tight">
-              Criminal Defense &amp; Court Representation
+              Criminal Defence Lawyers in Fairfield &amp; Sydney
             </h1>
             <p className="font-body-lg text-body-lg text-on-primary/80 max-w-lg">
               Protecting your rights and delivering expert legal advocacy when it matters most. We stand by you through
