@@ -10,11 +10,22 @@ export type ContactState = {
   errors?: Record<string, string>
 }
 
-// Rate limiting: 5 submissions per hour per IP
-const ratelimit = new Ratelimit({
-  redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(5, '1 h'),
-})
+// Rate limiting: 5 submissions per hour per IP.
+// Initialised lazily so the form still works when Upstash isn't configured —
+// Redis.fromEnv() throws if the env vars are missing, which would otherwise
+// crash the whole server action on module load.
+let ratelimit: Ratelimit | null = null
+function getRatelimit(): Ratelimit | null {
+  if (ratelimit) return ratelimit
+  if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
+    return null
+  }
+  ratelimit = new Ratelimit({
+    redis: Redis.fromEnv(),
+    limiter: Ratelimit.slidingWindow(5, '1 h'),
+  })
+  return ratelimit
+}
 
 const required = (v: FormDataEntryValue | null) =>
   typeof v === 'string' && v.trim().length > 0 ? v.trim() : ''
@@ -22,16 +33,19 @@ const required = (v: FormDataEntryValue | null) =>
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export async function submitContactForm(_prev: ContactState, formData: FormData): Promise<ContactState> {
-  // Rate limiting check
+  // Rate limiting check (skipped when Upstash isn't configured)
   try {
-    const headersList = headers()
-    const ip = headersList.get('x-forwarded-for')?.split(',')[0] || headersList.get('x-real-ip') || 'unknown'
-    const { success } = await ratelimit.limit(ip)
+    const limiter = getRatelimit()
+    if (limiter) {
+      const headersList = headers()
+      const ip = headersList.get('x-forwarded-for')?.split(',')[0] || headersList.get('x-real-ip') || 'unknown'
+      const { success } = await limiter.limit(ip)
 
-    if (!success) {
-      return {
-        status: 'error',
-        message: 'Too many submissions. Please try again in an hour.',
+      if (!success) {
+        return {
+          status: 'error',
+          message: 'Too many submissions. Please try again in an hour.',
+        }
       }
     }
   } catch (err) {
