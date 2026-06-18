@@ -5,6 +5,7 @@ import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { PageChrome } from '@/components/ui/PageChrome'
+import { PageTransition } from '@/components/ui/PageTransition'
 
 const domine = Domine({
   subsets: ['latin'],
@@ -136,7 +137,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <PageChrome />
         <Navbar />
-        <main id="main">{children}</main>
+        <PageTransition>
+          <main id="main">{children}</main>
+        </PageTransition>
         <Footer />
       </body>
     </html>

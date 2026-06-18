@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
+import { Reveal } from '@/components/ui/Reveal'
 import { BLUR_DATA_URL } from '@/lib/images'
 
 const data = PRACTICE_AREAS['civil-litigation']
@@ -30,7 +31,7 @@ export default function CivilLitigationPage() {
           <div className="absolute inset-0 academic-overlay" />
         </div>
         <div className="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl hero-stagger">
             <span className="inline-block text-brand-gold font-label-sm text-label-sm uppercase tracking-widest mb-4">
               Civil Litigation Experts
             </span>
@@ -51,6 +52,7 @@ export default function CivilLitigationPage() {
       </section>
 
       {/* Sub-services bento */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-deep-navy mb-4">Specialised Legal Focus</h2>
@@ -91,8 +93,10 @@ export default function CivilLitigationPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* Litigation process — image + circle numbers */}
+      <Reveal>
       <section className="bg-surface-container-low py-section-gap py-20 md:py-28">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="flex flex-col md:flex-row gap-16 items-center">
@@ -120,8 +124,10 @@ export default function CivilLitigationPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* CTA — grid pattern */}
+      <Reveal direction="scale">
       <section className="relative py-24 bg-deep-navy overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="grid grid-cols-12 h-full w-full">
@@ -144,6 +150,7 @@ export default function CivilLitigationPage() {
           </div>
         </div>
       </section>
+      </Reveal>
     </>
   )
 }

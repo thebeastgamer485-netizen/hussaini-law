@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { Reveal } from '@/components/ui/Reveal'
 import { FIRM } from '@/lib/navigation'
 import { CONTACT_IMAGES } from '@/lib/content'
 import { BLUR_DATA_URL } from '@/lib/images'
@@ -55,7 +56,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 texture-overlay opacity-40" aria-hidden="true" />
         <div className="orb bg-primary-container w-[420px] h-[420px] -top-20 -left-32" aria-hidden="true" />
         <div className="orb bg-brand-gold/25 w-[360px] h-[360px] bottom-0 right-0" aria-hidden="true" />
-        <div className="container-page relative max-w-3xl">
+        <div className="container-page relative max-w-3xl hero-stagger">
           <div className="text-label-sm uppercase tracking-[0.2em] text-brand-gold mb-4">
             Get in Touch
           </div>
@@ -77,7 +78,7 @@ export default function ContactPage() {
       {/* Form + contact details */}
       <section className="bg-surface" aria-labelledby="contact-heading">
         <div className="container-page py-section-gap py-20 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
-          <div className="lg:col-span-7">
+          <Reveal className="lg:col-span-7">
             <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-6 md:p-10">
               <SectionHeading
                 eyebrow="Inquiry Form"
@@ -88,9 +89,9 @@ export default function ContactPage() {
                 <ContactForm />
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <aside className="lg:col-span-5 space-y-6">
+          <Reveal direction="right" className="lg:col-span-5 space-y-6">
             <div className="bg-primary text-white rounded-2xl p-7 md:p-9 relative overflow-hidden">
               <div className="absolute inset-0 texture-overlay opacity-30" aria-hidden="true" />
               <h2 className="font-heading text-headline-md text-white relative">Contact details</h2>
@@ -134,30 +135,32 @@ export default function ContactPage() {
                 </div>
               </div>
             </a>
-          </aside>
+          </Reveal>
         </div>
       </section>
 
       {/* Advocacy Across Borders banner */}
-      <section className="bg-surface-container-lowest border-y border-outline-variant">
-        <div className="container-page py-section-gap py-20 md:py-24 text-center max-w-3xl mx-auto">
-          <h2 className="font-heading text-headline-lg md:text-headline-xl text-primary">
-            Advocacy Across Borders
-          </h2>
-          <p className="mt-6 text-body-lg text-on-surface-variant">
-            While based in Fairfield, we represent clients across New South Wales and internationally. Our multilingual
-            capabilities ensure that your voice is heard and your rights are protected, regardless of linguistic
-            barriers.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-4 opacity-40">
-            {['Sydney', 'Melbourne', 'Canberra', 'International Matters'].map((c) => (
-              <span key={c} className="font-heading italic text-xl md:text-2xl text-primary">
-                {c}
-              </span>
-            ))}
+      <Reveal direction="scale">
+        <section className="bg-surface-container-lowest border-y border-outline-variant">
+          <div className="container-page py-section-gap py-20 md:py-24 text-center max-w-3xl mx-auto">
+            <h2 className="font-heading text-headline-lg md:text-headline-xl text-primary">
+              Advocacy Across Borders
+            </h2>
+            <p className="mt-6 text-body-lg text-on-surface-variant">
+              While based in Fairfield, we represent clients across New South Wales and internationally. Our multilingual
+              capabilities ensure that your voice is heard and your rights are protected, regardless of linguistic
+              barriers.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-4 opacity-40">
+              {['Sydney', 'Melbourne', 'Canberra', 'International Matters'].map((c) => (
+                <span key={c} className="font-heading italic text-xl md:text-2xl text-primary">
+                  {c}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
     </>
   )
 }

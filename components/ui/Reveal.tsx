@@ -5,10 +5,12 @@ import { useEffect, useRef, type ReactNode } from 'react'
 export function Reveal({
   children,
   delay = 0,
+  direction = 'up',
   className = '',
 }: {
   children: ReactNode
   delay?: number
+  direction?: 'up' | 'left' | 'right' | 'scale'
   className?: string
 }) {
   const ref = useRef<HTMLDivElement | null>(null)
@@ -32,8 +34,14 @@ export function Reveal({
     return () => obs.disconnect()
   }, [delay])
 
+  const base =
+    direction === 'left' ? 'reveal-left' :
+    direction === 'right' ? 'reveal-right' :
+    direction === 'scale' ? 'reveal-scale' :
+    'reveal'
+
   return (
-    <div ref={ref} className={`reveal ${className}`}>
+    <div ref={ref} className={`${base} ${className}`}>
       {children}
     </div>
   )

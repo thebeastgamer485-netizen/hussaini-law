@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
+import { Reveal } from '@/components/ui/Reveal'
 import { BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 const data = PRACTICE_AREAS['conveyancing']
@@ -53,7 +54,7 @@ export default function ConveyancingPage() {
       <header className="relative pt-36 pb-24 md:pt-48 md:pb-40 hero-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-primary" />
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 hero-stagger">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-secondary-fixed/30 bg-secondary-fixed/10 text-secondary-fixed">
               <span className="material-symbols-outlined text-[18px]">real_estate_agent</span>
               <span className="font-label-sm text-label-sm uppercase tracking-widest">Property Law Specialists</span>
@@ -70,7 +71,7 @@ export default function ConveyancingPage() {
               <Button href="/contact" variant="secondary" size="lg">Speak to a Solicitor</Button>
             </div>
           </div>
-          <div className="hidden lg:block relative h-[500px]">
+          <div className="hidden lg:block relative h-[500px] hero-image-animate">
             <div className="absolute top-0 right-0 w-4/5 h-full rounded-xl overflow-hidden shadow-2xl border border-on-primary/10">
               <Image src={PRACTICE_IMAGES.conveyancingHero} alt="Modern architectural interior" fill priority sizes="40vw" className="object-cover" />
             </div>
@@ -91,6 +92,7 @@ export default function ConveyancingPage() {
       </header>
 
       {/* Services bento */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-headline-lg text-headline-lg text-primary">Specialized Property Services</h2>
@@ -148,8 +150,10 @@ export default function ConveyancingPage() {
           ))}
         </div>
       </section>
+      </Reveal>
 
       {/* Process — sticky sidebar + steps */}
+      <Reveal>
       <section className="bg-surface-container py-section-gap py-20 md:py-28">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-3 gap-gutter items-start">
           <div className="lg:col-span-1 lg:sticky lg:top-28 space-y-6">
@@ -178,8 +182,10 @@ export default function ConveyancingPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* FAQ */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 max-w-3xl mx-auto px-margin-mobile">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary">Property Law FAQs</h2>
@@ -187,8 +193,10 @@ export default function ConveyancingPage() {
         </div>
         <FaqAccordion items={data.faqs!} />
       </section>
+      </Reveal>
 
       {/* CTA */}
+      <Reveal direction="scale">
       <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop">
         <div className="max-w-max-width mx-auto bg-primary rounded-xl overflow-hidden relative shadow-2xl">
           <div className="relative z-10 p-12 md:p-20 text-center">
@@ -198,6 +206,7 @@ export default function ConveyancingPage() {
           </div>
         </div>
       </section>
+      </Reveal>
     </>
   )
 }

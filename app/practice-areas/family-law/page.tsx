@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
+import { Reveal } from '@/components/ui/Reveal'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 
 const data = PRACTICE_AREAS['family-law']
@@ -59,7 +60,7 @@ export default function FamilyLawPage() {
           <Image src={PRACTICE_IMAGES.familyHero} alt="" fill priority sizes="100vw" className="object-cover" />
         </div>
         <div className="relative z-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl hero-stagger">
             <span className="inline-block px-3 py-1 bg-brand-gold/20 border border-brand-gold/40 text-brand-gold font-label-sm text-label-sm mb-6 rounded">
               Family Law Excellence
             </span>
@@ -76,6 +77,7 @@ export default function FamilyLawPage() {
       </section>
 
       {/* Bento grid — 6 equal cards */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Our Family Law Expertise</h2>
@@ -96,8 +98,10 @@ export default function FamilyLawPage() {
           ))}
         </div>
       </section>
+      </Reveal>
 
       {/* Process — 4 steps with progress line */}
+      <Reveal>
       <section className="bg-surface-container-low py-section-gap py-20 md:py-28">
         <div className="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
@@ -124,8 +128,10 @@ export default function FamilyLawPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* FAQ */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Frequently Asked Questions</h2>
@@ -133,8 +139,10 @@ export default function FamilyLawPage() {
         </div>
         <FaqAccordion items={data.faqs!} />
       </section>
+      </Reveal>
 
       {/* CTA */}
+      <Reveal direction="scale">
       <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop">
         <div className="max-w-max-width mx-auto bg-primary rounded-xl overflow-hidden relative shadow-2xl">
           <div className="relative z-10 p-12 md:p-20 text-center">
@@ -150,6 +158,7 @@ export default function FamilyLawPage() {
           </div>
         </div>
       </section>
+      </Reveal>
     </>
   )
 }

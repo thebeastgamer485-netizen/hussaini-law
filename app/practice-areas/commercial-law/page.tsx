@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
+import { Reveal } from '@/components/ui/Reveal'
 import { BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 const data = PRACTICE_AREAS['commercial-law']
@@ -39,7 +40,7 @@ export default function CommercialLawPage() {
           <Image src={PRACTICE_IMAGES.commercialHero} alt="" fill priority sizes="100vw" className="object-cover object-center" />
         </div>
         <div className="relative z-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="max-w-2xl text-on-primary">
+          <div className="max-w-2xl text-on-primary hero-stagger">
             <span className="inline-block py-1 px-3 border border-brand-gold text-brand-gold font-label-sm uppercase tracking-widest mb-6">
               Commercial &amp; Corporate Law
             </span>
@@ -59,6 +60,7 @@ export default function CommercialLawPage() {
       </section>
 
       {/* Service cards */}
+      <Reveal>
       <section id="services" className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface">
         <div className="max-w-max-width mx-auto">
           <div className="text-center mb-16">
@@ -85,8 +87,10 @@ export default function CommercialLawPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* The Hussaini Advantage */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 bg-surface-container-low">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 relative">
@@ -113,8 +117,10 @@ export default function CommercialLawPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* CTA — dotted pattern */}
+      <Reveal direction="scale">
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-deep-navy">
           <div
@@ -135,6 +141,7 @@ export default function CommercialLawPage() {
           </div>
         </div>
       </section>
+      </Reveal>
     </>
   )
 }

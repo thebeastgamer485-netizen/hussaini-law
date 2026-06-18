@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
+import { Reveal } from '@/components/ui/Reveal'
 import { FIRM } from '@/lib/navigation'
 
 const data = PRACTICE_AREAS['criminal-law']
@@ -69,7 +70,7 @@ export default function CriminalLawPage() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent" />
         <div className="relative z-10 container-page w-full grid md:grid-cols-2 gap-12 items-center py-16">
-          <div className="space-y-6">
+          <div className="space-y-6 hero-stagger">
             <span className="inline-block px-4 py-1 bg-secondary-fixed/20 text-secondary-fixed border border-secondary-fixed/30 font-label-sm text-label-sm rounded-full">
               Practice Area: Criminal Law
             </span>
@@ -85,7 +86,7 @@ export default function CriminalLawPage() {
               <Button href="/contact" variant="secondary" size="lg">Speak to Our Team</Button>
             </div>
           </div>
-          <div className="hidden md:flex justify-end">
+          <div className="hidden md:flex justify-end hero-image-animate">
             <div className="relative group">
               <div className="absolute -inset-4 bg-brand-gold/20 blur-3xl rounded-full group-hover:bg-brand-gold/30 transition-all" />
               <div className="relative w-80 h-[480px] rounded-2xl overflow-hidden border border-outline-variant/30 shadow-2xl">
@@ -104,6 +105,7 @@ export default function CriminalLawPage() {
       </section>
 
       {/* Trust bar */}
+      <Reveal>
       <section className="bg-surface-container py-12">
         <div className="container-page flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
           {TRUST.map((t) => (
@@ -116,8 +118,10 @@ export default function CriminalLawPage() {
           ))}
         </div>
       </section>
+      </Reveal>
 
       {/* Sub-services bento grid */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 container-page">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-headline-lg text-headline-lg text-primary">Specialized Legal Defense</h2>
@@ -183,8 +187,10 @@ export default function CriminalLawPage() {
           ))}
         </div>
       </section>
+      </Reveal>
 
       {/* Process — navy with big faded numbers */}
+      <Reveal>
       <section className="bg-primary py-section-gap py-20 md:py-28 relative overflow-hidden">
         <div className="container-page relative z-10 grid md:grid-cols-3 gap-12">
           <div className="space-y-4">
@@ -211,8 +217,10 @@ export default function CriminalLawPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* FAQ */}
+      <Reveal>
       <section className="py-section-gap py-20 md:py-28 container-page max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Frequently Asked Questions</h2>
@@ -222,8 +230,10 @@ export default function CriminalLawPage() {
         </div>
         <FaqAccordion items={data.faqs!} />
       </section>
+      </Reveal>
 
       {/* CTA */}
+      <Reveal direction="scale">
       <section className="container-page mb-20 md:mb-28">
         <div className="bg-tertiary rounded-2xl p-12 md:p-20 relative overflow-hidden text-center flex flex-col items-center">
           <div className="relative z-10 max-w-2xl">
@@ -243,6 +253,7 @@ export default function CriminalLawPage() {
           </div>
         </div>
       </section>
+      </Reveal>
     </>
   )
 }
