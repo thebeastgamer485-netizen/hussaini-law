@@ -54,7 +54,7 @@ export default function FamilyLawPage() {
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       {/* Hero */}
-      <section className="relative h-[80vh] min-h-[560px] flex items-center overflow-hidden bg-deep-navy pt-20">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden bg-deep-navy pt-20">
         <div className="absolute inset-0 opacity-40">
           <div className="absolute inset-0 bg-gradient-to-r from-deep-navy via-deep-navy/60 to-transparent z-10" />
           <Image src={PRACTICE_IMAGES.familyHero} alt="" fill priority sizes="100vw" className="object-cover" />
@@ -78,7 +78,7 @@ export default function FamilyLawPage() {
 
       {/* Bento grid — 6 equal cards */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Our Family Law Expertise</h2>
           <div className="w-24 h-1 bg-brand-gold mx-auto" />
@@ -102,7 +102,7 @@ export default function FamilyLawPage() {
 
       {/* Process — 4 steps with progress line */}
       <Reveal>
-      <section className="bg-surface-container-low py-section-gap py-20 md:py-28">
+      <section className="bg-surface-container-low py-16 md:py-28">
         <div className="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
             <div className="max-w-xl">
@@ -132,7 +132,7 @@ export default function FamilyLawPage() {
 
       {/* FAQ */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Frequently Asked Questions</h2>
           <p className="text-on-surface-variant">Clarifying the legal landscape of family law in Australia.</p>
@@ -143,7 +143,7 @@ export default function FamilyLawPage() {
 
       {/* CTA */}
       <Reveal direction="scale">
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop">
         <div className="max-w-max-width mx-auto bg-primary rounded-xl overflow-hidden relative shadow-2xl">
           <div className="relative z-10 p-12 md:p-20 text-center">
             <h2 className="font-headline-xl text-headline-xl text-white mb-6">Begin Your Path to Resolution</h2>

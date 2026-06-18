@@ -65,7 +65,7 @@ export default function ImmigrationLawPage() {
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       {/* Hero */}
-      <section className="relative h-[614px] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <Image src={PRACTICE_IMAGES.immigrationHero} alt="" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-primary/75" />
@@ -74,7 +74,7 @@ export default function ImmigrationLawPage() {
           <span className="font-label-sm text-secondary-fixed tracking-widest uppercase mb-4 block">
             Specialised Legal Services
           </span>
-          <h1 className="font-display-lg text-5xl md:text-display-lg text-on-primary mb-6">Immigration Law</h1>
+          <h1 className="font-display-lg text-3xl sm:text-4xl md:text-display-lg text-on-primary mb-6">Immigration Law</h1>
           <p className="font-body-lg text-on-primary/90 max-w-2xl mx-auto">
             Navigating the complexities of global mobility with precision, heritage, and unwavering advocacy for your
             future in Australia.
@@ -84,7 +84,7 @@ export default function ImmigrationLawPage() {
 
       {/* Service messaging + bento */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface">
         <div className="max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
           <div className="lg:col-span-5 flex flex-col justify-center">
             <h2 className="font-headline-xl text-headline-xl text-primary mb-8">
@@ -123,7 +123,7 @@ export default function ImmigrationLawPage() {
 
       {/* Who We Advocate For + Process — navy */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary">
         <div className="max-w-max-width mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
             <div className="relative">
@@ -173,7 +173,7 @@ export default function ImmigrationLawPage() {
 
       {/* Why Choose */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container">
         <div className="max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div>
             <h2 className="font-headline-xl text-headline-xl text-primary mb-8">Why Global Citizens Choose Hussaini Law</h2>
@@ -189,7 +189,7 @@ export default function ImmigrationLawPage() {
               ))}
             </ul>
           </div>
-          <div className="relative h-[600px] overflow-hidden rounded-xl">
+          <div className="relative h-[350px] md:h-[600px] overflow-hidden rounded-xl">
             <Image src={PRACTICE_IMAGES.immigrationWhy} alt="A luxury law firm lobby with city views" fill sizes="(max-width:1024px) 100vw, 45vw" placeholder="blur" blurDataURL={BLUR_DATA_URL_LIGHT} className="object-cover" />
           </div>
         </div>
@@ -198,7 +198,7 @@ export default function ImmigrationLawPage() {
 
       {/* FAQ */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-headline-xl text-headline-xl text-primary text-center mb-10">Frequently Asked Questions</h2>
           <FaqAccordion items={data.faqs!} />
@@ -208,8 +208,8 @@ export default function ImmigrationLawPage() {
 
       {/* CTA */}
       <Reveal direction="scale">
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop">
-        <div className="max-w-max-width mx-auto bg-primary-container p-12 md:p-16 relative overflow-hidden text-center">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-max-width mx-auto bg-primary-container p-8 md:p-16 relative overflow-hidden text-center">
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="font-headline-xl text-headline-xl text-on-primary mb-6">Begin Your Australian Journey</h2>
             <p className="font-body-lg text-on-primary/80 mb-8">

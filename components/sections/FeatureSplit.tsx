@@ -90,7 +90,7 @@ export function FeatureSplit({ data }: { data: FeatureSplitData }) {
           <div className="absolute inset-0 texture-overlay opacity-30" aria-hidden="true" />
         </>
       )}
-      <div className="container-page py-section-gap py-20 md:py-28 relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="container-page py-16 md:py-28 relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {imageLeft ? (
           <>
             {imageBlock}

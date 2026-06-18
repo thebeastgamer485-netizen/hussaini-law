@@ -28,7 +28,7 @@ export function PracticeAreaTemplate({ data }: { data: PracticeAreaContent }) {
       <TrustBar />
 
       <section id="services" className="bg-surface" aria-labelledby="services-heading">
-        <div className="container-page py-section-gap py-20 md:py-28">
+        <div className="container-page py-16 md:py-28">
           <Reveal>
             <SectionHeading
               eyebrow={data.servicesEyebrow}
@@ -59,7 +59,7 @@ export function PracticeAreaTemplate({ data }: { data: PracticeAreaContent }) {
 
       {data.process && (
         <section className="bg-surface-container-low" aria-labelledby="process-heading">
-          <div className="container-page py-section-gap py-20 md:py-28">
+          <div className="container-page py-16 md:py-28">
             <Reveal>
               <SectionHeading
                 eyebrow={data.process.eyebrow}
@@ -80,7 +80,7 @@ export function PracticeAreaTemplate({ data }: { data: PracticeAreaContent }) {
 
       {data.faqs && data.faqs.length > 0 && (
         <section className="bg-surface" aria-labelledby="faq-heading">
-          <div className="container-page py-section-gap py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="container-page py-16 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <SectionHeading
                 eyebrow="Frequently Asked"

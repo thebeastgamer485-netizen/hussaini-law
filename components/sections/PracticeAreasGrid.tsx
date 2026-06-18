@@ -61,7 +61,7 @@ const GROUPS: Group[] = [
 export function PracticeAreasGrid() {
   return (
     <section id="practice-areas" className="bg-surface-container-low" aria-labelledby="practice-heading">
-      <div className="container-page py-section-gap py-20 md:py-28">
+      <div className="container-page py-16 md:py-28">
         <SectionHeading
           align="center"
           eyebrow="Our Legal Expertise"

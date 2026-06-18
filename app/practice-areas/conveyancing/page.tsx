@@ -51,7 +51,7 @@ export default function ConveyancingPage() {
       <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
-      <header className="relative pt-36 pb-24 md:pt-48 md:pb-40 hero-pattern overflow-hidden">
+      <header className="relative pt-28 pb-16 md:pt-48 md:pb-40 hero-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-primary" />
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
           <div className="space-y-8 hero-stagger">
@@ -93,7 +93,7 @@ export default function ConveyancingPage() {
 
       {/* Services bento */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+      <section className="py-16 md:py-28 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-headline-lg text-headline-lg text-primary">Specialized Property Services</h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto" />
@@ -154,7 +154,7 @@ export default function ConveyancingPage() {
 
       {/* Process — sticky sidebar + steps */}
       <Reveal>
-      <section className="bg-surface-container py-section-gap py-20 md:py-28">
+      <section className="bg-surface-container py-16 md:py-28">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-3 gap-gutter items-start">
           <div className="lg:col-span-1 lg:sticky lg:top-28 space-y-6">
             <h2 className="font-headline-lg text-headline-lg text-primary">Our Process</h2>
@@ -186,7 +186,7 @@ export default function ConveyancingPage() {
 
       {/* FAQ */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 max-w-3xl mx-auto px-margin-mobile">
+      <section className="py-16 md:py-28 max-w-3xl mx-auto px-margin-mobile">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary">Property Law FAQs</h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-4">Essential insights for your property journey.</p>
@@ -197,7 +197,7 @@ export default function ConveyancingPage() {
 
       {/* CTA */}
       <Reveal direction="scale">
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop">
         <div className="max-w-max-width mx-auto bg-primary rounded-xl overflow-hidden relative shadow-2xl">
           <div className="relative z-10 p-12 md:p-20 text-center">
             <h2 className="font-headline-xl text-headline-xl text-white mb-6">{data.cta.title}</h2>

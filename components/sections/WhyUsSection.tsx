@@ -20,7 +20,7 @@ export function WhyUsSection() {
       <div className="orb bg-brand-gold/15 w-[400px] h-[400px] bottom-0 right-0" aria-hidden="true" />
       <div className="absolute inset-0 texture-overlay opacity-40" aria-hidden="true" />
 
-      <div className="container-page py-section-gap py-20 md:py-28 relative grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      <div className="container-page py-16 md:py-28 relative grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-6">
           <SectionHeading
             tone="dark"

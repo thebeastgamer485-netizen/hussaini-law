@@ -34,7 +34,7 @@ export default function CommercialLawPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-20">
+      <section className="relative min-h-[60vh] md:min-h-[85vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-deep-navy/60 z-10" />
           <Image src={PRACTICE_IMAGES.commercialHero} alt="" fill priority sizes="100vw" className="object-cover object-center" />
@@ -61,7 +61,7 @@ export default function CommercialLawPage() {
 
       {/* Service cards */}
       <Reveal>
-      <section id="services" className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface">
+      <section id="services" className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface">
         <div className="max-w-max-width mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Core Corporate Expertise</h2>
@@ -91,11 +91,11 @@ export default function CommercialLawPage() {
 
       {/* The Hussaini Advantage */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 bg-surface-container-low">
+      <section className="py-16 md:py-28 bg-surface-container-low">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-gold z-10" />
-            <div className="relative w-full h-[500px] overflow-hidden shadow-2xl">
+            <div className="relative w-full h-[300px] md:h-[500px] overflow-hidden shadow-2xl">
               <Image src={PRACTICE_IMAGES.commercialWhy} alt="A distinguished senior partner in a mahogany-paneled law library" fill sizes="(max-width:1024px) 100vw, 50vw" placeholder="blur" blurDataURL={BLUR_DATA_URL_LIGHT} className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-brand-gold z-10" />

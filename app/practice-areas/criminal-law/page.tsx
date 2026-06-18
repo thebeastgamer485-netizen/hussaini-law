@@ -64,7 +64,7 @@ export default function CriminalLawPage() {
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center bg-primary overflow-hidden pt-20">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center bg-primary overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-20">
           <Image src={PRACTICE_IMAGES.criminalHero} alt="" fill priority sizes="100vw" className="object-cover" />
         </div>
@@ -122,7 +122,7 @@ export default function CriminalLawPage() {
 
       {/* Sub-services bento grid */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 container-page">
+      <section className="py-16 md:py-28 container-page">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-headline-lg text-headline-lg text-primary">Specialized Legal Defense</h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto" />
@@ -191,7 +191,7 @@ export default function CriminalLawPage() {
 
       {/* Process — navy with big faded numbers */}
       <Reveal>
-      <section className="bg-primary py-section-gap py-20 md:py-28 relative overflow-hidden">
+      <section className="bg-primary py-16 md:py-28 relative overflow-hidden">
         <div className="container-page relative z-10 grid md:grid-cols-3 gap-12">
           <div className="space-y-4">
             <span className="font-label-sm text-label-sm text-brand-gold block mb-2 uppercase tracking-widest">
@@ -221,7 +221,7 @@ export default function CriminalLawPage() {
 
       {/* FAQ */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 container-page max-w-4xl">
+      <section className="py-16 md:py-28 container-page max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Frequently Asked Questions</h2>
           <p className="font-body-md text-on-surface-variant">
@@ -235,7 +235,7 @@ export default function CriminalLawPage() {
       {/* CTA */}
       <Reveal direction="scale">
       <section className="container-page mb-20 md:mb-28">
-        <div className="bg-tertiary rounded-2xl p-12 md:p-20 relative overflow-hidden text-center flex flex-col items-center">
+        <div className="bg-tertiary rounded-2xl p-8 md:p-12 lg:p-20 relative overflow-hidden text-center flex flex-col items-center">
           <div className="relative z-10 max-w-2xl">
             <h2 className="font-headline-xl text-headline-xl text-on-tertiary-container mb-6">
               Secure Your Future with Expert Defense

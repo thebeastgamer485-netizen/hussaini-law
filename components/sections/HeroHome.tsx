@@ -7,8 +7,8 @@ import { HOME_IMAGES } from '@/lib/content'
 export function HeroHome() {
   return (
     <section
-      className="relative bg-brand-navy text-white overflow-hidden pt-32 md:pt-36 pb-20 md:pb-28"
-      style={{ minHeight: '85vh' }}
+      className="relative bg-brand-navy text-white overflow-hidden pt-28 pb-16 md:pt-36 md:pb-28"
+      style={{ minHeight: '70vh' }}
     >
       <div className="orb bg-primary-container w-[520px] h-[520px] -top-32 -left-40" aria-hidden="true" />
       <div className="orb bg-secondary w-[600px] h-[600px] top-1/4 -right-40" aria-hidden="true" />
@@ -74,7 +74,7 @@ export function HeroHome() {
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-transparent to-transparent" />
           </div>
 
-          <div className="hero-badge-animate absolute -left-4 md:-left-6 -bottom-6 bg-white text-on-surface rounded-xl shadow-2xl p-5 max-w-[260px]">
+          <div className="hero-badge-animate absolute left-2 md:-left-6 -bottom-6 bg-white text-on-surface rounded-xl shadow-2xl p-5 max-w-[260px]">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-sm bg-brand-gold/15 flex items-center justify-center">
                 <span className="material-symbols-outlined text-brand-gold text-2xl">verified</span>

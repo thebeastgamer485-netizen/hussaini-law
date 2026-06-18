@@ -25,7 +25,7 @@ export default function CivilLitigationPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center pt-20">
+      <section className="relative min-h-[60vh] md:min-h-[85vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
           <Image src={PRACTICE_IMAGES.civilHero} alt="" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 academic-overlay" />
@@ -53,7 +53,7 @@ export default function CivilLitigationPage() {
 
       {/* Sub-services bento */}
       <Reveal>
-      <section className="py-section-gap py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+      <section className="py-16 md:py-28 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline-lg text-headline-lg text-deep-navy mb-4">Specialised Legal Focus</h2>
           <div className="w-24 h-1 bg-brand-gold mx-auto" />
@@ -97,11 +97,11 @@ export default function CivilLitigationPage() {
 
       {/* Litigation process — image + circle numbers */}
       <Reveal>
-      <section className="bg-surface-container-low py-section-gap py-20 md:py-28">
+      <section className="bg-surface-container-low py-16 md:py-28">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
-              <div className="relative w-full h-[600px] shadow-2xl border-l-8 border-brand-gold overflow-hidden">
+              <div className="relative w-full h-[350px] md:h-[600px] shadow-2xl border-l-8 border-brand-gold overflow-hidden">
                 <Image src={PRACTICE_IMAGES.civilProcess} alt="Fountain pen on a legal document" fill sizes="(max-width:768px) 100vw, 50vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
               </div>
             </div>

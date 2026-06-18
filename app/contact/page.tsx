@@ -52,7 +52,7 @@ export default function ContactPage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-primary text-white pt-32 md:pt-36 pb-16 md:pb-20 overflow-hidden">
+      <section className="relative bg-primary text-white pt-28 pb-12 md:pt-36 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 texture-overlay opacity-40" aria-hidden="true" />
         <div className="orb bg-primary-container w-[420px] h-[420px] -top-20 -left-32" aria-hidden="true" />
         <div className="orb bg-brand-gold/25 w-[360px] h-[360px] bottom-0 right-0" aria-hidden="true" />
@@ -77,7 +77,7 @@ export default function ContactPage() {
 
       {/* Form + contact details */}
       <section className="bg-surface" aria-labelledby="contact-heading">
-        <div className="container-page py-section-gap py-20 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+        <div className="container-page py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           <Reveal className="lg:col-span-7">
             <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-6 md:p-10">
               <SectionHeading
@@ -108,7 +108,7 @@ export default function ContactPage() {
               href="https://www.google.com/maps?q=7%2F37+Spencer+Street+Fairfield+NSW+2165"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative block rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[320px]"
+              className="group relative block rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[240px] md:h-[320px]"
               aria-label={`Open ${FIRM.address} in Google Maps`}
             >
               <Image
@@ -142,7 +142,7 @@ export default function ContactPage() {
       {/* Advocacy Across Borders banner */}
       <Reveal direction="scale">
         <section className="bg-surface-container-lowest border-y border-outline-variant">
-          <div className="container-page py-section-gap py-20 md:py-24 text-center max-w-3xl mx-auto">
+          <div className="container-page py-16 md:py-24 text-center max-w-3xl mx-auto">
             <h2 className="font-heading text-headline-lg md:text-headline-xl text-primary">
               Advocacy Across Borders
             </h2>

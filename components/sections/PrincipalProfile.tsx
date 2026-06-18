@@ -17,7 +17,7 @@ const DEFAULT_PRINCIPAL: Principal = TEAM_PRINCIPAL
 export function PrincipalProfile({ principal = DEFAULT_PRINCIPAL }: { principal?: Principal }) {
   return (
     <section id="principal" className="bg-surface" aria-labelledby="principal-heading">
-      <div className="container-page py-section-gap py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div className="container-page py-16 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <div className="lg:col-span-5 order-2 lg:order-1">
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-outline-variant/40">
             <Image

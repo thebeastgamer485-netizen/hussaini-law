@@ -25,7 +25,7 @@ export function CtaBanner({
       <div className="absolute inset-0 texture-overlay opacity-50" aria-hidden="true" />
       <div className="orb bg-brand-gold/30 w-[500px] h-[500px] -top-40 -right-40" aria-hidden="true" />
       <div className="orb bg-primary-container w-[420px] h-[420px] -bottom-32 -left-32" aria-hidden="true" />
-      <div className="container-page py-section-gap py-20 md:py-24 relative">
+      <div className="container-page py-16 md:py-24 relative">
         <div className="max-w-3xl">
           <div className="text-label-sm uppercase tracking-[0.2em] text-brand-gold mb-4">
             {eyebrow}
