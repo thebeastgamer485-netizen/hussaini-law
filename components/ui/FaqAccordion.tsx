@@ -40,12 +40,19 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
               id={panelId}
               role="region"
               aria-labelledby={buttonId}
-              hidden={!isOpen}
-              className={`overflow-hidden transition-all duration-300 ${
-                isOpen ? 'pb-6 opacity-100' : 'opacity-0'
-              }`}
+              aria-hidden={!isOpen}
+              style={{
+                display: 'grid',
+                gridTemplateRows: isOpen ? '1fr' : '0fr',
+                opacity: isOpen ? 1 : 0,
+                transition: 'grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease',
+              }}
             >
-              <p className="text-body-lg text-on-surface-variant max-w-3xl">{item.answer}</p>
+              <div style={{ overflow: 'hidden' }}>
+                <div className="pb-6">
+                  <p className="text-body-lg text-on-surface-variant max-w-3xl">{item.answer}</p>
+                </div>
+              </div>
             </div>
           </div>
         )

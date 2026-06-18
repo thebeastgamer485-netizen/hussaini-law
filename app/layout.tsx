@@ -4,6 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { PageChrome } from '@/components/ui/PageChrome'
 
 const domine = Domine({
   subsets: ['latin'],
@@ -100,6 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <PageChrome />
         <Navbar />
         <main id="main">{children}</main>
         <Footer />

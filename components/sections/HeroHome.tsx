@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
+import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
 import { FIRM } from '@/lib/navigation'
 import { HOME_IMAGES } from '@/lib/content'
 
@@ -15,7 +16,7 @@ export function HeroHome() {
       <div className="absolute inset-0 texture-overlay opacity-40" aria-hidden="true" />
 
       <div className="container-page relative grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 hero-stagger">
           <div className="text-label-sm uppercase tracking-[0.2em] text-brand-gold mb-4">
             Imperial Juris &amp; Multicultural Excellence
           </div>
@@ -60,7 +61,7 @@ export function HeroHome() {
         </div>
 
         {/* Right column: hero image with floating trust badge */}
-        <div className="lg:col-span-5 relative">
+        <div className="lg:col-span-5 relative hero-image-animate">
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
             <Image
               src={HOME_IMAGES.hero}
@@ -73,13 +74,15 @@ export function HeroHome() {
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-transparent to-transparent" />
           </div>
 
-          <div className="absolute -left-4 md:-left-6 -bottom-6 bg-white text-on-surface rounded-xl shadow-2xl p-5 max-w-[260px]">
+          <div className="hero-badge-animate absolute -left-4 md:-left-6 -bottom-6 bg-white text-on-surface rounded-xl shadow-2xl p-5 max-w-[260px]">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-sm bg-brand-gold/15 flex items-center justify-center">
                 <span className="material-symbols-outlined text-brand-gold text-2xl">verified</span>
               </div>
               <div>
-                <div className="font-heading font-semibold leading-tight text-2xl text-primary">15+</div>
+                <div className="font-heading font-semibold leading-tight text-2xl text-primary">
+                  <AnimatedCounter target={15} suffix="+" />
+                </div>
                 <div className="text-xs text-on-surface-variant uppercase tracking-wider">Years</div>
               </div>
             </div>
