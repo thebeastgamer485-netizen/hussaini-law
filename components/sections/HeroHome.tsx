@@ -22,8 +22,8 @@ export function HeroHome() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-brand-navy/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-brand-navy/70" />
+        <div className="absolute inset-0 bg-brand-navy/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-brand-navy/50" />
       </div>
       <div className="absolute inset-0 texture-overlay opacity-20 z-0" aria-hidden="true" />
 
