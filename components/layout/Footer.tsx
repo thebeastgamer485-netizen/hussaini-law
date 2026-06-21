@@ -72,9 +72,9 @@ export function Footer() {
         <div>
           <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-brand-gold mb-6">Legal</h4>
           <ul className="space-y-4 mb-8">
-            <li><Link href="/contact" className="text-on-primary/60 hover:text-on-primary transition-colors font-body-md">Privacy Policy</Link></li>
-            <li><Link href="/contact" className="text-on-primary/60 hover:text-on-primary transition-colors font-body-md">Terms of Service</Link></li>
-            <li><Link href="/contact" className="text-on-primary/60 hover:text-on-primary transition-colors font-body-md">Disclaimer</Link></li>
+            <li><Link href="/privacy-policy" className="text-on-primary/60 hover:text-on-primary transition-colors font-body-md">Privacy Policy</Link></li>
+            <li><Link href="/terms-of-service" className="text-on-primary/60 hover:text-on-primary transition-colors font-body-md">Terms of Service</Link></li>
+            <li><Link href="/disclaimer" className="text-on-primary/60 hover:text-on-primary transition-colors font-body-md">Disclaimer</Link></li>
           </ul>
           <Link
             href="/contact"
@@ -88,7 +88,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-page py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-on-primary/40">
-          <p>© 2025 Hussaini Law Group. Liability limited by a scheme approved under Professional Standards Legislation.</p>
+          <p>© 2026 Hussaini Law Group. Liability limited by a scheme approved under Professional Standards Legislation.</p>
           <p>Languages spoken: English · Dari · Pashto · Arabic</p>
         </div>
       </div>
