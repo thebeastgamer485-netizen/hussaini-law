@@ -83,16 +83,55 @@ const legalServiceJsonLd = {
   ],
   areaServed: [
     { '@type': 'City', name: 'Sydney' },
-    { '@type': 'City', name: 'Fairfield' },
     { '@type': 'AdministrativeArea', name: 'New South Wales' },
+    { '@type': 'AdministrativeArea', name: 'Greater Western Sydney' },
+    ...[
+      'Fairfield',
+      'Cabramatta',
+      'Canley Vale',
+      'Smithfield',
+      'Wetherill Park',
+      'Bossley Park',
+      'Bonnyrigg',
+      'Villawood',
+      'Liverpool',
+      'Bankstown',
+      'Parramatta',
+      'Auburn',
+      'Merrylands',
+    ].map((name) => ({ '@type': 'Place', name })),
+  ],
+  knowsAbout: [
+    'Criminal Law',
+    'Immigration Law',
+    'Family Law',
+    'Conveyancing',
+    'Commercial Law',
+    'Civil Litigation',
+    'Bilingual legal representation in Dari, Pashto and Arabic',
   ],
   knowsLanguage: ['en', 'fa', 'ps', 'ar'],
   employee: {
     '@type': 'Attorney',
+    '@id': `${SITE_URL}/#principal`,
     name: 'Sayed Rahmatullah Hussainizada',
     jobTitle: 'Principal Solicitor',
+    url: SITE_URL,
     knowsLanguage: ['en', 'fa', 'ps', 'ar'],
+    worksFor: { '@id': `${SITE_URL}/#legalservice` },
     memberOf: { '@type': 'Organization', name: 'Law Society of New South Wales' },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'license',
+        recognizedBy: { '@type': 'Organization', name: 'Law Society of New South Wales' },
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Registered Migration Agent (MARA)',
+        recognizedBy: { '@type': 'Organization', name: 'Office of the Migration Agents Registration Authority' },
+      },
+    ],
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -108,6 +147,16 @@ const legalServiceJsonLd = {
   },
 }
 
+const webSiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: 'Hussaini Law Group',
+  url: SITE_URL,
+  inLanguage: 'en-AU',
+  publisher: { '@id': `${SITE_URL}/#legalservice` },
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${domine.variable} ${manrope.variable}`}>
@@ -120,6 +169,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           id="ld-legal-service"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceJsonLd) }}
+        />
+        <Script
+          id="ld-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
       </head>
       <body className="font-body bg-surface text-on-surface antialiased">

@@ -175,17 +175,17 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       {
         question: 'What should I do if the police want to interview me?',
         answer:
-          'You have the right to silence. We strongly advise contacting a lawyer before providing any formal statements. Anything you say can and will be used against you in court. Our advocates can be present during interviews to ensure your rights are protected.',
+          'You have the right to silence under NSW law, and in almost all cases you should exercise it until you have spoken to a lawyer. Apart from giving your name and address, you are not obliged to answer police questions, and anything you say can be used as evidence against you. A poorly handled police interview is one of the most common ways people damage an otherwise defensible case. If police ask you to attend a station or take part in a recorded ERISP interview, contact us first — we will advise you on what to say, whether to participate at all, and can attend with you to protect your rights. We appear in matters at Fairfield Local Court, Parramatta District Court and the Downing Centre, and give this advice in English, Dari, Pashto and Arabic.',
       },
       {
         question: "Can I get bail if I've been charged with a serious offence?",
         answer:
-          "Bail eligibility depends on several factors including the nature of the offence, your criminal history, and the likelihood of appearing in court. In NSW, some offences have a 'show cause' requirement. We specialize in complex bail applications to secure your release while awaiting trial.",
+          "Yes, bail is often achievable even for serious charges, but eligibility depends on the offence, your background, and the risks the court must weigh. Under the Bail Act 2013 (NSW) the court considers whether you are an 'unacceptable risk' of failing to appear, committing further offences, interfering with witnesses or endangering the community, and certain serious offences carry a 'show cause' requirement you must overcome first. A well-prepared application — addressing stable accommodation, employment, sureties and proposed conditions such as reporting or curfews — dramatically improves your prospects. We prepare detailed bail applications for the Local, District and Supreme Courts, and can act urgently when police bail has been refused and you are due in court the next morning. Advice is available in English, Dari, Pashto and Arabic.",
       },
       {
         question: 'How long does a criminal case usually take to resolve?',
         answer:
-          'Timelines vary significantly. A simple traffic matter might be resolved in a few months, whereas a complex Supreme Court jury trial can take over a year. We provide realistic timelines during your initial consultation based on the specifics of your case.',
+          'Timelines vary widely depending on the court and the complexity of the matter. A guilty plea to a minor traffic or summary offence in the Local Court may be finalised within one to three months, while a defended hearing takes longer, and an indictable matter committed to the District or Supreme Court can run for twelve months or more through committal, arraignment and trial. Adjournments, the service of the brief of evidence, expert reports and negotiations with the prosecution all affect the schedule. At your first consultation we map out the likely stages and a realistic timeframe for your specific charges, so you can plan around court dates and any bail conditions. We keep you informed at every step and explain each stage in English, Dari, Pashto or Arabic.',
       },
     ],
     cta: {
@@ -199,7 +199,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     slug: 'immigration-law',
     metaTitle: 'Immigration Lawyers Fairfield & Sydney',
     metaDescription:
-      'Sydney migration lawyers for partner, family, skilled, business and AAT-review visa matters. Bilingual service in English, Dari, Pashto and Arabic.',
+      'Fairfield & Sydney migration lawyers for partner, family, skilled & business visas and refusal reviews. Bilingual in English, Dari, Pashto & Arabic.',
     eyebrow: 'Specialised Legal Services',
     title: 'Immigration Law',
     description:
@@ -326,17 +326,17 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       {
         question: 'What is the processing time for a Partner Visa?',
         answer:
-          'Processing times vary depending on whether the application is made onshore or offshore. Currently, most Partner Visas are processed within 12 to 24 months.',
+          'Partner visa processing times depend on whether you apply onshore (subclasses 820/801) or offshore (subclasses 309/100), your country of origin, and how complete your application is when lodged. As a guide, the Department of Home Affairs currently finalises most partner visas within roughly 12 to 24 months, though strong, well-evidenced applications are often decided faster. The key is proving a genuine and continuing relationship through financial, social, household and commitment evidence that meets the legal criteria. We prepare partner visa applications end to end — assembling evidence, drafting statements, and responding to requests for further information — and we do this in English, Dari, Pashto and Arabic so nothing is lost in translation. If you hold a bridging visa during processing, we also advise on your work and travel rights.',
       },
       {
         question: 'Can I apply for a visa while my current one is expiring?',
         answer:
-          'Yes, if you apply for a substantive visa while in Australia, you may be eligible for a Bridging Visa (BVA) to remain lawfully during processing.',
+          'Yes. If you lodge a valid application for a substantive visa while you are lawfully in Australia, you will generally be granted a Bridging Visa A (BVA), which lets you remain in the country lawfully while your application is decided. The BVA usually comes into effect when your current visa expires, and its conditions — such as work or study rights — depend on the visa you applied for. If you need to travel overseas during processing you may need a Bridging Visa B before you leave. Timing is critical: applying before your current visa expires protects your status, while letting it lapse can leave you unlawful and limit your options. We track these deadlines for our clients and advise on bridging arrangements in English, Dari, Pashto and Arabic.',
       },
       {
         question: 'What happens if my visa is refused?',
         answer:
-          'If your visa is refused, you may have the right to apply for a merits review at the Administrative Appeals Tribunal (AAT). Strict time limits apply — contact us immediately to preserve your review rights.',
+          'If your visa is refused you often have a right to seek a merits review — most commonly at the Administrative Review Tribunal (ART), which replaced the Administrative Appeals Tribunal in October 2024 — and strict deadlines apply, sometimes as little as 21 days from notification. The tribunal looks at your case afresh and can overturn the original decision, but missing the deadline usually ends your review rights permanently. Depending on the refusal, options may include tribunal review, addressing the specific grounds in a fresh application, or in limited cases judicial review in the Federal Circuit and Family Court. Acting quickly is essential. Contact us the moment you receive a refusal so we can confirm your deadline, obtain the decision record, and advise the strongest path forward — in English, Dari, Pashto or Arabic.',
       },
     ],
     cta: {
@@ -350,7 +350,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     slug: 'family-law',
     metaTitle: 'Family Lawyers Fairfield & Western Sydney',
     metaDescription:
-      'Sensitive family law representation for divorce, property settlement, parenting orders, child support, AVOs and de facto matters across NSW.',
+      'Fairfield & Sydney family lawyers for divorce, property settlement, parenting orders & child support. Bilingual in English, Dari, Pashto & Arabic.',
     eyebrow: 'Family Law Excellence',
     title: 'Compassionate Advocacy for Family Matters.',
     description:
@@ -430,17 +430,17 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       {
         question: 'How long does a typical divorce process take?',
         answer:
-          'In Australia, you must be separated for 12 months before applying for divorce. Once applied, the hearing is typically set 2–3 months later. However, property settlement and parenting matters can be handled concurrently with the separation period.',
+          'In Australia you must be separated for at least 12 months and one day before you can apply for a divorce, which is a no-fault process dealing only with the legal end of the marriage. Once you file the application with the Federal Circuit and Family Court of Australia, a hearing date is typically set around two to four months later, and the divorce becomes final one month and one day after the order is made. Importantly, divorce is separate from property settlement and parenting arrangements, which can — and usually should — be negotiated during the 12-month separation period rather than left until afterwards. We guide you through each step, prepare your application correctly to avoid delays, and assist with service requirements, offering support in English, Dari, Pashto and Arabic.',
       },
       {
         question: 'Do we have to go to court for property settlement?',
         answer:
-          'Not necessarily. Most property settlements are resolved through mediation and formalised via Consent Orders. Court is a last resort if parties cannot reach a mutual agreement through our guided negotiation process.',
+          "No — most property settlements are resolved without a final court hearing. Separating couples are encouraged to reach agreement through negotiation or mediation, and that agreement can then be made legally binding either through Consent Orders filed with the Federal Circuit and Family Court or through a Binding Financial Agreement. Formalising your settlement matters because an informal 'handshake' deal is not enforceable and leaves both parties exposed to future claims. Court becomes necessary only when parties cannot agree, or where there are urgent issues such as protecting assets or family violence. We aim to settle matters efficiently and fairly through guided negotiation, and prepare the documents that give your agreement legal effect — with advice available in English, Dari, Pashto and Arabic.",
       },
       {
         question: 'How are child support payments calculated?',
         answer:
-          "Child support is primarily calculated by Services Australia (Child Support) based on both parents' incomes, the number of children, and the percentage of care each parent provides. We can assist in drafting Private Child Support Agreements.",
+          "Child support in Australia is primarily assessed by Services Australia using a legislated formula based on both parents' taxable incomes, the number and ages of the children, and the percentage of care each parent provides. You can apply for an administrative assessment, and the figure is reviewed as incomes and care arrangements change. Parents who prefer more flexibility can instead enter a Limited or Binding Child Support Agreement, which can set amounts or arrangements different from the formula — a Binding agreement requires each parent to obtain independent legal advice first. We help parents understand their likely assessment, draft and review child support agreements, and resolve disputes about care percentages or change-of-assessment applications. Guidance is offered in English, Dari, Pashto and Arabic.",
       },
     ],
     cta: {
@@ -454,7 +454,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     slug: 'conveyancing',
     metaTitle: 'Conveyancing Solicitors Fairfield & Sydney',
     metaDescription:
-      'Sydney property solicitors handling residential purchase and sale, off-the-plan, title transfers, refinancing and strata-title matters end-to-end through PEXA settlement.',
+      'Fairfield & Sydney property solicitors for purchase, sale, off-the-plan, title transfers & strata title. Bilingual in English, Dari, Pashto & Arabic.',
     eyebrow: 'Property Law Specialists',
     title: 'Seamless Property Transactions & Expert Advice.',
     description:
@@ -536,17 +536,17 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       {
         question: 'What is the difference between a conveyancer and a property solicitor?',
         answer:
-          'While both can handle the transfer of title, property solicitors are qualified lawyers who can provide broader legal advice on complex issues like tax implications, property disputes, and estate planning related to your purchase. Hussaini Law Group provides this comprehensive legal oversight for every transaction.',
+          'Both a licensed conveyancer and a property solicitor can handle the transfer of title, but a solicitor is a qualified lawyer who can also advise on the broader legal issues a transaction can raise — tax and stamp duty implications, contract disputes, trusts and company purchases, estate planning, and problems with easements, covenants or title defects. If something goes wrong or a dispute arises, a solicitor can act for you without referring the matter on. For most buyers and sellers in NSW the cost difference is modest, while the protection is significant. Hussaini Law Group provides full legal oversight on every conveyancing matter — residential, off-the-plan, strata and commercial — so you receive complete advice from contract to settlement, available in English, Dari, Pashto and Arabic.',
       },
       {
         question: 'When should I involve a lawyer in my property purchase?',
         answer:
-          'Ideally, before you sign anything. A pre-signing contract review is the most critical step in protecting yourself from unfavorable conditions, undisclosed easements, or restrictive covenants that could affect your future enjoyment or resale value.',
+          'Ideally before you sign anything. In NSW the contract for sale is prepared by the vendor, and once you sign and exchange you are legally bound, often with only a short cooling-off period (and none at auction). A pre-signing contract review is the single most valuable step you can take: we check the title, zoning, easements and covenants, special conditions, disclosure documents, and the deposit and settlement terms, and we negotiate changes before you commit. This is where undisclosed problems and unfavourable clauses are caught — afterwards your options are far more limited. Send us the contract as soon as you are seriously interested in a property and we will review it promptly, explaining anything unclear in English, Dari, Pashto or Arabic.',
       },
       {
         question: 'How long does a standard settlement take?',
         answer:
-          'Most standard residential settlements in Australia occur 30, 60, or 90 days after the exchange of contracts. However, these timeframes can be negotiated to suit the needs of both the vendor and the purchaser. We help manage these negotiations to align with your moving or financing schedule.',
+          'Most standard residential settlements in NSW occur 42 days (six weeks) after exchange of contracts, though 30, 60 or 90-day periods are also common and the timeframe is negotiable between buyer and seller. The settlement period gives you time to arrange finance, complete inspections and searches, pay stamp duty, and have your lender ready to disburse funds. Off-the-plan purchases settle when the development is registered, which can be months or years away. Delays usually stem from finance approval or unresolved contract conditions, so we coordinate closely with your lender, the other side and the PEXA platform to keep settlement on track and avoid penalty interest. We manage the entire timeline for you and keep you updated in English, Dari, Pashto or Arabic.',
       },
     ],
     cta: {
@@ -560,7 +560,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     slug: 'commercial-law',
     metaTitle: 'Commercial Lawyers Fairfield & Sydney',
     metaDescription:
-      'Sydney commercial lawyers for business structuring, complex contracts, shareholder agreements, sale of business, dispute resolution and debt recovery.',
+      'Fairfield & Sydney commercial lawyers for structuring, contracts, sale of business, disputes & debt recovery. Bilingual in English, Dari, Pashto & Arabic.',
     eyebrow: 'Commercial & Corporate Law',
     title: 'Strategic Legal Solutions for Your Business.',
     description:
@@ -633,6 +633,28 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         },
       ],
     },
+    faqs: [
+      {
+        question: 'Do I need a lawyer to start a business in NSW?',
+        answer:
+          'You are not legally required to use a lawyer to start a business, but getting your structure and contracts right at the outset prevents far costlier problems later. Early legal advice helps you choose the right structure (sole trader, partnership, company or trust), register correctly, protect your business name and intellectual property, and put enforceable agreements in place with co-founders, suppliers and customers. Decisions you make now affect your tax position, your personal liability, and your ability to raise capital or sell the business later. We advise founders and established enterprises across Fairfield and Greater Sydney on structuring, shareholder and partnership agreements, leases and contracts, and we explain the commercial and legal trade-offs in plain language — available in English, Dari, Pashto and Arabic.',
+      },
+      {
+        question: 'What should a commercial contract include to protect my business?',
+        answer:
+          'A well-drafted commercial contract clearly defines the parties, the scope of the goods or services, the price and payment terms, and the timeframe for performance. Beyond the basics, the clauses that protect you most are the ones dealing with what happens when things go wrong: termination rights, dispute resolution, limitation of liability, warranties and indemnities, confidentiality, and ownership of intellectual property. Vague or generic "template" contracts are a leading cause of business disputes because they leave key risks unaddressed. We draft and review commercial agreements — supply, services, shareholder, partnership and sale-of-business contracts — to make sure your interests are protected and the document is enforceable under Australian law. We can prepare and explain your contracts in English, Dari, Pashto and Arabic.',
+      },
+      {
+        question: 'How can I recover money a customer or client owes my business?',
+        answer:
+          'Recovering money owed to your business usually starts with a formal letter of demand setting out the debt and a deadline to pay, which often resolves the matter without court. If the debtor still does not pay, the next steps depend on the amount: smaller claims proceed through the NSW Local Court, larger debts go to the District or Supreme Court, and for company debtors a statutory demand under the Corporations Act can be a powerful tool. Acting promptly matters, because debts become harder to recover over time and limitation periods apply. We manage the whole process — demands, proceedings and enforcement of judgments — in a commercial, cost-effective way, and keep you informed in English, Dari, Pashto and Arabic.',
+      },
+      {
+        question: 'Which business structure is right for me — sole trader, company or trust?',
+        answer:
+          'The right structure depends on your goals, your risk profile and your tax position. Operating as a sole trader is simple and inexpensive but exposes your personal assets to business liabilities. A company provides limited liability and credibility but carries reporting obligations and running costs. A trust can offer asset protection and tax flexibility, and many businesses use a combination — for example, a company acting as trustee of a trading trust. The structure you choose affects your liability, tax, ability to bring in investors, and how easily you can sell or restructure later. We assess your circumstances, recommend a structure that fits, and set it up correctly with the right agreements — with advice available in English, Dari, Pashto and Arabic.',
+      },
+    ],
     cta: {
       title: 'Ready to Secure Your Business Future?',
       description:
@@ -644,7 +666,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     slug: 'civil-litigation',
     metaTitle: 'Civil Litigation Lawyers Fairfield & Sydney',
     metaDescription:
-      'Sydney civil litigation solicitors for debt recovery, contract disputes, consumer claims, NCAT applications and mediation across NSW.',
+      'Fairfield & Sydney civil litigation lawyers for debt recovery, contract disputes, NCAT applications & mediation. Bilingual in English, Dari, Pashto & Arabic.',
     eyebrow: 'Civil Litigation Experts',
     title: 'Rigorous Advocacy in Civil Disputes',
     description:
@@ -709,6 +731,28 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         },
       ],
     },
+    faqs: [
+      {
+        question: 'What is NCAT and what kinds of disputes does it handle?',
+        answer:
+          'NCAT — the NSW Civil and Administrative Tribunal — resolves a wide range of everyday disputes more quickly and informally than the courts. Its jurisdiction includes residential and retail tenancy disputes, consumer and trader claims, building and home-renovation disputes, strata and community-scheme matters, guardianship, and the review of certain government decisions. Proceedings are designed to be accessible, and in many matters parties represent themselves, though complex or high-value cases benefit from legal representation (which sometimes requires the tribunal’s leave). Strict time limits and procedural rules still apply. We advise clients on whether NCAT or a court is the right forum, prepare the evidence and submissions that win cases, and appear on your behalf — with support in English, Dari, Pashto and Arabic.',
+      },
+      {
+        question: 'How long do I have to start a civil claim in NSW?',
+        answer:
+          'In NSW most civil claims are governed by the Limitation Act 1969, and the deadline to start proceedings depends on the type of claim. As a general guide, claims for breach of contract and many debt and negligence claims must be commenced within six years of the cause of action arising, while personal injury and certain other claims have shorter or different periods. Once the limitation period expires you usually lose the right to sue altogether, regardless of the merits, so identifying the correct deadline early is critical. Some periods can be paused or extended in limited circumstances. We assess your claim, confirm the applicable limitation period, and act promptly to protect your rights — explaining your options in English, Dari, Pashto and Arabic.',
+      },
+      {
+        question: 'Do I have to go to court to recover a debt?',
+        answer:
+          'No — most debts are recovered without a contested court hearing. The process typically begins with a letter of demand, and many debtors pay or negotiate once they receive formal notice that proceedings will follow. If payment is not made, you can file a claim in the appropriate NSW court, and if the debtor does not respond you may obtain default judgment without a hearing. Even after judgment, enforcement options such as garnishee orders, writs and examination notices help you actually collect the money. Court is the backstop, not the starting point. We pursue debt recovery commercially — pressing for payment quickly while keeping costs proportionate to the debt — and we keep you informed in English, Dari, Pashto and Arabic.',
+      },
+      {
+        question: 'What can I do if someone breaches a contract with me?',
+        answer:
+          'If someone breaches a contract with you, your first step is to confirm the agreement’s terms and document the breach and any loss it caused. Common remedies include damages to compensate your loss, specific performance compelling the other party to do what they promised, or termination of the contract where the breach is serious enough. The strength of your position depends on the wording of the contract, the available evidence, and whether you have taken reasonable steps to limit your loss. Strict limitation periods also apply. We assess your contract and prospects, pursue a commercial resolution through negotiation where possible, and litigate firmly when necessary — across the NSW courts and NCAT, with advice available in English, Dari, Pashto and Arabic.',
+      },
+    ],
     cta: {
       title: 'Resolve Your Dispute Today',
       description:

@@ -27,6 +27,20 @@ const breadcrumbLd = {
   ],
 }
 
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'Criminal Law',
+  serviceType: 'Criminal defence law',
+  url: PAGE_URL,
+  description:
+    'Criminal defence and court representation across NSW — bail, traffic, assault, drug, fraud, AVO and appeal matters — in English, Dari, Pashto and Arabic.',
+  provider: { '@id': `${SITE}/#legalservice` },
+  areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+}
+
 const faqLd = data.faqs?.length
   ? {
       '@context': 'https://schema.org',
@@ -61,6 +75,7 @@ export default function CriminalLawPage() {
   return (
     <>
       <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Script id="ld-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       {/* Hero */}
@@ -77,6 +92,9 @@ export default function CriminalLawPage() {
             <h1 className="font-headline-xl text-4xl md:text-headline-xl text-on-primary leading-tight">
               Criminal Defence Lawyers in Fairfield &amp; Sydney
             </h1>
+            <p className="mt-5 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
+              Bilingual service — English · Dari · Pashto · Arabic
+            </p>
             <p className="font-body-lg text-body-lg text-on-primary/80 max-w-lg">
               Protecting your rights and delivering expert legal advocacy when it matters most. We stand by you through
               every stage of the legal process.

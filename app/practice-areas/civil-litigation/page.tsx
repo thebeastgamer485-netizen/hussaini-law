@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
+import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
 import { Reveal } from '@/components/ui/Reveal'
@@ -27,6 +28,32 @@ const breadcrumbLd = {
   ],
 }
 
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'Civil Litigation',
+  serviceType: 'Civil litigation',
+  url: PAGE_URL,
+  description:
+    'Civil litigation — debt recovery, contract and consumer disputes, NCAT applications and mediation across NSW — in English, Dari, Pashto and Arabic.',
+  provider: { '@id': `${SITE}/#legalservice` },
+  areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+}
+
+const faqLd = data.faqs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: data.faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    }
+  : null
+
 const TOP = [
   { icon: 'account_balance_wallet', title: 'Debt Recovery', body: 'Persistent and strategic recovery of outstanding debts for corporations and individuals, leveraging statutory demands and court actions.' },
   { icon: 'gavel', title: 'Contract Disputes', body: 'Expert interpretation and enforcement of contractual obligations, resolving breaches with clinical precision and commercial foresight.' },
@@ -37,6 +64,8 @@ export default function CivilLitigationPage() {
   return (
     <>
       <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Script id="ld-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
+      {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
       <section className="relative min-h-[60vh] md:min-h-[85vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
@@ -52,6 +81,9 @@ export default function CivilLitigationPage() {
               Civil Litigation Lawyers in <br />
               <span className="text-brand-gold">Fairfield &amp; Sydney</span>
             </h1>
+            <p className="mb-6 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
+              Bilingual service — English · Dari · Pashto · Arabic
+            </p>
             <p className="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">
               Navigating the complexities of the Australian legal system with unwavering precision. From high-stakes debt
               recovery to complex contract litigation, we protect your interests with scholarly authority.
@@ -136,6 +168,19 @@ export default function CivilLitigationPage() {
             </div>
           </div>
         </div>
+      </section>
+      </Reveal>
+
+      {/* FAQ */}
+      <Reveal>
+      <section className="py-16 md:py-28 max-w-3xl mx-auto px-margin-mobile">
+        <div className="text-center mb-16">
+          <h2 className="font-headline-lg text-headline-lg text-deep-navy">Civil Litigation FAQs</h2>
+          <p className="font-body-md text-body-md text-on-surface-variant mt-4">
+            Clear answers on NCAT, debt recovery, limitation periods and contract disputes in NSW.
+          </p>
+        </div>
+        <FaqAccordion items={data.faqs!} />
       </section>
       </Reveal>
 

@@ -27,6 +27,20 @@ const breadcrumbLd = {
   ],
 }
 
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'Conveyancing',
+  serviceType: 'Property conveyancing',
+  url: PAGE_URL,
+  description:
+    'Residential, off-the-plan and strata conveyancing and pre-signing contract review across NSW — in English, Dari, Pashto and Arabic.',
+  provider: { '@id': `${SITE}/#legalservice` },
+  areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+}
+
 const faqLd = data.faqs?.length
   ? {
       '@context': 'https://schema.org',
@@ -49,6 +63,7 @@ export default function ConveyancingPage() {
   return (
     <>
       <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Script id="ld-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
       <header className="relative pt-28 pb-16 md:pt-48 md:pb-40 hero-pattern overflow-hidden">
@@ -62,6 +77,9 @@ export default function ConveyancingPage() {
             <h1 className="font-headline-xl text-4xl md:text-headline-xl text-on-primary leading-tight">
               Conveyancing Solicitors in <span className="text-gradient-cta">Fairfield &amp; Sydney</span>
             </h1>
+            <p className="text-label-sm uppercase tracking-widest text-secondary-fixed font-semibold">
+              Bilingual service — English · Dari · Pashto · Arabic
+            </p>
             <p className="font-body-lg text-body-lg text-on-primary/80 max-w-xl">
               Hussaini Law Group provides distinguished legal counsel for your most significant assets. From first-time
               buyers to portfolio investors, we ensure your property transition is handled with meticulous precision.

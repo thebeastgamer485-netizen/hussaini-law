@@ -26,6 +26,20 @@ const breadcrumbLd = {
   ],
 }
 
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'Family Law',
+  serviceType: 'Family law',
+  url: PAGE_URL,
+  description:
+    'Family law representation — divorce, property settlement, parenting orders and child support through the Federal Circuit and Family Court — in English, Dari, Pashto and Arabic.',
+  provider: { '@id': `${SITE}/#legalservice` },
+  areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+}
+
 const faqLd = data.faqs?.length
   ? {
       '@context': 'https://schema.org',
@@ -51,6 +65,7 @@ export default function FamilyLawPage() {
   return (
     <>
       <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Script id="ld-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       {/* Hero */}
@@ -67,6 +82,9 @@ export default function FamilyLawPage() {
             <h1 className="font-headline-xl text-4xl md:text-headline-xl text-white mb-6 leading-tight">
               Family Lawyers in Fairfield &amp; Western Sydney
             </h1>
+            <p className="mb-6 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
+              Bilingual service — English · Dari · Pashto · Arabic
+            </p>
             <p className="font-body-lg text-body-lg text-white/80 mb-10 max-w-lg">
               Navigating the complexities of domestic relationships with the sensitivity and expertise your family
               deserves. We protect your future through unwavering dedication.

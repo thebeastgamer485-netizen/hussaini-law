@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
+import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { FIRM } from '@/lib/navigation'
 import { Reveal } from '@/components/ui/Reveal'
@@ -27,6 +28,32 @@ const breadcrumbLd = {
   ],
 }
 
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'Commercial Law',
+  serviceType: 'Commercial and business law',
+  url: PAGE_URL,
+  description:
+    'Commercial law — business structuring, contracts, shareholder agreements, sale of business, debt recovery and disputes — in English, Dari, Pashto and Arabic.',
+  provider: { '@id': `${SITE}/#legalservice` },
+  areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+}
+
+const faqLd = data.faqs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: data.faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    }
+  : null
+
 const SERVICES = [
   { icon: 'business_center', title: 'Business Structuring', body: 'Strategic optimization of entity frameworks to ensure tax efficiency, operational fluidity, and robust liability protection for emerging and established enterprises.', dark: false },
   { icon: 'contract_edit', title: 'Complex Contracts', body: 'Drafting and negotiating bulletproof commercial agreements that safeguard your interests while facilitating seamless cross-border and domestic transactions.', dark: true },
@@ -46,6 +73,8 @@ export default function CommercialLawPage() {
   return (
     <>
       <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Script id="ld-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
+      {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
       <section className="relative min-h-[60vh] md:min-h-[85vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
@@ -60,6 +89,9 @@ export default function CommercialLawPage() {
             <h1 className="font-headline-xl text-4xl md:text-headline-xl mb-6 leading-tight">
               Commercial Lawyers in Fairfield &amp; Sydney
             </h1>
+            <p className="mb-6 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
+              Bilingual service — English · Dari · Pashto · Arabic
+            </p>
             <p className="font-body-lg text-body-lg text-on-primary/90 mb-10 border-l-4 border-brand-gold pl-6">
               Navigating the complexities of the corporate landscape requires more than just legal advice — it requires a
               strategic partnership built on precision and institutional excellence.
@@ -129,6 +161,19 @@ export default function CommercialLawPage() {
             </ul>
           </div>
         </div>
+      </section>
+      </Reveal>
+
+      {/* FAQ */}
+      <Reveal>
+      <section className="py-16 md:py-28 max-w-3xl mx-auto px-margin-mobile">
+        <div className="text-center mb-16">
+          <h2 className="font-headline-lg text-headline-lg text-primary">Commercial Law FAQs</h2>
+          <p className="font-body-md text-body-md text-on-surface-variant mt-4">
+            Practical answers for founders and business owners in Fairfield and Greater Sydney.
+          </p>
+        </div>
+        <FaqAccordion items={data.faqs!} />
       </section>
       </Reveal>
 

@@ -27,6 +27,20 @@ const breadcrumbLd = {
   ],
 }
 
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'Immigration Law',
+  serviceType: 'Immigration and visa law',
+  url: PAGE_URL,
+  description:
+    'Immigration and visa representation — partner, skilled, family, refugee and protection visas, refusals and ART appeals — in English, Dari, Pashto and Arabic.',
+  provider: { '@id': `${SITE}/#legalservice` },
+  areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
+  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+}
+
 const faqLd = data.faqs?.length
   ? {
       '@context': 'https://schema.org',
@@ -62,6 +76,7 @@ export default function ImmigrationLawPage() {
   return (
     <>
       <Script id="ld-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Script id="ld-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       {faqLd && <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       {/* Hero */}
@@ -75,6 +90,9 @@ export default function ImmigrationLawPage() {
             Specialised Legal Services
           </span>
           <h1 className="font-display-lg text-3xl sm:text-4xl md:text-display-lg text-on-primary mb-6">Immigration Lawyers in Fairfield, Sydney</h1>
+          <p className="mb-6 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
+            Bilingual service — English · Dari · Pashto · Arabic
+          </p>
           <p className="font-body-lg text-on-primary/90 max-w-2xl mx-auto">
             Navigating the complexities of global mobility with precision, heritage, and unwavering advocacy for your
             future in Australia.

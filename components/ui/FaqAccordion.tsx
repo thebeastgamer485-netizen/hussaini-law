@@ -36,11 +36,13 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                 </span>
               </button>
             </h3>
+            {/* Answer text is always present in the DOM (no aria-hidden / display:none)
+                so AI crawlers and lightweight fetchers can read every answer even
+                when visually collapsed. Collapse is purely CSS via grid-template-rows. */}
             <div
               id={panelId}
               role="region"
               aria-labelledby={buttonId}
-              aria-hidden={!isOpen}
               style={{
                 display: 'grid',
                 gridTemplateRows: isOpen ? '1fr' : '0fr',
