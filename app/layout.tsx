@@ -126,11 +126,6 @@ const legalServiceJsonLd = {
         credentialCategory: 'license',
         recognizedBy: { '@type': 'Organization', name: 'Law Society of New South Wales' },
       },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Registered Migration Agent (MARA)',
-        recognizedBy: { '@type': 'Organization', name: 'Office of the Migration Agents Registration Authority' },
-      },
     ],
   },
   hasOfferCatalog: {

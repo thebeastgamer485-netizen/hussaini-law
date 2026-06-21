@@ -3,7 +3,7 @@ type Badge = { icon: string; label: string; sub?: string }
 const DEFAULT_BADGES: Badge[] = [
   { icon: 'verified', label: 'Law Society of NSW', sub: 'Registered Solicitors' },
   { icon: 'diversity_3', label: 'Multicultural Excellence', sub: 'Award Recognised' },
-  { icon: 'workspace_premium', label: 'Accredited Specialists', sub: 'NSW Approved' },
+  { icon: 'workspace_premium', label: '7 Years Experience', sub: 'Trusted Advocacy' },
   { icon: 'gavel', label: 'Court Appointed', sub: 'Local & Federal' },
 ]
 

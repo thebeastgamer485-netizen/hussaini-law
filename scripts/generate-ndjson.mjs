@@ -47,9 +47,9 @@ docs.push({
   ],
   credentials: [
     'Law Society of NSW Member',
-    'Accredited Specialist',
     'Supreme Court of NSW',
-    'Migration Agent (MARN registered)',
+    '7 Years Experience',
+    'Bilingual Service',
   ],
   languages: ['English', 'Dari', 'Pashto', 'Arabic'],
   order: 1,

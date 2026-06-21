@@ -67,7 +67,7 @@ const AUDIENCE = [
 ]
 
 const WHY = [
-  { icon: 'verified_user', title: 'MARA Accredited Excellence', body: 'Our practitioners are fully accredited and strictly adhere to the MARA Code of Conduct for Migration Agents.' },
+  { icon: 'verified_user', title: 'Qualified Immigration Lawyers', body: 'Your matter is handled by admitted NSW solicitors regulated under the Legal Profession Uniform Law, giving you the full protection and privilege of working with qualified lawyers.' },
   { icon: 'balance', title: 'Heritage of Advocacy', body: 'We bring the weight of a multi-disciplinary firm to your case, looking beyond migration to your commercial or family law needs.' },
   { icon: 'location_on', title: 'Sydney Expertise, Global Reach', body: 'Deep local knowledge of Australian immigration policy with a sophisticated understanding of international jurisdictions.' },
 ]

@@ -219,5 +219,5 @@ Vercel auto-builds on every `main` push. ISR revalidates pages every 5 minutes (
 - **Email:** info@hussainilaw.com.au
 - **Principal:** Sayed Rahmatullah Hussainizada
 
-**Credentials:** Law Society NSW Member, Accredited Specialist, Migration Agent (MARN registered)  
+**Credentials:** Law Society NSW Member, Admitted in the Supreme Court of NSW, 7 years' experience  
 **Languages:** English, Dari, Pashto, Arabic

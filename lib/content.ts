@@ -281,8 +281,8 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       items: [
         {
           icon: 'verified_user',
-          title: 'MARA Accredited Excellence',
-          body: 'Our practitioners are fully accredited and strictly adhere to the MARA Code of Conduct for Migration Agents.',
+          title: 'Qualified Immigration Lawyers',
+          body: 'Your matter is handled by admitted NSW solicitors regulated under the Legal Profession Uniform Law, giving you the full protection and privilege of working with qualified lawyers.',
         },
         {
           icon: 'balance',
@@ -771,8 +771,8 @@ export const TEAM_PRINCIPAL = {
   imageSrc: IMG.principal,
   credentials: [
     'Law Society of NSW Member',
-    'Accredited Specialist',
     'Supreme Court of NSW',
-    'Migration Agent (MARN registered)',
+    '7 Years Experience',
+    'Bilingual Service',
   ],
 }
