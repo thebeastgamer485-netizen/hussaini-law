@@ -5,7 +5,7 @@ import { useState } from 'react'
 export type FaqItem = { question: string; answer: string }
 
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
-  const [openIdx, setOpenIdx] = useState<number | null>(0)
+  const [openIdx, setOpenIdx] = useState<number | null>(null)
 
   return (
     <div className="divide-y divide-outline-variant border-t border-b border-outline-variant">

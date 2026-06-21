@@ -68,7 +68,7 @@ const IMG = {
     'https://lh3.googleusercontent.com/aida-public/AB6AXuCUlNLEFf_MF-Bd78eHb1b5dnYcZgezYfpPKV4zX1Y3FRZBj7VCUbatexfsmYubckWIUHqguAIChh6c-3z93-t8-HjKgSwxzDaoi3Krhb0rzQlTUJ2L_VUNUa-7r3OscnW_GZDA0cEHW6jA8YHH2PsqFNZQ8QFae4oBCHzxI3Q7y6T6F0myVnmcErsDx9qnhL218iHDKnk0d59evjmmGuwABm2cfi5QsIFZfFKU-Ebwf3AcpFvExIQBhbH6aRknuThq7loqGd112Pg',
 }
 
-export const HOME_IMAGES = { hero: IMG.homeHero }
+export const HOME_IMAGES = { hero: IMG.homeHero, principal: IMG.principal }
 export const CONTACT_IMAGES = { map: IMG.fairfieldMap }
 export const PRACTICE_IMAGES = {
   criminalHero: IMG.criminalHero,
