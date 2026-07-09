@@ -13,11 +13,11 @@ export const ACCREDITATIONS: Accreditation[] = [
     alt: 'PEXA — Property Exchange Australia',
     heightClass: 'h-6 md:h-7',
   },
-  // {
-  //   src: '/images/logos/professional-standards-scheme.png',
-  //   alt: 'Participant — Law Society Professional Standards Scheme',
-  //   heightClass: 'h-9 md:h-10',
-  // },
+  {
+    src: '/images/logos/professional-standards-scheme.svg',
+    alt: 'The Law Society of NSW Professional Standards Scheme',
+    heightClass: 'h-11 md:h-14',
+  },
 ]
 
 /** Row of accreditation logos, each on a white card so they read on any background. */
