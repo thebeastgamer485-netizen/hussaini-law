@@ -104,7 +104,6 @@ const legalServiceJsonLd = {
   knowsAbout: [
     'Criminal Law',
     'Immigration Law',
-    'Family Law',
     'Conveyancing',
     'Commercial Law',
     'Civil Litigation',
@@ -134,7 +133,6 @@ const legalServiceJsonLd = {
     itemListElement: [
       'Criminal Law',
       'Immigration Law',
-      'Family Law',
       'Conveyancing',
       'Commercial Law',
       'Civil Litigation',

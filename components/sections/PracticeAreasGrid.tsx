@@ -14,12 +14,6 @@ const GROUPS: Group[] = [
         description: 'Skilled visas, family reunions, and refugee status navigation.',
         href: '/practice-areas/immigration-law',
       },
-      {
-        icon: 'family_restroom',
-        title: 'Family Law',
-        description: 'Compassionate advocacy for divorce and property settlements.',
-        href: '/practice-areas/family-law',
-      },
     ],
   },
   {

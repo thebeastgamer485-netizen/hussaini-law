@@ -1,9 +1,8 @@
 export type NavLink = { href: string; label: string }
 
 export const practiceAreaLinks: NavLink[] = [
-  { href: '/practice-areas/criminal-law', label: 'Criminal Law' },
   { href: '/practice-areas/immigration-law', label: 'Immigration Law' },
-  { href: '/practice-areas/family-law', label: 'Family Law' },
+  { href: '/practice-areas/criminal-law', label: 'Criminal Law' },
   { href: '/practice-areas/conveyancing', label: 'Conveyancing' },
   { href: '/practice-areas/commercial-law', label: 'Commercial Law' },
   { href: '/practice-areas/civil-litigation', label: 'Civil Litigation' },

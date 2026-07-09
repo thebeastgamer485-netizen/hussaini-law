@@ -40,8 +40,6 @@ const IMG = {
     'https://lh3.googleusercontent.com/aida-public/AB6AXuC93ExUYfBMc4axw2g95xuyntWlVhFYBHdulN59qu1nodWBkln-M7YYVnfVKLS2IDzSIdoT5O_DYRoBTaFSu7VwJnXFtmcE9lFCRWBLZg8dtu6VYMw-qj1AWrpbcNKdCMmQSodPjlSSLTcS4nNkxZM09EAy4z1ZSVvruG6iDD9oa9z-yvvB4arwNkYKtNofO2uj8n22z27DnwfRLfC0pfQOJnPei8Bv2Rmh7nju2zz8I0-velf1Xf6HYGbCuWSVSAL3hivQME8xsWs',
   immigrationHero:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuAV38Se0agrIQSA4gF1cKiYOW1JeXbuX0OpQYu4xcsXYbZUqf7Z66CypBVU7boRSeQzv8nmpSu3XqPKpTXJymDXMfG5Sb946EoN_1hpWpmFoyfyKZUOcoxioHGG-jfmX-0aVRfsf7t6HovPrB-Bz8doCHkfSaiZY7w-pYfjuWu7MxQMnAhRxRwy8oqyo2GU-DGnPiueNGDTOG9przHFTc6y8XUmAypMieK5Z_vm5u5myYYiXy6QSxvYHHzATTntS8K87fympF1FqU8',
-  familyHero:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuAGk-JCXaFGtpjaXbCqwGff5gEVww1Fbl4tMsHmsT1VFbFf6PsAEc5Whki87FHgQf_yGrfvFZ3m-q1g7qDftpEyuIjgQ2R6OdLtdgKMF_W5tziMooH8QKPJYITC7TvNExCXoejstIPveTe9_7bGsXqhPflVy7KlnBGeea6Nbd73IcU3npvwUAlFnUzAhxrQzTPFBoVhrzdLhPwbHxIUq9qkfYvboN7r9HydkGodILMjOnCWKW9Wk5-kX4JgLuUieRukYmw80HQqVKE',
   conveyancingHero:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuC9yDwho8tMQ5Q7i5ImKb6UXHAcwopXukAGYPXhj24YKrFxoW065brXfxRRjirx3pearNHrZGjZGxFXSBWMTime_-UGHG4gKYExdHKGORhpfv_ty6dU4Vhu_InRYg1pF88BIc2UbuTW7UmVP8RfDpPg1-gvQeu3f6x2kYFJcjSortfr9A7JtKUfzKMJsLRpNovQBYJEnuCBEGC5_gy1Kj3uNq8E1_FnWrWjHd681vp2GKeXEyWOULMJkVf1wAIqihw7yCwM0CG1Kbk',
   commercialHero:
@@ -76,7 +74,6 @@ export const PRACTICE_IMAGES = {
   immigrationHero: IMG.immigrationHero,
   immigrationAudience: IMG.immigrationAudience,
   immigrationWhy: IMG.immigrationWhy,
-  familyHero: IMG.familyHero,
   conveyancingHero: IMG.conveyancingHero,
   conveyancingProcess: IMG.conveyancingProcess,
   commercialHero: IMG.commercialHero,
@@ -343,110 +340,6 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       title: 'Begin Your Australian Journey',
       description:
         'Connect with our specialized immigration lawyers for a confidential and thorough assessment of your visa options.',
-    },
-  },
-
-  'family-law': {
-    slug: 'family-law',
-    metaTitle: 'Family Lawyers Fairfield & Western Sydney',
-    metaDescription:
-      'Fairfield & Sydney family lawyers for divorce, property settlement, parenting orders & child support. Bilingual in English, Dari, Pashto & Arabic.',
-    eyebrow: 'Family Law Excellence',
-    title: 'Compassionate Advocacy for Family Matters.',
-    description:
-      'Navigating the complexities of domestic relationships with the sensitivity and expertise your family deserves. We protect your future through unwavering dedication.',
-    heroImage: IMG.familyHero,
-    servicesEyebrow: 'Our Family Law Expertise',
-    servicesTitle: 'Our Family Law Expertise',
-    servicesIntro:
-      'Whether the path forward is mediation, consent orders or contested proceedings, we will guide you through with cultural sensitivity and procedural rigour.',
-    services: [
-      {
-        icon: 'gavel',
-        title: 'Divorce & Separation',
-        description:
-          'Strategic advice for complex marriage dissolutions, ensuring your rights and assets are protected through every stage.',
-      },
-      {
-        icon: 'real_estate_agent',
-        title: 'Property Settlement',
-        description:
-          'Meticulous handling of asset division, including business interests, real estate, and superannuation portfolios.',
-      },
-      {
-        icon: 'family_restroom',
-        title: 'Parenting Orders',
-        description:
-          'Prioritizing the best interests of children through sensitive negotiation and firm representation in custody matters.',
-      },
-      {
-        icon: 'child_care',
-        title: 'Child Support',
-        description:
-          "Navigating financial obligations to ensure fair and sustainable outcomes for the children's well-being.",
-      },
-      {
-        icon: 'security',
-        title: 'Intervention Orders',
-        description:
-          'Immediate legal protection and advocacy for domestic violence matters and personal safety intervention orders.',
-      },
-      {
-        icon: 'diversity_3',
-        title: 'De Facto Relationships',
-        description:
-          'Expert guidance on the legal standing and rights of partners in unregistered domestic relationships.',
-      },
-    ],
-    process: {
-      eyebrow: 'Our Workflow',
-      title: 'A Measured Approach to Resolution',
-      intro:
-        'We follow a structured, empathetic process to ensure no detail is overlooked while minimizing the emotional strain on your family.',
-      steps: [
-        {
-          title: 'Consultation',
-          description:
-            'A private session to understand your unique circumstances and define clear legal objectives.',
-        },
-        {
-          title: 'Strategy',
-          description:
-            'Developing a tailored roadmap, prioritizing mediation where possible to reduce conflict.',
-        },
-        {
-          title: 'Representation',
-          description:
-            'Rigorous advocacy in negotiations or court proceedings to secure the optimal outcome.',
-        },
-        {
-          title: 'Finalization',
-          description:
-            'Executing all legal documents and ensuring compliance with orders for a clean transition.',
-        },
-      ],
-    },
-    faqs: [
-      {
-        question: 'How long does a typical divorce process take?',
-        answer:
-          'In Australia you must be separated for at least 12 months and one day before you can apply for a divorce, which is a no-fault process dealing only with the legal end of the marriage. Once you file the application with the Federal Circuit and Family Court of Australia, a hearing date is typically set around two to four months later, and the divorce becomes final one month and one day after the order is made. Importantly, divorce is separate from property settlement and parenting arrangements, which can — and usually should — be negotiated during the 12-month separation period rather than left until afterwards. We guide you through each step, prepare your application correctly to avoid delays, and assist with service requirements, offering support in English, Dari, Pashto and Arabic.',
-      },
-      {
-        question: 'Do we have to go to court for property settlement?',
-        answer:
-          "No — most property settlements are resolved without a final court hearing. Separating couples are encouraged to reach agreement through negotiation or mediation, and that agreement can then be made legally binding either through Consent Orders filed with the Federal Circuit and Family Court or through a Binding Financial Agreement. Formalising your settlement matters because an informal 'handshake' deal is not enforceable and leaves both parties exposed to future claims. Court becomes necessary only when parties cannot agree, or where there are urgent issues such as protecting assets or family violence. We aim to settle matters efficiently and fairly through guided negotiation, and prepare the documents that give your agreement legal effect — with advice available in English, Dari, Pashto and Arabic.",
-      },
-      {
-        question: 'How are child support payments calculated?',
-        answer:
-          "Child support in Australia is primarily assessed by Services Australia using a legislated formula based on both parents' taxable incomes, the number and ages of the children, and the percentage of care each parent provides. You can apply for an administrative assessment, and the figure is reviewed as incomes and care arrangements change. Parents who prefer more flexibility can instead enter a Limited or Binding Child Support Agreement, which can set amounts or arrangements different from the formula — a Binding agreement requires each parent to obtain independent legal advice first. We help parents understand their likely assessment, draft and review child support agreements, and resolve disputes about care percentages or change-of-assessment applications. Guidance is offered in English, Dari, Pashto and Arabic.",
-      },
-    ],
-    cta: {
-      title: 'Begin Your Path to Resolution',
-      description:
-        'Our Family Law specialists are ready to provide the clarity and support you need. Book a confidential consultation today to discuss your circumstances.',
     },
   },
 

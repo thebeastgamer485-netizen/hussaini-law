@@ -10,6 +10,15 @@ const nextConfig = {
   experimental: {
     typedRoutes: false,
   },
+  async redirects() {
+    return [
+      {
+        source: '/practice-areas/family-law',
+        destination: '/#practice-areas',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

@@ -6,7 +6,6 @@ import { submitContactForm, type ContactState } from '@/lib/actions'
 const AREAS = [
   'Criminal Law',
   'Immigration Law',
-  'Family Law',
   'Conveyancing',
   'Commercial Law',
   'Civil Litigation',

@@ -40,8 +40,6 @@ New South Wales.
 - Immigration Law: partner visas (subclasses 820/801 and 309/100), skilled migration, family
   reunification, refugee and protection visas, visa refusals and Administrative Review Tribunal (ART)
   appeals, and Department of Home Affairs matters.
-- Family Law: divorce, property settlement, parenting orders, child support, consent orders and
-  binding financial agreements through the Federal Circuit and Family Court of Australia.
 - Conveyancing: residential purchase and sale, off-the-plan, title transfers, strata title, and
   pre-signing contract review for property across NSW.
 - Commercial Law: business structuring, commercial contracts, shareholder and partnership agreements,
@@ -54,7 +52,6 @@ New South Wales.
 - Contact & Consultation: https://hussainilaw.com.au/contact
 - Criminal Law: https://hussainilaw.com.au/practice-areas/criminal-law
 - Immigration Law: https://hussainilaw.com.au/practice-areas/immigration-law
-- Family Law: https://hussainilaw.com.au/practice-areas/family-law
 - Conveyancing: https://hussainilaw.com.au/practice-areas/conveyancing
 - Commercial Law: https://hussainilaw.com.au/practice-areas/commercial-law
 - Civil Litigation: https://hussainilaw.com.au/practice-areas/civil-litigation
