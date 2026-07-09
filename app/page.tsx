@@ -1,5 +1,4 @@
 import { HeroHome } from '@/components/sections/HeroHome'
-import { TrustBar } from '@/components/ui/TrustBar'
 import { PrincipalProfile } from '@/components/sections/PrincipalProfile'
 import { PracticeAreasGrid } from '@/components/sections/PracticeAreasGrid'
 import { WhyUsSection } from '@/components/sections/WhyUsSection'
@@ -16,7 +15,6 @@ export default async function HomePage() {
   return (
     <>
       <HeroHome />
-      <TrustBar />
       <Reveal>
         <PrincipalProfile principal={principal} />
       </Reveal>
