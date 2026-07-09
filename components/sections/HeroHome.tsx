@@ -5,7 +5,7 @@ import { HOME_IMAGES } from '@/lib/content'
 
 const TRUST = [
   'Law Society of NSW',
-  '7 Years Experience',
+  "7 Years' Experience",
   'Bilingual Service',
 ]
 
