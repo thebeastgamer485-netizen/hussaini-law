@@ -303,7 +303,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         'A clear path through complex legislation — diagnosis to citizenship.',
       steps: [
         {
-          title: 'Diagnosis',
+          title: 'Consultation',
           description: 'Deep analysis of your current status and desired migration outcome.',
         },
         {
@@ -312,7 +312,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
             'Developing a tailored roadmap to navigate complex legislative hurdles.',
         },
         {
-          title: 'Execution',
+          title: 'Processing',
           description:
             'Rigorous documentation and submission with precision-led oversight.',
         },
