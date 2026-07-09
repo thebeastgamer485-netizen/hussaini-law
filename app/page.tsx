@@ -1,4 +1,5 @@
 import { HeroHome } from '@/components/sections/HeroHome'
+import { AccreditationStrip } from '@/components/ui/AccreditationLogos'
 import { PrincipalProfile } from '@/components/sections/PrincipalProfile'
 import { PracticeAreasGrid } from '@/components/sections/PracticeAreasGrid'
 import { WhyUsSection } from '@/components/sections/WhyUsSection'
@@ -15,6 +16,7 @@ export default async function HomePage() {
   return (
     <>
       <HeroHome />
+      <AccreditationStrip />
       <Reveal>
         <PrincipalProfile principal={principal} />
       </Reveal>

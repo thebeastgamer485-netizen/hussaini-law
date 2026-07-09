@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { practiceAreaLinks, FIRM } from '@/lib/navigation'
+import { LogoCards } from '@/components/ui/AccreditationLogos'
 
 export function Footer() {
   const pathname = usePathname()
@@ -83,6 +84,15 @@ export function Footer() {
             Book Consultation
             <span className="material-symbols-outlined text-base">arrow_forward</span>
           </Link>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="container-page py-10 flex flex-col items-center gap-6">
+          <p className="font-label-sm text-label-sm uppercase tracking-widest text-brand-gold/80">
+            Members &amp; Accreditations
+          </p>
+          <LogoCards />
         </div>
       </div>
 

@@ -1,0 +1,48 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512 489" width="1512" height="489">
+	<title>logo-white-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m344.09 103.23l-96.48 141.57 96.48 141.57h96.75l-96.48-141.57 96.48-141.57z"/>
+		</clipPath>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(193.239,0,0,283.15,247.603,527.94)">
+			<stop offset="0" stop-color="#80267d"/>
+			<stop offset="1" stop-color="#c31ca7"/>
+		</linearGradient>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m0.96 103.23l96.48 141.57-96.48 141.57h96.75l96.49-141.57-96.49-141.57z"/>
+		</clipPath>
+		<linearGradient id="g2" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(193.239,0,0,283.133,.959,527.931)">
+			<stop offset="0" stop-color="#80267d"/>
+			<stop offset="1" stop-color="#c31ca7"/>
+		</linearGradient>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+			<path d="m290.66 0.88v102.35l-69.76 102.35-69.76-102.35v-102.35l69.76 102.35zm-69.76 283.14l69.76 102.34v102.35l-69.76-102.35-69.76 102.35v-102.35z"/>
+		</clipPath>
+		<linearGradient id="g3" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(139.515,0,0,487.81,151.146,732.624)">
+			<stop offset="0" stop-color="#80267d"/>
+			<stop offset="1" stop-color="#c31ca7"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: #1f2142 } 
+		.s1 { fill: url(#g1) } 
+		.s2 { fill: url(#g2) } 
+		.s3 { fill: url(#g3) } 
+	</style>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m716.1 235.6c-4.6 11.7-11.7 21.8-21.2 30.2-9.5 8.4-21.5 15-35.9 19.6-14.4 4.7-31.3 7.1-50.6 7.1h-38.1v98.5h-60.1v-286.5h98.2c19.8 0 37 2.3 51.5 6.9q21.8 6.9 35.8 19.3c9.3 8.2 16.2 17.9 20.7 29.3q6.7 16.9 6.7 36.9 0 21.1-7 38.7zm-56.6-58.2q-3.3-8.7-10-15-6.7-6.2-16.9-9.5c-6.8-2.3-14.9-3.4-24.2-3.4h-38.1v97.5h38.1c18.8 0 32.5-4.4 41.3-13.4 8.7-8.9 13.1-21.2 13.1-36.7q0-10.6-3.3-19.5zm142.3-26.5v73.6h97v44.9h-97v75.2h124.6v46.4h-185.1v-286.5h185.1v46.4zm415.5 240.1h-60q-6 0-9.8-3-3.7-2.9-5.8-6.9l-62.9-105.4c-0.7 1.4-1.3 2.8-1.9 4.2q-1 2.1-2.1 3.9l-59.7 97.3q-2.7 3.8-6.2 6.8-3.5 3.1-8.9 3.1h-56l95.1-147.5-91.5-139h60q6.1 0 8.9 1.5 2.8 1.7 5 5.2l62.5 101.3c0.6-1.6 1.3-3.2 2.2-4.8 0.8-1.7 1.7-3.4 2.8-5.1l56.1-90.4q2.4-4 5.3-5.8 2.9-1.9 7.1-1.9h57.4l-92.3 136.4zm247.8 0q-7.9 0-12.8-3.6-4.9-3.7-7.3-9.4l-19.6-54.7h-115.8l-19.6 54.7q-2 4.9-7 9c-3.3 2.7-7.5 4-12.6 4h-47.1l113.6-286.5h61.5l113.3 286.5zm-85.7-196.4c-1.9-4.6-3.8-10-5.9-16.2q-3.1-9.3-5.9-20.2-2.8 11.1-5.9 20.5-3.1 9.4-5.9 16.3l-31.3 87.2h86.3z"/>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m344.1 103.2l-96.5 141.6 96.5 141.6h96.7l-96.4-141.6 96.4-141.6z"/>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp2)">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s2" d="m1 103.2l96.4 141.6-96.4 141.6h96.7l96.5-141.6-96.5-141.6z"/>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp3)">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s3" d="m290.7 0.9v102.3l-69.8 102.4-69.8-102.4v-102.3l69.8 102.3zm-69.8 283.2l69.8 102.3v102.4l-69.8-102.4-69.7 102.4v-102.4z"/>
+		</g>
+	</g>
+</svg>
