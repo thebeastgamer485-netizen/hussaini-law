@@ -1,11 +1,8 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { FIRM } from '@/lib/navigation'
-import { CONTACT_IMAGES } from '@/lib/content'
-import { BLUR_DATA_URL } from '@/lib/images'
 
 export const metadata: Metadata = {
   title: 'Contact — Fairfield, Sydney',
@@ -71,37 +68,31 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <a
-              href="https://www.google.com/maps?q=7%2F37+Spencer+Street+Fairfield+NSW+2165"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[240px] md:h-[320px]"
-              aria-label={`Open ${FIRM.address} in Google Maps`}
-            >
-              <Image
-                src={CONTACT_IMAGES.map}
-                alt="Aerial view of Fairfield, Sydney"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                placeholder="blur"
-                blurDataURL={BLUR_DATA_URL}
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+            <div className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm">
+              <iframe
+                src="https://www.google.com/maps?q=Hussaini+Law+Group+Pty+Ltd%2C+7%2F37+Spencer+St%2C+Fairfield+NSW+2165&z=16&output=embed"
+                title={`Map showing ${FIRM.address}`}
+                className="block w-full h-[280px] md:h-[360px] border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
               />
-              <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Hussaini+Law+Group+Pty+Ltd+7%2F37+Spencer+St+Fairfield+NSW+2165"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-primary text-white text-sm font-semibold py-3 hover:bg-primary-container transition-colors"
+              >
                 <span
-                  className="material-symbols-outlined text-5xl text-brand-gold drop-shadow-lg"
+                  className="material-symbols-outlined text-brand-gold text-xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                   aria-hidden="true"
                 >
                   location_on
                 </span>
-                <div className="bg-primary text-white px-4 py-2 shadow-xl mt-1 text-center border border-brand-gold/50 rounded-sm">
-                  <p className="text-sm font-bold">7/37 Spencer Street</p>
-                  <p className="text-xs text-white/80">Fairfield NSW 2165</p>
-                </div>
-              </div>
-            </a>
+                Open in Google Maps — {FIRM.address}
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>
