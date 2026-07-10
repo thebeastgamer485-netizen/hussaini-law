@@ -8,6 +8,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
   const [openIdx, setOpenIdx] = useState<number | null>(null)
 
   return (
+    <>
     <div className="divide-y divide-outline-variant border-t border-b border-outline-variant">
       {items.map((item, i) => {
         const isOpen = openIdx === i
@@ -60,5 +61,16 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
         )
       })}
     </div>
+    <p className="mt-6 flex items-start gap-2.5 text-sm text-on-surface-variant max-w-3xl">
+      <span className="material-symbols-outlined text-brand-gold text-lg shrink-0" aria-hidden="true">
+        info
+      </span>
+      <span>
+        These answers are general information about the law in New South Wales, not legal advice, and
+        reading them does not create a solicitor&ndash;client relationship. Every matter turns on its
+        own facts &mdash; please contact us for advice about your specific circumstances.
+      </span>
+    </p>
+    </>
   )
 }
