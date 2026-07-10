@@ -248,7 +248,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       imageAlt: 'A diverse professional group in a modern boardroom',
       imagePosition: 'left',
       tone: 'dark',
-      badge: { value: '20+ Years', label: 'Combined Expertise' },
+      badge: { value: '7 Years', label: 'Trusted Advocacy' },
       items: [
         {
           icon: 'corporate_fare',

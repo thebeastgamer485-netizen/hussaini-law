@@ -149,8 +149,8 @@ export default function ImmigrationLawPage() {
                 <Image src={PRACTICE_IMAGES.immigrationAudience} alt="A diverse professional group in a modern boardroom" fill sizes="(max-width:1024px) 100vw, 45vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover grayscale opacity-80" />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-secondary-fixed p-8 lg:p-10 hidden lg:block rounded-xl">
-                <div className="text-on-secondary-fixed font-headline-lg text-headline-lg">20+ Years</div>
-                <div className="text-on-secondary-fixed font-label-sm uppercase tracking-widest">Combined Expertise</div>
+                <div className="text-on-secondary-fixed font-headline-lg text-headline-lg">7 Years</div>
+                <div className="text-on-secondary-fixed font-label-sm uppercase tracking-widest">Trusted Advocacy</div>
               </div>
             </div>
             <div>

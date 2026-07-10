@@ -68,7 +68,7 @@ const WIDE = [
 const TRUST = [
   { icon: 'balance', label: 'Law Society of NSW Member' },
   { icon: 'gavel', label: 'Experienced Court Advocates' },
-  { icon: 'verified_user', label: 'Trusted Counsel Since 2004' },
+  { icon: 'verified_user', label: "7 Years' Trusted Counsel" },
 ]
 
 export default function CriminalLawPage() {
