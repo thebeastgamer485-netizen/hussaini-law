@@ -55,9 +55,9 @@ const faqLd = data.faqs?.length
 
 const MEDIUM = [
   { icon: 'directions_car', title: 'Traffic Offences', body: 'Protecting your license and livelihood from drink driving and other major traffic charges.' },
-  { icon: 'sports_kabaddi', title: 'Assault', body: 'Robust defense against common assault, GBH, and other person-to-person charges.' },
+  { icon: 'sports_kabaddi', title: 'Assault', body: 'Robust defence against common assault, GBH, and other person-to-person charges.' },
   { icon: 'medication', title: 'Drug Offences', body: 'Handling possession, supply, and manufacture charges with meticulous strategy.' },
-  { icon: 'payments', title: 'Fraud', body: 'Defense against white-collar crime, financial fraud, and embezzlement allegations.' },
+  { icon: 'payments', title: 'Fraud', body: 'Defence against white-collar crime, financial fraud, and embezzlement allegations.' },
 ]
 
 const WIDE = [
@@ -142,10 +142,10 @@ export default function CriminalLawPage() {
       <Reveal>
       <section className="py-16 md:py-28 container-page">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="font-headline-lg text-headline-lg text-primary">Specialized Legal Defense</h2>
+          <h2 className="font-headline-lg text-headline-lg text-primary">Specialised Legal Defence</h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto" />
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-            Our expertise spans the full spectrum of criminal law. We provide strategic defense for cases of all
+            Our expertise spans the full spectrum of criminal law. We provide strategic defence for cases of all
             complexities.
           </p>
         </div>
@@ -256,7 +256,7 @@ export default function CriminalLawPage() {
         <div className="bg-tertiary rounded-2xl p-8 md:p-12 lg:p-20 relative overflow-hidden text-center flex flex-col items-center">
           <div className="relative z-10 max-w-2xl">
             <h2 className="font-headline-xl text-headline-xl text-on-tertiary-container mb-6">
-              Secure Your Future with Expert Defense
+              Secure Your Future with Expert Defence
             </h2>
             <p className="font-body-lg text-body-lg text-on-tertiary-container/80 mb-10">
               Don&apos;t face the criminal justice system alone. Our experienced advocates are ready to protect your

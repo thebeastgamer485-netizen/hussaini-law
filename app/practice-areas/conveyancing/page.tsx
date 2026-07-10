@@ -56,7 +56,7 @@ const faqLd = data.faqs?.length
 const SMALL = [
   { icon: 'sync_alt', title: 'Title Transfers', body: 'Streamlined transfers for family settlements, gifting, or corporate restructuring.' },
   { icon: 'account_balance', title: 'Refinancing', body: 'Liaising with financial institutions to secure your mortgage discharge and new registration.' },
-  { icon: 'layers', title: 'Strata Title', body: 'Specialized advice on by-laws, levies, and management statement compliance.' },
+  { icon: 'layers', title: 'Strata Title', body: 'Specialised advice on by-laws, levies, and management statement compliance.' },
 ]
 
 export default function ConveyancingPage() {
@@ -113,7 +113,7 @@ export default function ConveyancingPage() {
       <Reveal>
       <section className="py-16 md:py-28 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="font-headline-lg text-headline-lg text-primary">Specialized Property Services</h2>
+          <h2 className="font-headline-lg text-headline-lg text-primary">Specialised Property Services</h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto" />
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
             Comprehensive legal support tailored to the Australian property market, ensuring compliance, security, and

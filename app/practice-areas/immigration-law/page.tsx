@@ -231,7 +231,7 @@ export default function ImmigrationLawPage() {
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="font-headline-xl text-headline-xl text-on-primary mb-6">Begin Your Australian Journey</h2>
             <p className="font-body-lg text-on-primary/80 mb-8">
-              Connect with our specialized immigration lawyers for a confidential and thorough assessment of your visa
+              Connect with our specialised immigration lawyers for a confidential and thorough assessment of your visa
               options.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

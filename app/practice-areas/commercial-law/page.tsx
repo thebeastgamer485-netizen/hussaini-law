@@ -55,16 +55,16 @@ const faqLd = data.faqs?.length
   : null
 
 const SERVICES = [
-  { icon: 'business_center', title: 'Business Structuring', body: 'Strategic optimization of entity frameworks to ensure tax efficiency, operational fluidity, and robust liability protection for emerging and established enterprises.', dark: false },
+  { icon: 'business_center', title: 'Business Structuring', body: 'Strategic optimisation of entity frameworks to ensure tax efficiency, operational fluidity, and robust liability protection for emerging and established enterprises.', dark: false },
   { icon: 'contract_edit', title: 'Complex Contracts', body: 'Drafting and negotiating bulletproof commercial agreements that safeguard your interests while facilitating seamless cross-border and domestic transactions.', dark: true },
   { icon: 'groups', title: 'Shareholder Agreements', body: 'Defining clear governance structures and dispute resolution mechanisms to align stakeholder interests and ensure long-term corporate stability.', dark: false },
-  { icon: 'shopping_cart_checkout', title: 'Business Sale & Purchase', body: 'Meticulous due diligence and transaction management for mergers, acquisitions, and asset transfers to maximize value and minimize risk.', dark: false },
+  { icon: 'shopping_cart_checkout', title: 'Business Sale & Purchase', body: 'Meticulous due diligence and transaction management for mergers, acquisitions, and asset transfers to maximise value and minimise risk.', dark: false },
   { icon: 'gavel', title: 'Dispute Resolution', body: 'Aggressive advocacy and strategic mediation to resolve high-stakes commercial conflicts with a focus on protecting your corporate reputation and bottom line.', dark: false },
   { icon: 'account_balance_wallet', title: 'Debt Recovery', body: 'Persistent and professional recovery strategies designed to restore cash flow through sophisticated legal channels and negotiation tactics.', dark: false },
 ]
 
 const ADVANTAGE = [
-  { icon: 'verified', title: 'Decades of Specialization', body: 'Deep-rooted experience in navigating the regulatory hurdles of global and local trade.' },
+  { icon: 'verified', title: 'Decades of Specialisation', body: 'Deep-rooted experience in navigating the regulatory hurdles of global and local trade.' },
   { icon: 'shield_with_heart', title: 'Integrity-First Approach', body: 'A commitment to the highest ethical standards, ensuring your reputation remains untarnished.' },
   { icon: 'psychology', title: 'Strategic Foresight', body: "We don't just solve problems; we anticipate them through rigorous risk assessment models." },
 ]

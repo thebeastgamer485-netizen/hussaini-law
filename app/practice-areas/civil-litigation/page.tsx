@@ -132,7 +132,7 @@ export default function CivilLitigationPage() {
             <span className="material-symbols-outlined text-4xl text-deep-navy mb-6 block">handshake</span>
             <h3 className="font-headline-md text-headline-md text-deep-navy mb-4">Mediation</h3>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              Alternative dispute resolution strategies designed to achieve favorable outcomes without the protracted
+              Alternative dispute resolution strategies designed to achieve favourable outcomes without the protracted
               costs of a courtroom trial.
             </p>
           </div>

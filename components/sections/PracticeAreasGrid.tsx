@@ -39,7 +39,7 @@ const GROUPS: Group[] = [
       {
         icon: 'gavel',
         title: 'Criminal Law',
-        description: 'Robust defense strategies in Fairfield and Sydney courts.',
+        description: 'Robust defence strategies in Fairfield and Sydney courts.',
         href: '/practice-areas/criminal-law',
       },
       {

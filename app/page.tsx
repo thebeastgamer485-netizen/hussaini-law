@@ -11,7 +11,12 @@ import { TEAM_PRINCIPAL } from '@/lib/content'
 export const revalidate = 300
 
 export default async function HomePage() {
-  const principal = (await getPrincipal()) ?? TEAM_PRINCIPAL
+  // Credentials are maintained in code (lib/content.ts), not the CMS, so the
+  // accreditation badges stay accurate even when the Sanity copy is out of date.
+  const sanityPrincipal = await getPrincipal()
+  const principal = sanityPrincipal
+    ? { ...sanityPrincipal, credentials: TEAM_PRINCIPAL.credentials }
+    : TEAM_PRINCIPAL
 
   return (
     <>

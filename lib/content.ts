@@ -89,14 +89,14 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     metaDescription:
       'Court representation across NSW for traffic, assault, drug, fraud, AVO and appellate criminal matters. Bilingual defence in English and Dari.',
     eyebrow: 'Practice Area: Criminal Law',
-    title: 'Criminal Defense & Court Representation',
+    title: 'Criminal Defence & Court Representation',
     description:
       'Protecting your rights and delivering expert legal advocacy when it matters most. We stand by you through every stage of the legal process.',
     heroImage: IMG.criminalHero,
-    servicesEyebrow: 'Specialized Legal Defense',
-    servicesTitle: 'Specialized Legal Defense',
+    servicesEyebrow: 'Specialised Legal Defence',
+    servicesTitle: 'Specialised Legal Defence',
     servicesIntro:
-      'Our expertise spans the full spectrum of criminal law. We provide strategic defense for cases of all complexities.',
+      'Our expertise spans the full spectrum of criminal law. We provide strategic defence for cases of all complexities.',
     services: [
       {
         icon: 'cases',
@@ -120,7 +120,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         icon: 'sports_kabaddi',
         title: 'Assault',
         description:
-          'Robust defense against common assault, GBH, and other person-to-person charges.',
+          'Robust defence against common assault, GBH, and other person-to-person charges.',
       },
       {
         icon: 'medication',
@@ -132,7 +132,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         icon: 'payments',
         title: 'Fraud',
         description:
-          'Defense against white-collar crime, financial fraud, and embezzlement allegations.',
+          'Defence against white-collar crime, financial fraud, and embezzlement allegations.',
       },
       {
         icon: 'history',
@@ -159,7 +159,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         {
           title: 'Strategy Development',
           description:
-            'Building a bespoke defense strategy focused on your specific circumstances and intended outcomes.',
+            'Building a bespoke defence strategy focused on your specific circumstances and intended outcomes.',
         },
         {
           title: 'Strong Advocacy',
@@ -186,7 +186,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       },
     ],
     cta: {
-      title: 'Secure Your Future with Expert Defense',
+      title: 'Secure Your Future with Expert Defence',
       description:
         "Don't face the criminal justice system alone. Our experienced advocates are ready to protect your interests and fight for the best possible outcome.",
     },
@@ -339,7 +339,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     cta: {
       title: 'Begin Your Australian Journey',
       description:
-        'Connect with our specialized immigration lawyers for a confidential and thorough assessment of your visa options.',
+        'Connect with our specialised immigration lawyers for a confidential and thorough assessment of your visa options.',
     },
   },
 
@@ -353,8 +353,8 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     description:
       'Hussaini Law Group provides distinguished legal counsel for your most significant assets. From first-time buyers to portfolio investors, we ensure your property transition is handled with meticulous precision.',
     heroImage: IMG.conveyancingHero,
-    servicesEyebrow: 'Specialized Property Services',
-    servicesTitle: 'Specialized Property Services',
+    servicesEyebrow: 'Specialised Property Services',
+    servicesTitle: 'Specialised Property Services',
     servicesIntro:
       'Comprehensive legal support tailored to the Australian property market, ensuring compliance, security, and peace of mind.',
     spotlight: {
@@ -399,7 +399,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         icon: 'layers',
         title: 'Strata Title',
         description:
-          'Specialized advice on by-laws, levies, and management statement compliance.',
+          'Specialised advice on by-laws, levies, and management statement compliance.',
       },
     ],
     process: {
@@ -468,7 +468,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         icon: 'business_center',
         title: 'Business Structuring',
         description:
-          'Strategic optimization of entity frameworks to ensure tax efficiency, operational fluidity, and robust liability protection for emerging and established enterprises.',
+          'Strategic optimisation of entity frameworks to ensure tax efficiency, operational fluidity, and robust liability protection for emerging and established enterprises.',
       },
       {
         icon: 'contract_edit',
@@ -486,7 +486,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         icon: 'shopping_cart_checkout',
         title: 'Business Sale & Purchase',
         description:
-          'Meticulous due diligence and transaction management for mergers, acquisitions, and asset transfers to maximize value and minimize risk.',
+          'Meticulous due diligence and transaction management for mergers, acquisitions, and asset transfers to maximise value and minimise risk.',
       },
       {
         icon: 'gavel',
@@ -511,7 +511,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       items: [
         {
           icon: 'verified',
-          title: 'Decades of Specialization',
+          title: 'Decades of Specialisation',
           body: 'Deep-rooted experience in navigating the regulatory hurdles of global and local trade.',
         },
         {
@@ -599,7 +599,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
         icon: 'handshake',
         title: 'Mediation',
         description:
-          'Alternative dispute resolution strategies designed to achieve favorable outcomes without the protracted costs of a courtroom trial.',
+          'Alternative dispute resolution strategies designed to achieve favourable outcomes without the protracted costs of a courtroom trial.',
       },
     ],
     process: {
@@ -659,13 +659,13 @@ export const TEAM_PRINCIPAL = {
   title: 'Principal Solicitor',
   bio: [
     'With a profound commitment to social justice and legal excellence, Sayed Rahmatullah Hussainizada founded Hussaini Law Group to bridge the gap between complex legal structures and the diverse communities of Sydney.',
-    "His approach combines meticulous legal precision with a deep understanding of the cultural nuances that impact his clients' lives. Having successfully represented thousands of clients, he is recognized for his advocacy and strategic legal counsel.",
+    "His approach combines meticulous legal precision with a deep understanding of the cultural nuances that impact his clients' lives. Having successfully represented thousands of clients, he is recognised for his advocacy and strategic legal counsel.",
   ],
   imageSrc: IMG.principal,
   credentials: [
     'Law Society of NSW Member',
     'Supreme Court of NSW',
-    '7 Years Experience',
-    'Bilingual Service',
+    "7 Years' Experience",
+    'Dari & English Speaking',
   ],
 }
