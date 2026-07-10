@@ -1,12 +1,12 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { GOOGLE_REVIEWS } from '@/lib/content'
+import type { ReviewsData } from '@/lib/reviews'
 
 const AUTO_ADVANCE_MS = 6000
 
-export function ReviewsCarousel() {
-  const { rating, count, url, items } = GOOGLE_REVIEWS
+export function ReviewsCarousel({ data }: { data: ReviewsData }) {
+  const { rating, count, url, items } = data
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const touchStartX = useRef<number | null>(null)
@@ -53,15 +53,11 @@ export function ReviewsCarousel() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors"
           >
-            <span className="flex" aria-hidden="true">
+            <span className="flex gap-0.5" aria-hidden="true">
               {[1, 2, 3, 4, 5].map((s) => (
-                <span
-                  key={s}
-                  className="material-symbols-outlined text-brand-gold text-xl"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  star
-                </span>
+                <svg key={s} viewBox="0 0 24 24" className="w-5 h-5 fill-brand-gold">
+                  <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
               ))}
             </span>
             <span>
@@ -103,10 +99,31 @@ export function ReviewsCarousel() {
                     <blockquote className="font-heading text-xl md:text-2xl leading-relaxed text-on-surface">
                       &ldquo;{r.quote}&rdquo;
                     </blockquote>
-                    <figcaption className="mt-6">
-                      <span className="block font-semibold text-primary">{r.name}</span>
-                      <span className="block text-xs uppercase tracking-[0.2em] text-on-surface-variant mt-1">
-                        Google Review
+                    <figcaption className="mt-6 flex items-center justify-center gap-3">
+                      {r.avatar ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={r.avatar}
+                          alt=""
+                          width={44}
+                          height={44}
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                          className="w-11 h-11 rounded-full border-2 border-brand-gold/60 object-cover bg-surface-container"
+                        />
+                      ) : (
+                        <span
+                          aria-hidden="true"
+                          className="w-11 h-11 rounded-full border-2 border-brand-gold/60 bg-primary text-white flex items-center justify-center font-heading text-lg"
+                        >
+                          {r.name.charAt(0)}
+                        </span>
+                      )}
+                      <span className="text-left">
+                        <span className="block font-semibold text-primary leading-tight">{r.name}</span>
+                        <span className="block text-xs uppercase tracking-[0.2em] text-on-surface-variant mt-0.5">
+                          Google Review
+                        </span>
                       </span>
                     </figcaption>
                   </figure>

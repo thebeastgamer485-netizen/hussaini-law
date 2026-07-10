@@ -680,36 +680,43 @@ export const GOOGLE_REVIEWS = {
   items: [
     {
       name: 'Khatira Omarzoy',
+      avatar: '/images/reviews/khatira-omarzoy.png',
       quote:
         "Hussaini Law was instrumental in helping me secure my husband's visa. Their expertise and dedication made the process smooth and successful. Highly recommended!",
     },
     {
       name: 'Habib Hassanzadah',
+      avatar: '/images/reviews/habib-hassanzadah.png',
       quote:
         'Highly recommend Hussaini Law Group as they are passionate, knowledgeable and engaging with their clients. They never made us feel left in the dark and provided us with information that was definitely helpful and led to a successful claim.',
     },
     {
       name: 'Ibrahim P.',
+      avatar: '/images/reviews/ibrahim-p.png',
       quote:
         'Hussaini Law Group helps me to get my visa after 14 years and my citizenship as well. Highly recommended — much appreciated Sayed Hussaini.',
     },
     {
       name: 'Mahdi Aliyarzada',
+      avatar: '/images/reviews/mahdi-aliyarzada.png',
       quote:
         'Thanks a lot from Hussaini Law Group — they get my partner visa in around 11 months. Very professional on their work, I recommend to go with Hussaini Law Group.',
     },
     {
       name: 'Mehdi Panahi',
+      avatar: '/images/reviews/mehdi-panahi.png',
       quote:
         'Hussaini Law Group helps my father to get his permanent visa after 13 years. Highly recommended.',
     },
     {
       name: 'Samira Jan',
+      avatar: '/images/reviews/samira-jan.png',
       quote:
         "I'm very happy — I got my partner visa very fast. Thanks a lot from Hussaini Law Group.",
     },
     {
       name: 'Ali Sultani',
+      avatar: '/images/reviews/ali-sultani.png',
       quote:
         'Thank you Hussaini Law Group for helping me to get my family visa. Great services at all.',
     },

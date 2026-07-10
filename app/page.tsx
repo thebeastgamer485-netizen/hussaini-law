@@ -7,6 +7,7 @@ import { ReviewsCarousel } from '@/components/sections/ReviewsCarousel'
 import { CtaBanner } from '@/components/ui/CtaBanner'
 import { Reveal } from '@/components/ui/Reveal'
 import { getPrincipal } from '@/sanity/lib/fetch'
+import { getGoogleReviews } from '@/lib/reviews'
 import { TEAM_PRINCIPAL } from '@/lib/content'
 
 export const revalidate = 300
@@ -18,6 +19,8 @@ export default async function HomePage() {
   const principal = sanityPrincipal
     ? { ...sanityPrincipal, credentials: TEAM_PRINCIPAL.credentials }
     : TEAM_PRINCIPAL
+  // Live Google reviews (auto-refreshing); falls back to the curated static set.
+  const reviews = await getGoogleReviews()
 
   return (
     <>
@@ -33,7 +36,7 @@ export default async function HomePage() {
         <WhyUsSection />
       </Reveal>
       <Reveal>
-        <ReviewsCarousel />
+        <ReviewsCarousel data={reviews} />
       </Reveal>
       <Reveal>
         <CtaBanner />
