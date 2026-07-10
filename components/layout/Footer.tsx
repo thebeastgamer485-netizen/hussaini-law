@@ -19,7 +19,7 @@ export function Footer() {
             <div className="relative h-10 w-10">
               <Image src="/logo.png" alt="" fill sizes="40px" className="object-contain" />
             </div>
-            <span className="font-headline-md text-headline-md text-secondary-fixed">Hussaini Law Group</span>
+            <span className="font-headline-md text-headline-md text-secondary-fixed">Hussaini Law Group Pty Ltd</span>
           </div>
           <p className="text-on-primary/60 font-body-md mb-6">
             Sydney&apos;s boutique law firm dedicated to precision, advocacy, and the diverse communities of Fairfield.
