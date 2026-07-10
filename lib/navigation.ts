@@ -27,4 +27,10 @@ export const FIRM = {
   hoursSaturday: 'Sat: By appointment',
   arabicName: 'مكتب الحسيني للمحاماة',
   farsiName: 'دفتر وکالت حسینی',
+  // Set each to the firm's real profile URL to make the footer icon appear.
+  social: {
+    facebook: '',
+    instagram: '',
+    tiktok: '',
+  },
 }

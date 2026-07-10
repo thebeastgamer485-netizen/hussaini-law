@@ -35,10 +35,10 @@ const serviceLd = {
   serviceType: 'Immigration and visa law',
   url: PAGE_URL,
   description:
-    'Immigration and visa representation — partner, skilled, family, refugee and protection visas, refusals and ART appeals — in English, Dari, Pashto and Arabic.',
+    'Immigration and visa representation — partner, skilled, family, refugee and protection visas, refusals and ART appeals — in English and Dari.',
   provider: { '@id': `${SITE}/#legalservice` },
   areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
-  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+  availableLanguage: ['en', 'fa'],
 }
 
 const faqLd = data.faqs?.length
@@ -91,7 +91,7 @@ export default function ImmigrationLawPage() {
           </span>
           <h1 className="font-display-lg text-3xl sm:text-4xl md:text-display-lg text-on-primary mb-6">Immigration Lawyers in Fairfield, Sydney</h1>
           <p className="mb-6 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
-            Bilingual service — English · Dari · Pashto · Arabic
+            Bilingual service — English · Dari
           </p>
           <p className="font-body-lg text-on-primary/90 max-w-2xl mx-auto">
             Navigating the complexities of global mobility with precision, heritage, and unwavering advocacy for your

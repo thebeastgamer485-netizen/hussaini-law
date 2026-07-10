@@ -28,6 +28,52 @@ export function Footer() {
             <div className="font-headline-md text-brand-gold text-lg" dir="rtl">{FIRM.farsiName}</div>
             <div className="font-headline-md text-brand-gold text-lg" dir="rtl">{FIRM.arabicName}</div>
           </div>
+
+          {(FIRM.social.facebook || FIRM.social.instagram || FIRM.social.tiktok) && (
+          <div className="flex items-center gap-3 mt-6">
+            {FIRM.social.facebook && (
+            <a
+              href={FIRM.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Hussaini Law Group on Facebook"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/15 text-on-primary/70 hover:text-brand-navy hover:bg-brand-gold hover:border-brand-gold transition-colors"
+            >
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" aria-hidden="true">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z" />
+              </svg>
+            </a>
+            )}
+            {FIRM.social.instagram && (
+            <a
+              href={FIRM.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Hussaini Law Group on Instagram"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/15 text-on-primary/70 hover:text-brand-navy hover:bg-brand-gold hover:border-brand-gold transition-colors"
+            >
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            )}
+            {FIRM.social.tiktok && (
+            <a
+              href={FIRM.social.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Hussaini Law Group on TikTok"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/15 text-on-primary/70 hover:text-brand-navy hover:bg-brand-gold hover:border-brand-gold transition-colors"
+            >
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" aria-hidden="true">
+                <path d="M16.5 2h-3v13.2a2.4 2.4 0 1 1-2.1-2.38V9.7a5.5 5.5 0 1 0 5.1 5.48V8.4a6.4 6.4 0 0 0 3.9 1.32V6.66a3.6 3.6 0 0 1-3.8-3.46V2Z" />
+              </svg>
+            </a>
+            )}
+          </div>
+          )}
         </div>
 
         {/* Practice areas */}
@@ -99,7 +145,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-page py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-on-primary/40">
           <p>© 2026 Hussaini Law Group. Liability limited by a scheme approved under Professional Standards Legislation.</p>
-          <p>Languages spoken: English · Dari · Pashto · Arabic</p>
+          <p>Languages spoken: English · Dari</p>
         </div>
       </div>
     </footer>

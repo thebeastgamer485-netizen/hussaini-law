@@ -36,10 +36,10 @@ const serviceLd = {
   serviceType: 'Civil litigation',
   url: PAGE_URL,
   description:
-    'Civil litigation — debt recovery, contract and consumer disputes, NCAT applications and mediation across NSW — in English, Dari, Pashto and Arabic.',
+    'Civil litigation — debt recovery, contract and consumer disputes, NCAT applications and mediation across NSW — in English and Dari.',
   provider: { '@id': `${SITE}/#legalservice` },
   areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
-  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+  availableLanguage: ['en', 'fa'],
 }
 
 const faqLd = data.faqs?.length
@@ -82,7 +82,7 @@ export default function CivilLitigationPage() {
               <span className="text-brand-gold">Fairfield &amp; Sydney</span>
             </h1>
             <p className="mb-6 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
-              Bilingual service — English · Dari · Pashto · Arabic
+              Bilingual service — English · Dari
             </p>
             <p className="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">
               Navigating the complexities of the Australian legal system with unwavering precision. From high-stakes debt

@@ -11,7 +11,7 @@ const AREAS = [
   'Civil Litigation',
   'Other / Not sure',
 ]
-const LANGUAGES = ['English', 'Dari', 'Pashto', 'Arabic']
+const LANGUAGES = ['English', 'Dari']
 
 const initialState: ContactState = { status: 'idle' }
 

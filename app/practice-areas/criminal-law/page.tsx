@@ -35,10 +35,10 @@ const serviceLd = {
   serviceType: 'Criminal defence law',
   url: PAGE_URL,
   description:
-    'Criminal defence and court representation across NSW — bail, traffic, assault, drug, fraud, AVO and appeal matters — in English, Dari, Pashto and Arabic.',
+    'Criminal defence and court representation across NSW — bail, traffic, assault, drug, fraud, AVO and appeal matters — in English and Dari.',
   provider: { '@id': `${SITE}/#legalservice` },
   areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
-  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+  availableLanguage: ['en', 'fa'],
 }
 
 const faqLd = data.faqs?.length
@@ -93,7 +93,7 @@ export default function CriminalLawPage() {
               Criminal Defence Lawyers in Fairfield &amp; Sydney
             </h1>
             <p className="mt-5 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
-              Bilingual service — English · Dari · Pashto · Arabic
+              Bilingual service — English · Dari
             </p>
             <p className="font-body-lg text-body-lg text-on-primary/80 max-w-lg">
               Protecting your rights and delivering expert legal advocacy when it matters most. We stand by you through

@@ -4,7 +4,7 @@ const FEATURES = [
   {
     icon: 'translate',
     title: 'Bilingual Proficiency',
-    body: 'Professional services in English, Dari, Farsi, and Arabic, ensuring precision in every legal detail.',
+    body: 'Professional services in English and Dari, ensuring precision in every legal detail.',
   },
   {
     icon: 'balance',

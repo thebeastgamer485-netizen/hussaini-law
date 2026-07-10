@@ -45,7 +45,7 @@ export default function OgImage() {
           <div style={{ color: 'rgba(255,255,255,0.3)', fontSize: 18, display: 'flex' }}>·</div>
           <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18, display: 'flex' }}>hussainilaw.com.au</div>
           <div style={{ color: 'rgba(255,255,255,0.3)', fontSize: 18, display: 'flex' }}>·</div>
-          <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18, display: 'flex' }}>English · Dari · Arabic</div>
+          <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18, display: 'flex' }}>English · Dari</div>
         </div>
 
         {/* Gold bottom bar */}

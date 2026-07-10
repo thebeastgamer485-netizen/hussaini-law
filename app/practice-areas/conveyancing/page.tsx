@@ -35,10 +35,10 @@ const serviceLd = {
   serviceType: 'Property conveyancing',
   url: PAGE_URL,
   description:
-    'Residential, off-the-plan and strata conveyancing and pre-signing contract review across NSW — in English, Dari, Pashto and Arabic.',
+    'Residential, off-the-plan and strata conveyancing and pre-signing contract review across NSW — in English and Dari.',
   provider: { '@id': `${SITE}/#legalservice` },
   areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
-  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+  availableLanguage: ['en', 'fa'],
 }
 
 const faqLd = data.faqs?.length
@@ -78,7 +78,7 @@ export default function ConveyancingPage() {
               Conveyancing Solicitors in <span className="text-gradient-cta">Fairfield &amp; Sydney</span>
             </h1>
             <p className="text-label-sm uppercase tracking-widest text-secondary-fixed font-semibold">
-              Bilingual service — English · Dari · Pashto · Arabic
+              Bilingual service — English · Dari
             </p>
             <p className="font-body-lg text-body-lg text-on-primary/80 max-w-xl">
               Hussaini Law Group provides distinguished legal counsel for your most significant assets. From first-time

@@ -36,10 +36,10 @@ const serviceLd = {
   serviceType: 'Commercial and business law',
   url: PAGE_URL,
   description:
-    'Commercial law — business structuring, contracts, shareholder agreements, sale of business, debt recovery and disputes — in English, Dari, Pashto and Arabic.',
+    'Commercial law — business structuring, contracts, shareholder agreements, sale of business, debt recovery and disputes — in English and Dari.',
   provider: { '@id': `${SITE}/#legalservice` },
   areaServed: { '@type': 'AdministrativeArea', name: 'New South Wales' },
-  availableLanguage: ['en', 'fa', 'ps', 'ar'],
+  availableLanguage: ['en', 'fa'],
 }
 
 const faqLd = data.faqs?.length
@@ -90,7 +90,7 @@ export default function CommercialLawPage() {
               Commercial Lawyers in Fairfield &amp; Sydney
             </h1>
             <p className="mb-6 text-label-sm uppercase tracking-widest text-brand-gold font-semibold">
-              Bilingual service — English · Dari · Pashto · Arabic
+              Bilingual service — English · Dari
             </p>
             <p className="font-body-lg text-body-lg text-on-primary/90 mb-10 border-l-4 border-brand-gold pl-6">
               Navigating the complexities of the corporate landscape requires more than just legal advice — it requires a
