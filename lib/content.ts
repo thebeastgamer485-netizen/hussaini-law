@@ -679,6 +679,18 @@ export const GOOGLE_REVIEWS = {
   url: 'https://www.google.com/maps/search/?api=1&query=Hussaini+Law+Group+Pty+Ltd+7%2F37+Spencer+St+Fairfield+NSW+2165',
   items: [
     {
+      name: 'Akhanjan Jan',
+      avatar: '/images/reviews/akhanjan-jan.png',
+      quote:
+        'I cannot thank Hussaini Law Group enough for their outstanding service. They helped us achieve what I thought was impossible. From the beginning, they were professional, honest, supportive, and always available to answer our questions. Thanks to their hard work and expertise, my partner received his visa much sooner than we expected.',
+    },
+    {
+      name: 'Hashan Fernando',
+      avatar: '/images/reviews/hashan-fernando.png',
+      quote:
+        "Highly recommend Hussaini Law Group as they are passionate, knowledgeable. I was in this country for years without a visa. But I had a problem and when I went to him, he did everything for me and I got a permanent residency. I will never forget the things they did for me.",
+    },
+    {
       name: 'Khatira Omarzoy',
       avatar: '/images/reviews/khatira-omarzoy.png',
       quote:
