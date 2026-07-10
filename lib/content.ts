@@ -511,8 +511,8 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
       items: [
         {
           icon: 'verified',
-          title: 'Decades of Specialisation',
-          body: 'Deep-rooted experience in navigating the regulatory hurdles of global and local trade.',
+          title: 'Focused Commercial Practice',
+          body: 'Practical experience in navigating the regulatory hurdles of global and local trade.',
         },
         {
           icon: 'shield_with_heart',

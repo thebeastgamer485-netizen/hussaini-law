@@ -3,7 +3,7 @@
 
 > Hussaini Law Group is a multicultural law firm in Fairfield, Sydney (NSW, Australia)
 > offering bilingual legal representation in English and Dari across
-> criminal, immigration, family, conveyancing, commercial and civil litigation matters.
+> criminal, immigration, conveyancing, commercial and civil litigation matters.
 
 ## About This Site
 Hussaini Law Group is a boutique law firm based at 7/37 Spencer Street, Fairfield NSW 2165,
@@ -59,7 +59,7 @@ New South Wales.
 ## Frequently Asked Questions (concise, citable)
 Q: Is there a Dari-speaking (Persian/Farsi) lawyer in Fairfield / Western Sydney?
 A: Yes. Hussaini Law Group provides legal advice and court representation directly in English and
-Dari from its Fairfield office, across criminal, immigration, family, property,
+Dari from its Fairfield office, across criminal, immigration, property,
 commercial and civil matters — without third-party interpreters.
 
 Q: Can I get bail for a serious offence in NSW?
@@ -70,10 +70,6 @@ A well-prepared application addressing accommodation, employment and conditions 
 Q: How long does a partner visa take in Australia?
 A: The Department of Home Affairs currently finalises most partner visas (subclasses 820/801 onshore,
 309/100 offshore) within roughly 12 to 24 months, depending on evidence and country of origin.
-
-Q: Do I have to go to court for a family property settlement?
-A: Usually no. Most settlements are resolved by negotiation or mediation and made binding through
-Consent Orders filed with the Federal Circuit and Family Court or a Binding Financial Agreement.
 
 Q: What is NCAT?
 A: NCAT is the NSW Civil and Administrative Tribunal, which resolves tenancy, consumer, building,

@@ -6,6 +6,8 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { PageChrome } from '@/components/ui/PageChrome'
 import { PageTransition } from '@/components/ui/PageTransition'
+import { FIRM } from '@/lib/navigation'
+import { GOOGLE_REVIEWS } from '@/lib/content'
 
 const domine = Domine({
   subsets: ['latin'],
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     template: '%s | Hussaini Law Group',
   },
   description:
-    'Hussaini Law Group is a Fairfield-based multicultural law firm offering bilingual representation in criminal, immigration, family, conveyancing, commercial and civil litigation matters.',
+    'Fairfield, Sydney law firm offering bilingual (English & Dari) representation in criminal, immigration, conveyancing, commercial and civil litigation.',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
     siteName: 'Hussaini Law Group',
     title: 'Hussaini Law Group — Multicultural Legal Excellence',
     description:
-      'Bilingual legal representation across criminal, immigration, family, commercial and property law. Fairfield, Sydney.',
+      'Bilingual legal representation across criminal, immigration, commercial and property law. Fairfield, Sydney.',
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Hussaini Law Group' }],
   },
   twitter: {
@@ -110,6 +112,12 @@ const legalServiceJsonLd = {
     'Bilingual legal representation in Dari and English',
   ],
   knowsLanguage: ['en', 'fa'],
+  sameAs: [FIRM.social.facebook, FIRM.social.instagram, FIRM.social.tiktok, GOOGLE_REVIEWS.url],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: GOOGLE_REVIEWS.rating,
+    reviewCount: GOOGLE_REVIEWS.count,
+  },
   employee: {
     '@type': 'Attorney',
     '@id': `${SITE_URL}/#principal`,
@@ -154,6 +162,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${domine.variable} ${manrope.variable}`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
           rel="stylesheet"

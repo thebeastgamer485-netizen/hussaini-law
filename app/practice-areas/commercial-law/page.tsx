@@ -64,7 +64,7 @@ const SERVICES = [
 ]
 
 const ADVANTAGE = [
-  { icon: 'verified', title: 'Decades of Specialisation', body: 'Deep-rooted experience in navigating the regulatory hurdles of global and local trade.' },
+  { icon: 'verified', title: 'Focused Commercial Practice', body: 'Practical experience in navigating the regulatory hurdles of global and local trade.' },
   { icon: 'shield_with_heart', title: 'Integrity-First Approach', body: 'A commitment to the highest ethical standards, ensuring your reputation remains untarnished.' },
   { icon: 'psychology', title: 'Strategic Foresight', body: "We don't just solve problems; we anticipate them through rigorous risk assessment models." },
 ]
