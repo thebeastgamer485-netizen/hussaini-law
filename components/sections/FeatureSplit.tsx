@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { Icon } from '@/components/ui/Icon'
 import { BLUR_DATA_URL, BLUR_DATA_URL_LIGHT } from '@/lib/images'
 
 export type FeatureItem = { icon: string; title: string; body: string }
@@ -61,15 +62,15 @@ export function FeatureSplit({ data }: { data: FeatureSplitData }) {
                 : 'flex gap-4'
             }
           >
-            <div
-              className={`shrink-0 flex items-center justify-center ${
-                isDark
-                  ? 'w-12 h-12 rounded-full bg-primary border border-white/20 text-white'
-                  : 'w-12 h-12 rounded-sm bg-primary/10 text-primary'
-              }`}
-            >
-              <span className="material-symbols-outlined">{item.icon}</span>
-            </div>
+            {isDark ? (
+              <div className="shrink-0 w-12 h-12 rounded-full bg-primary border border-white/20 text-white flex items-center justify-center">
+                <span className="material-symbols-outlined">{item.icon}</span>
+              </div>
+            ) : (
+              <div className="shrink-0 w-12 h-12 flex items-center justify-center">
+                <Icon name={item.icon} className="text-4xl" />
+              </div>
+            )}
             <div>
               <h3 className={`font-heading text-lg ${isDark ? 'text-white' : 'text-primary'}`}>{item.title}</h3>
               <p className={`mt-1 text-body-md ${isDark ? 'text-white/70' : 'text-on-surface-variant'}`}>

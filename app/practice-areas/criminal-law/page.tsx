@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import { Button } from '@/components/ui/Button'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
+import { Icon } from '@/components/ui/Icon'
 import { PRACTICE_AREAS, PRACTICE_IMAGES } from '@/lib/content'
 import { Reveal } from '@/components/ui/Reveal'
 import { FIRM } from '@/lib/navigation'
@@ -194,8 +195,8 @@ export default function CriminalLawPage() {
               key={c.title}
               className="p-8 glass-card rounded-xl flex items-center gap-6 md:col-span-2 group hover:bg-surface-container transition-colors"
             >
-              <div className="p-4 bg-primary/10 rounded-full text-primary">
-                <span className="material-symbols-outlined text-3xl">{c.icon}</span>
+              <div className="shrink-0">
+                <Icon name={c.icon} className="text-[44px]" />
               </div>
               <div className="flex-1">
                 <h3 className="font-headline-md text-headline-md text-primary">{c.title}</h3>

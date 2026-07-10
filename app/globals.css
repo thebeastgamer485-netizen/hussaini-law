@@ -44,6 +44,27 @@ h1, h2, h3, h4, h5, h6 {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* ---- Duotone icons (solid base glyph + linework overlay, no chip) ---- */
+.icon-duo {
+  position: relative;
+  display: inline-flex;
+  line-height: 1;
+}
+.icon-duo > .material-symbols-outlined {
+  display: block;
+  font-size: inherit;
+}
+.icon-duo > .icon-duo-line {
+  position: absolute;
+  inset: 0;
+}
+.icon-duo-base {
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 40;
+}
+.icon-duo-line {
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 40;
+}
+
 /* ---- Layout container ---- */
 .container-page {
   max-width: 1280px;

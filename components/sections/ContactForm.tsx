@@ -1,6 +1,7 @@
 'use client'
 
 import { useFormState, useFormStatus } from 'react-dom'
+import { Icon } from '@/components/ui/Icon'
 import { submitContactForm, type ContactState } from '@/lib/actions'
 
 const AREAS = [
@@ -38,8 +39,8 @@ export function ContactForm() {
   if (state.status === 'success') {
     return (
       <div className="rounded-xl border border-primary/30 bg-primary/5 p-8 text-center">
-        <div className="w-14 h-14 mx-auto rounded-sm bg-brand-gold/15 flex items-center justify-center mb-4">
-          <span className="material-symbols-outlined text-brand-gold text-3xl">check_circle</span>
+        <div className="mx-auto mb-4 w-fit">
+          <Icon name="check_circle" variant="gold" className="text-5xl" />
         </div>
         <h2 className="font-heading text-headline-md text-on-surface mb-2">Inquiry received</h2>
         <p className="text-body-md text-on-surface-variant max-w-md mx-auto">{state.message}</p>

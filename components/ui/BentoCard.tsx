@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Icon } from '@/components/ui/Icon'
 
 export type BentoCardProps = {
   icon: string
@@ -33,10 +34,6 @@ export function BentoCard({
 
   const titleColor = tone === 'navy' ? 'text-white' : 'text-on-surface'
   const descColor = tone === 'navy' ? 'text-white/75' : 'text-on-surface-variant'
-  const iconBg =
-    tone === 'navy'
-      ? 'bg-brand-gold/15 text-brand-gold'
-      : 'bg-primary/10 text-primary'
 
   const inner = (
     <article
@@ -44,8 +41,8 @@ export function BentoCard({
         isLarge ? 'md:row-span-2' : ''
       } ${className}`}
     >
-      <div className={`inline-flex items-center justify-center w-14 h-14 rounded-sm ${iconBg} mb-5`}>
-        <span className="material-symbols-outlined text-3xl">{icon}</span>
+      <div className="mb-5">
+        <Icon name={icon} variant={tone === 'navy' ? 'gold' : 'navy'} className="text-[52px]" />
       </div>
       <h3
         className={`font-heading ${
