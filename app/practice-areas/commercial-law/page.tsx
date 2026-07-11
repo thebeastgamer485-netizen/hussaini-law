@@ -15,6 +15,7 @@ const PAGE_URL = `${SITE}/practice-areas/commercial-law`
 export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
+  alternates: { canonical: PAGE_URL },
 }
 
 export const revalidate = 300
@@ -55,18 +56,18 @@ const faqLd = data.faqs?.length
   : null
 
 const SERVICES = [
-  { icon: 'business_center', title: 'Business Structuring', body: 'Strategic optimisation of entity frameworks to ensure tax efficiency, operational fluidity, and robust liability protection for emerging and established enterprises.', dark: false },
-  { icon: 'contract_edit', title: 'Complex Contracts', body: 'Drafting and negotiating bulletproof commercial agreements that safeguard your interests while facilitating seamless cross-border and domestic transactions.', dark: true },
-  { icon: 'groups', title: 'Shareholder Agreements', body: 'Defining clear governance structures and dispute resolution mechanisms to align stakeholder interests and ensure long-term corporate stability.', dark: false },
-  { icon: 'shopping_cart_checkout', title: 'Business Sale & Purchase', body: 'Meticulous due diligence and transaction management for mergers, acquisitions, and asset transfers to maximise value and minimise risk.', dark: false },
-  { icon: 'gavel', title: 'Dispute Resolution', body: 'Aggressive advocacy and strategic mediation to resolve high-stakes commercial conflicts with a focus on protecting your corporate reputation and bottom line.', dark: false },
-  { icon: 'account_balance_wallet', title: 'Debt Recovery', body: 'Persistent and professional recovery strategies designed to restore cash flow through sophisticated legal channels and negotiation tactics.', dark: false },
+  { icon: 'business_center', title: 'Business Structuring', body: 'Advice on choosing between sole trader, company and trust structures — weighing liability protection, tax position and how easily you can bring in investors or sell later.', dark: false },
+  { icon: 'contract_edit', title: 'Complex Contracts', body: 'Drafting and reviewing supply, services and sale-of-business agreements, with clear termination rights, dispute resolution clauses, limitation of liability and IP ownership terms.', dark: true },
+  { icon: 'groups', title: 'Shareholder Agreements', body: 'Governance and exit provisions that set out decision-making, dispute resolution and buy-out terms clearly, so disagreements between founders don’t stall the business.', dark: false },
+  { icon: 'shopping_cart_checkout', title: 'Business Sale & Purchase', body: 'Due diligence and transaction management for buying or selling a business, including asset transfers and the contractual terms that protect you either side of the deal.', dark: false },
+  { icon: 'gavel', title: 'Dispute Resolution', body: 'Representation for commercial disputes through negotiation, mediation, or NSW Local, District and Supreme Court proceedings where a matter can’t be resolved directly.', dark: false },
+  { icon: 'account_balance_wallet', title: 'Debt Recovery', body: 'From an initial letter of demand through to court proceedings or a statutory demand under the Corporations Act for company debtors who don’t pay.', dark: false },
 ]
 
 const ADVANTAGE = [
   { icon: 'verified', title: 'Focused Commercial Practice', body: 'Practical experience in navigating the regulatory hurdles of global and local trade.' },
-  { icon: 'shield_with_heart', title: 'Integrity-First Approach', body: 'A commitment to the highest ethical standards, ensuring your reputation remains untarnished.' },
-  { icon: 'psychology', title: 'Strategic Foresight', body: "We don't just solve problems; we anticipate them through rigorous risk assessment models." },
+  { icon: 'shield_with_heart', title: 'Plain-Language Advice', body: 'We explain the commercial and legal trade-offs in your matter clearly, in English and Dari, so you can make an informed decision.' },
+  { icon: 'psychology', title: 'Risk-Aware Drafting', body: 'Contracts and structures built to address what happens if something goes wrong, not just the straightforward case.' },
 ]
 
 export default function CommercialLawPage() {
@@ -189,7 +190,7 @@ export default function CommercialLawPage() {
         <div className="relative z-10 max-w-max-width mx-auto px-margin-mobile text-center">
           <h2 className="font-headline-lg text-headline-lg text-on-primary mb-6">Ready to Secure Your Business Future?</h2>
           <p className="text-on-primary/70 max-w-2xl mx-auto mb-10 text-body-lg">
-            Connect with our senior partners today for a comprehensive evaluation of your commercial legal requirements.
+            Book a consultation today for a clear, practical evaluation of your commercial legal requirements.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button href="/contact" size="lg" icon="arrow_forward">Schedule a Consultation</Button>

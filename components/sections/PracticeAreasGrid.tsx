@@ -60,7 +60,7 @@ export function PracticeAreasGrid() {
           align="center"
           eyebrow="Our Legal Expertise"
           title={<span id="practice-heading">Comprehensive Solutions</span>}
-          intro="From migration matters that change a family's future to commercial contracts that build a business, our solicitors bring depth where it counts."
+          intro="From migration matters that change a family's future to commercial contracts that build a business, we bring depth where it counts."
         />
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8">

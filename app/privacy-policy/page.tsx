@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
     'How Hussaini Law Group collects, uses, stores and protects your personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles.',
+  alternates: { canonical: '/privacy-policy' },
 }
 
 const LAST_UPDATED = '21 June 2026'

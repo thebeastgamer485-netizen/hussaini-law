@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Contact — Fairfield, Sydney',
   description:
     'Book a confidential consultation with Hussaini Law Group in Fairfield. Bilingual service in English and Dari. Call 02 8764 7885.',
+  alternates: { canonical: '/contact' },
 }
 
 const LANGUAGES = ['English', 'Dari']

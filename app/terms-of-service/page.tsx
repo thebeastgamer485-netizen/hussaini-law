@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
     'The terms governing your use of the Hussaini Law Group website, governed by the laws of New South Wales, Australia.',
+  alternates: { canonical: '/terms-of-service' },
 }
 
 const LAST_UPDATED = '21 June 2026'

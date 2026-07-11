@@ -551,7 +551,7 @@ export const PRACTICE_AREAS: Record<string, PracticeAreaContent> = {
     cta: {
       title: 'Ready to Secure Your Business Future?',
       description:
-        'Connect with our senior partners today for a comprehensive evaluation of your commercial legal requirements.',
+        'Book a consultation today for a clear, practical evaluation of your commercial legal requirements.',
     },
   },
 

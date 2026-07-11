@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   },
   description:
     'Fairfield, Sydney law firm offering bilingual (English & Dari) representation in criminal, immigration, conveyancing, commercial and civil litigation.',
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'en_AU',

@@ -15,6 +15,7 @@ const PAGE_URL = `${SITE}/practice-areas/criminal-law`
 export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
+  alternates: { canonical: PAGE_URL },
 }
 
 export const revalidate = 300

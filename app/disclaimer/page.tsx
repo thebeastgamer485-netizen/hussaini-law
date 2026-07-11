@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Disclaimer',
   description:
     'Important information about the use of content on the Hussaini Law Group website. General information only — not legal advice.',
+  alternates: { canonical: '/disclaimer' },
 }
 
 const LAST_UPDATED = '21 June 2026'
