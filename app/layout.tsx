@@ -48,7 +48,13 @@ export const metadata: Metadata = {
     title: 'Hussaini Law Group',
     description: 'Multicultural legal excellence in Sydney.',
   },
-  icons: { apple: '/logo.png' },
+  icons: {
+    icon: [
+      { url: '/icon', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/logo.png',
+  },
 }
 
 const legalServiceJsonLd = {
