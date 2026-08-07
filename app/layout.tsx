@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Domine, Manrope } from 'next/font/google'
 import Script from 'next/script'
+import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
@@ -186,7 +187,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
       </head>
+      <GoogleTagManager gtmId="GTM-TQGCNVVK" />
       <body className="font-body bg-surface text-on-surface antialiased">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TQGCNVVK"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-brand-navy focus:text-white focus:px-4 focus:py-2 focus:rounded-sm"
