@@ -1,9 +1,15 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Script from 'next/script'
 import { useFormState, useFormStatus } from 'react-dom'
 import { Icon } from '@/components/ui/Icon'
 import { submitContactForm, type ContactState } from '@/lib/actions'
+
+// Set once the Cloudflare Turnstile site is created — see .env.local.example.
+// The widget simply doesn't render until this is configured, so the form
+// keeps working exactly as it does today in the meantime.
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 
 const AREAS = [
   'Criminal Law',
@@ -118,6 +124,13 @@ export function ContactForm() {
       />
       {/* Set client-side on mount; lets the server reject instant bot submissions */}
       <input type="hidden" name="renderedAt" ref={renderedAtRef} />
+
+      {TURNSTILE_SITE_KEY && (
+        <>
+          <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer strategy="afterInteractive" />
+          <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="light" />
+        </>
+      )}
 
       <p className="text-xs text-on-surface-variant">
         By submitting you agree to be contacted by Hussaini Law Group regarding your matter. Submissions are confidential.

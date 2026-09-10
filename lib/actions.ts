@@ -45,13 +45,38 @@ const URL_RE = /https?:\/\/|www\.|\b[a-z0-9-]+\.(?:com|net|org|xyz|info|biz|co|i
 const SPAM_KEYWORDS =
   /\b(seo servic|backlink|guest post|link building|crypto|bitcoin|forex|casino|viagra|cialis|dropship|social media marketing|increase your (traffic|ranking))\b/i
 
+// Verifies a Cloudflare Turnstile token server-side. Returns true (skips
+// the check) when TURNSTILE_SECRET_KEY isn't set, so the form keeps working
+// exactly as it does today until the widget is configured — same pattern
+// as the Resend/rate-limit graceful degradation above.
+async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET_KEY
+  if (!secret) return true
+  if (!token) return false
+
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ secret, response: token, remoteip: ip }),
+    })
+    const data = await res.json()
+    return data.success === true
+  } catch (err) {
+    console.error('[contact] Turnstile verification request failed:', err instanceof Error ? err.message : String(err))
+    // Network hiccup talking to Cloudflare shouldn't strand a genuine visitor.
+    return true
+  }
+}
+
 export async function submitContactForm(_prev: ContactState, formData: FormData): Promise<ContactState> {
+  const headersList = headers()
+  const ip = headersList.get('x-forwarded-for')?.split(',')[0] || headersList.get('x-real-ip') || 'unknown'
+
   // Rate limiting check (skipped when Upstash isn't configured)
   try {
     const limiter = getRatelimit()
     if (limiter) {
-      const headersList = headers()
-      const ip = headersList.get('x-forwarded-for')?.split(',')[0] || headersList.get('x-real-ip') || 'unknown'
       const { success } = await limiter.limit(ip)
 
       if (!success) {
@@ -76,6 +101,21 @@ export async function submitContactForm(_prev: ContactState, formData: FormData)
   // Honeypot — bots fill every field including hidden ones; real users never see this.
   if ((formData.get('website') as string | null)?.length) {
     return { status: 'success', message: 'Thanks. We will be in touch shortly.' }
+  }
+
+  // Turnstile — skipped entirely until TURNSTILE_SECRET_KEY is configured.
+  // Unlike the honeypot/timing checks, a real visitor can genuinely fail
+  // this (blocked script, flaky network), so we tell them what happened
+  // instead of silently discarding their inquiry.
+  const turnstileOk = await verifyTurnstile(
+    required(formData.get('cf-turnstile-response')),
+    ip,
+  )
+  if (!turnstileOk) {
+    return {
+      status: 'error',
+      message: 'We could not verify you are human. Please try again, or call us directly on 02 8764 7885.',
+    }
   }
 
   // Fill-time check — bots submit within milliseconds of the page loading;
