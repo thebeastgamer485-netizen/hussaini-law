@@ -32,6 +32,19 @@ const required = (v: FormDataEntryValue | null) =>
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+// Real visitors take at least a few seconds to read and fill the form;
+// bots submit within milliseconds of the page loading.
+const MIN_FILL_TIME_MS = 3000
+
+// Genuine inquiries essentially never contain links. This is the single
+// most common spam pattern (SEO/crypto/backlink pitches), so it's worth
+// filtering even at the cost of asking a rare legitimate link-sharer to
+// rephrase — unlike the honeypot/timing checks, we tell the user why,
+// rather than silently discarding a real inquiry.
+const URL_RE = /https?:\/\/|www\.|\b[a-z0-9-]+\.(?:com|net|org|xyz|info|biz|co|io)\b/i
+const SPAM_KEYWORDS =
+  /\b(seo servic|backlink|guest post|link building|crypto|bitcoin|forex|casino|viagra|cialis|dropship|social media marketing|increase your (traffic|ranking))\b/i
+
 export async function submitContactForm(_prev: ContactState, formData: FormData): Promise<ContactState> {
   // Rate limiting check (skipped when Upstash isn't configured)
   try {
@@ -59,9 +72,30 @@ export async function submitContactForm(_prev: ContactState, formData: FormData)
   const area = required(formData.get('area'))
   const language = required(formData.get('language'))
   const matter = required(formData.get('matter'))
-  // Honeypot
+
+  // Honeypot — bots fill every field including hidden ones; real users never see this.
   if ((formData.get('website') as string | null)?.length) {
     return { status: 'success', message: 'Thanks. We will be in touch shortly.' }
+  }
+
+  // Fill-time check — bots submit within milliseconds of the page loading;
+  // no legitimate visitor fills this form that fast. Fails open (treats
+  // a missing/invalid timestamp as fine) so nothing breaks for visitors
+  // with JS quirks — it only ever catches submissions that are too fast.
+  const renderedAt = Number(formData.get('renderedAt'))
+  if (renderedAt && Date.now() - renderedAt < MIN_FILL_TIME_MS) {
+    return { status: 'success', message: 'Thanks. We will be in touch shortly.' }
+  }
+
+  // Spam content check — genuine inquiries essentially never contain links
+  // or SEO/crypto pitch language. Unlike the checks above, tell the user
+  // why so a rare false positive doesn't silently lose a real inquiry.
+  if (URL_RE.test(matter) || SPAM_KEYWORDS.test(matter)) {
+    return {
+      status: 'error',
+      message: 'Please remove any links from your message and try again, or call us directly on 02 8764 7885.',
+      errors: { matter: 'Links are not permitted in this field.' },
+    }
   }
 
   const errors: Record<string, string> = {}

@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { Icon } from '@/components/ui/Icon'
 import { submitContactForm, type ContactState } from '@/lib/actions'
@@ -35,6 +36,14 @@ const fieldClass =
 
 export function ContactForm() {
   const [state, formAction] = useFormState(submitContactForm, initialState)
+  const renderedAtRef = useRef<HTMLInputElement>(null)
+
+  // Timestamp the moment the form became interactive. Bots that submit
+  // within a second or two of loading the page get caught by this
+  // server-side — real people take longer to read and fill the form.
+  useEffect(() => {
+    if (renderedAtRef.current) renderedAtRef.current.value = String(Date.now())
+  }, [])
 
   if (state.status === 'success') {
     return (
@@ -98,7 +107,7 @@ export function ContactForm() {
         <ErrorText>{state.errors?.matter}</ErrorText>
       </div>
 
-      {/* Honeypot */}
+      {/* Honeypot — real users never see or fill this */}
       <input
         type="text"
         name="website"
@@ -107,6 +116,8 @@ export function ContactForm() {
         className="absolute -left-[9999px] w-1 h-1 opacity-0"
         aria-hidden="true"
       />
+      {/* Set client-side on mount; lets the server reject instant bot submissions */}
+      <input type="hidden" name="renderedAt" ref={renderedAtRef} />
 
       <p className="text-xs text-on-surface-variant">
         By submitting you agree to be contacted by Hussaini Law Group regarding your matter. Submissions are confidential.
