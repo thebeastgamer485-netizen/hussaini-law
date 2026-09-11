@@ -5,6 +5,8 @@ export type ArticleSection = {
   paragraphs?: string[]
   bullets?: string[]
   subsections?: { heading: string; paragraphs: string[] }[]
+  /** Optional in-article stock photo, rendered after this section's paragraphs. */
+  image?: { src: string; alt: string; caption?: string }
 }
 
 export type Article = {

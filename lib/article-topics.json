@@ -1,0 +1,22 @@
+{
+  "_readme": "Queue for the weekly article automation (see .claude/scheduled-tasks or ask Claude about the 'weekly-article' scheduled task). Each run takes the first entry with status 'pending' from the next category in rotation order, researches it, drafts an article, and marks it 'published' with the resulting slug + date. Category rotation order: immigration-law -> criminal-law -> conveyancing -> repeat. When fewer than 3 pending topics remain in any category, the task should flag it in its completion summary so more can be queued.",
+  "rotation": ["Immigration Law", "Criminal Law", "Conveyancing"],
+  "lastCategoryUsed": null,
+  "topics": [
+    { "category": "Immigration Law", "topic": "Character test visa cancellations under s501 of the Migration Act — what a single conviction can trigger", "status": "pending" },
+    { "category": "Immigration Law", "topic": "The Genuine Temporary Entrant (GTE) requirement's replacement and what it means for student visa renewals", "status": "pending" },
+    { "category": "Immigration Law", "topic": "Partner visa family violence exception — how to evidence abuse without a police report or AVO", "status": "pending" },
+    { "category": "Immigration Law", "topic": "Made redundant on a subclass 482 sponsored visa — the 60/90-day rule and what happens next", "status": "pending" },
+    { "category": "Immigration Law", "topic": "Skilled Independent visa (subclass 189) points test recalculations and the mistakes that cost applicants an invitation", "status": "pending" },
+    { "category": "Criminal Law", "topic": "How an Apprehended Domestic Violence Order (ADVO) can affect a pending visa application even without a conviction", "status": "pending" },
+    { "category": "Criminal Law", "topic": "The NSW spent convictions scheme — what actually gets wiped, what doesn't, and who can still see it", "status": "pending" },
+    { "category": "Criminal Law", "topic": "Mid-range drink driving (PCA) penalties in NSW and the flow-on consequences for visa holders", "status": "pending" },
+    { "category": "Criminal Law", "topic": "The Bail Act 2013 (NSW) 'show cause' offences — what they are and why bail becomes much harder to get", "status": "pending" },
+    { "category": "Criminal Law", "topic": "The 'good character' requirement for Australian citizenship after a past criminal record", "status": "pending" },
+    { "category": "Conveyancing", "topic": "Off-the-plan sunset clauses in NSW — when a developer can rescind, and a buyer's rights under the Conveyancing Act", "status": "pending" },
+    { "category": "Conveyancing", "topic": "The NSW 5-business-day cooling-off period — the exceptions that catch buyers out at auction and beyond", "status": "pending" },
+    { "category": "Conveyancing", "topic": "Foreign purchaser surcharge duty and land tax surcharge in NSW — who actually has to pay it", "status": "pending" },
+    { "category": "Conveyancing", "topic": "Strata by-law disputes before settlement — what a conveyancer checks in the strata report and why it matters", "status": "pending" },
+    { "category": "Conveyancing", "topic": "Vendor disclosure obligations under s52A of the Conveyancing Act — what must be attached to a NSW contract of sale", "status": "pending" }
+  ]
+}

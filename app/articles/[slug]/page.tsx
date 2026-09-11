@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Reveal } from '@/components/ui/Reveal'
 import { CtaBanner } from '@/components/ui/CtaBanner'
-import { BLUR_DATA_URL } from '@/lib/images'
+import { BLUR_DATA_URL, BLUR_DATA_URL_LIGHT } from '@/lib/images'
 import { ARTICLES, getArticleBySlug } from '@/lib/articles'
 import { FIRM } from '@/lib/navigation'
 
@@ -141,6 +141,26 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       <p key={pi}>{p}</p>
                     ))}
                   </div>
+                  {section.image && (
+                    <figure className="my-8">
+                      <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={section.image.src}
+                          alt={section.image.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 768px"
+                          placeholder="blur"
+                          blurDataURL={BLUR_DATA_URL_LIGHT}
+                          className="object-cover"
+                        />
+                      </div>
+                      {section.image.caption && (
+                        <figcaption className="mt-2 text-sm text-on-surface-variant/70 text-center">
+                          {section.image.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
                   {section.bullets && (
                     <ul className="mt-4 space-y-3">
                       {section.bullets.map((b, bi) => (
