@@ -89,6 +89,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/articles" className="text-on-primary/60 hover:text-on-primary transition-colors font-body-md">
+                Articles
+              </Link>
+            </li>
           </ul>
         </div>
 

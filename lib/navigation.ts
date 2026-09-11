@@ -12,6 +12,7 @@ export const primaryNav: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '#practice-areas', label: 'Practice Areas' },
   { href: '#principal', label: 'About' },
+  { href: '/articles', label: 'Articles' },
   { href: '/contact', label: 'Contact' },
 ]
 

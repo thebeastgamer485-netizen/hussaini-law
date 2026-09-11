@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { PRACTICE_AREAS } from '@/lib/content'
+import { ARTICLES } from '@/lib/articles'
 
 const SITE = 'https://hussainilaw.com.au'
 
@@ -13,6 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    })),
+    { url: `${SITE}/articles`, lastModified, changeFrequency: 'weekly', priority: 0.7 },
+    ...ARTICLES.map((a) => ({
+      url: `${SITE}/articles/${a.slug}`,
+      lastModified: new Date(a.updatedAt || a.publishedAt),
+      changeFrequency: 'yearly' as const,
+      priority: 0.6,
     })),
     ...['privacy-policy', 'terms-of-service', 'disclaimer'].map((slug) => ({
       url: `${SITE}/${slug}`,
