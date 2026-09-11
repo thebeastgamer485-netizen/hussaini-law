@@ -76,6 +76,17 @@ export function Navbar() {
           </div>
 
           <Link
+            href="/articles"
+            className={`font-label-lg text-label-lg pb-1 transition-colors ${
+              isActive('/articles')
+                ? 'text-secondary-fixed border-b-2 border-secondary-fixed'
+                : 'text-on-primary/80 hover:text-secondary-fixed'
+            }`}
+          >
+            Articles
+          </Link>
+
+          <Link
             href="/contact"
             className={`font-label-lg text-label-lg pb-1 transition-colors ${
               isActive('/contact')
