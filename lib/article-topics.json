@@ -1,9 +1,9 @@
 {
   "_readme": "Queue for the weekly article automation (see .claude/scheduled-tasks or ask Claude about the 'weekly-article' scheduled task). Each run takes the first entry with status 'pending' from the next category in rotation order, researches it, drafts an article, and marks it 'published' with the resulting slug + date. Category rotation order: immigration-law -> criminal-law -> conveyancing -> repeat. When fewer than 3 pending topics remain in any category, the task should flag it in its completion summary so more can be queued.",
   "rotation": ["Immigration Law", "Criminal Law", "Conveyancing"],
-  "lastCategoryUsed": null,
+  "lastCategoryUsed": "Immigration Law",
   "topics": [
-    { "category": "Immigration Law", "topic": "Character test visa cancellations under s501 of the Migration Act — what a single conviction can trigger", "status": "pending" },
+    { "category": "Immigration Law", "topic": "Character test visa cancellations under s501 of the Migration Act — what a single conviction can trigger", "status": "published", "slug": "character-test-what-a-single-conviction-can-trigger", "publishedAt": "2026-09-18" },
     { "category": "Immigration Law", "topic": "The Genuine Temporary Entrant (GTE) requirement's replacement and what it means for student visa renewals", "status": "pending" },
     { "category": "Immigration Law", "topic": "Partner visa family violence exception — how to evidence abuse without a police report or AVO", "status": "pending" },
     { "category": "Immigration Law", "topic": "Made redundant on a subclass 482 sponsored visa — the 60/90-day rule and what happens next", "status": "pending" },
