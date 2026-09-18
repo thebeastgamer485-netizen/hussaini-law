@@ -150,7 +150,20 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-page py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-on-primary/40">
           <p>© 2026 Hussaini Law Group. Liability limited by a scheme approved under Professional Standards Legislation.</p>
-          <p>Languages spoken: English · Dari</p>
+          <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
+            <p>Languages spoken: English · Dari</p>
+            <p>
+              Website by{' '}
+              <a
+                href="https://ignitestudio.com.au"
+                target="_blank"
+                rel="noopener"
+                className="text-on-primary/60 hover:text-brand-gold transition-colors"
+              >
+                Ignite Studio
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
